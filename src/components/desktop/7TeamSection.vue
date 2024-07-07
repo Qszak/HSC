@@ -1,55 +1,55 @@
 <template>
-<div class="Wrap">    
-    <section class="Team">
-        <div class="SectionHeader">
-            <div class="SectionTitle">
-                <div class="PromoText">KADRA</div>
-                <div class="Title">ZIOMKI Z MORDOWNI</div>
+  
+    <section class="team">
+        <div class="section-header">
+            <div class="section-title">
+                <div class="promo-text">KADRA</div>
+                <div class="title">ZIOMKI Z MORDOWNI</div>
             </div>
-            <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-            <div class="TeamSlider">
-                <div class="CoachCard">
-                    <div class="GalleryImage">
-                        <div class="RatioImage"></div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+            <div class="team-slider">
+                <div class="coach-card">
+                    <div class="gallery-image">
+                        <div class="ratio-image"></div>
                     </div>
-                    <div class="CoachInfo">
-                        <div class="CoachName">Michał Kulej</div>
-                        <div class="CoachPosition">Trener Personalny</div>
-                    </div>
-                </div>
-                <div class="CoachCard">
-                    <div class="GalleryImage">
-                        <div class="RatioImage"></div>
-                    </div>
-                    <div class="CoachInfo">
-                        <div class="CoachName">Jakub Kulej</div>
-                        <div class="CoachPosition">Trener Personalny</div>
+                    <div class="coach-info">
+                        <div class="coach-name">Michał Kulej</div>
+                        <div class="coach-position">Trener Personalny</div>
                     </div>
                 </div>
-                <div class="CoachCard">
-                    <div class="GalleryImage">
-                        <div class="RatioImage"></div>
+                <div class="coach-card">
+                    <div class="gallery-image">
+                        <div class="ratio-image"></div>
                     </div>
-                    <div class="CoachInfo">
-                        <div class="CoachName">Filip Krasiński</div>
-                        <div class="CoachPosition">Trener Personalny</div>
+                    <div class="coach-info">
+                        <div class="coach-name">Jakub Kulej</div>
+                        <div class="coach-position">Trener Personalny</div>
                     </div>
                 </div>
-                <div class="CoachCard">
-                    <div class="GalleryImage">
-                        <div class="RatioImage"></div>
+                <div class="coach-card">
+                    <div class="gallery-image">
+                        <div class="ratio-image"></div>
                     </div>
-                    <div class="CoachInfo">
-                        <div class="CoachName">Sandra Cieślik</div>
-                        <div class="CoachPosition">Trener Personalny</div>
+                    <div class="coach-info">
+                        <div class="coach-name">Filip Krasiński</div>
+                        <div class="coach-position">Trener Personalny</div>
+                    </div>
+                </div>
+                <div class="coach-card">
+                    <div class="gallery-image">
+                        <div class="ratio-image"></div>
+                    </div>
+                    <div class="coach-info">
+                        <div class="coach-name">Sandra Cieślik</div>
+                        <div class="coach-position">Trener Personalny</div>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="MeetCrew">Poznaj naszą kadrę</button>
+        <button class="meet-crew">Poznaj naszą kadrę</button>
 
     </section>
-</div> 
+
 </template>
 
 
@@ -62,22 +62,16 @@ export default {
 
 
 <style scoped>
-.Wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-}
 
-section.Team {
+section.team {
     display: flex;
-    width: 98vw;
+    width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
     flex-direction: column;
     align-items: center;
     gap: 4.5rem;
 }
-.SectionHeader {
+.section-header {
     display: flex;
     max-width: 100%;
     flex-direction: column;
@@ -86,14 +80,14 @@ section.Team {
     gap: 2rem;
     align-self: stretch;
 }
-.SectionTitle {
+.section-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: -5rem;
     align-self: stretch;
 }
-.PromoText {
+.promo-text {
     text-align: center;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
@@ -106,7 +100,7 @@ section.Team {
     text-transform: uppercase;
     color: transparent;
 }
-.Title {
+.title {
     align-self: stretch;
     color: var(--Text-Primary, #181818);
     text-align: center;
@@ -120,7 +114,7 @@ section.Team {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
-.Text {
+.text {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;
@@ -133,7 +127,7 @@ section.Team {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.TeamSlider {
+.team-slider {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -142,13 +136,13 @@ section.Team {
     align-self: stretch;
     flex-wrap: wrap;
 }
-.CoachCard {
+.coach-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--Surface-Secondary, #F5F5F5);
 }
-.GalleryImage {
+.gallery-image {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +150,7 @@ section.Team {
     align-self: stretch;
 
 }
-.RatioImage {
+.ratio-image {
     display: flex;
     max-width: 43.75rem;
     height: 30vh;
@@ -165,7 +159,7 @@ section.Team {
     align-self: stretch;
     background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/public/images/Offer.jpg) lightgray 50% / cover no-repeat;
 }
-.CoachInfo {
+.coach-info {
     display: flex;
     padding: var(--space-300, 1.5rem) 0rem;
     flex-direction: column;
@@ -173,7 +167,7 @@ section.Team {
     gap: var(--space-050, 0.25rem);
     align-self: stretch;
 }
-.CoachName {
+.coach-name {
     width: 18.75rem;
     color: var(--Text-Primary, #181818);
     text-align: center;
@@ -186,7 +180,7 @@ section.Team {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.CoachPosition {
+.coach-position {
     width: 18.75rem;
     color: var(--Text-Tertiary, #747474);
     text-align: center;
@@ -199,7 +193,7 @@ section.Team {
     line-height: 1.25rem; /* 142.857% */
     letter-spacing: -0.00438rem;
 }
-button.MeetCrew {
+button.meet-crew {
     display: flex;
     padding: 1.25rem 3rem;
     justify-content: center;

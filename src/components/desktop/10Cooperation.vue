@@ -1,7 +1,7 @@
 <template>
-    <section class="Cooperations">
-        <div class="Claim">Współprace</div>
-        <div class="Brands">
+    <section class="cooperations">
+        <div class="claim">Współprace</div>
+        <div class="brands">
             <div class="logo"></div>
             <div class="logo"></div>
             <div class="logo"></div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-section.Cooperations {
+section.cooperations {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     padding: 4.5rem;
@@ -27,7 +27,7 @@ section.Cooperations {
     gap: 4.5rem;
     background: var(--Surface-Inverse-primary, #181818);
 }
-.Claim {
+.claim {
     align-self: stretch;
     text-align: center;
 
@@ -43,7 +43,7 @@ section.Cooperations {
     text-transform: uppercase;
     color: transparent;
 }
-.Brands {
+.brands {
     display: flex;
     padding: 0rem var(--space-300, 1.5rem);
     justify-content: center;

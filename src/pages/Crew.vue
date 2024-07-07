@@ -1,7 +1,7 @@
 <template>
 
 
-    <h1>O NAS</h1>
+    <h1>Kadra</h1>
 
 
 </template>
@@ -10,7 +10,7 @@
 
 
 export default {
-    name: 'About',
+    name: 'Crew',
     components: {
         
     }

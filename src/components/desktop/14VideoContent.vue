@@ -1,8 +1,8 @@
 <template>
-<div class="VideoContainer">
+<div class="video-container">
 
   <video
-  class="VideoPlayer"
+  class="video-player"
   :src="VideoSrc"
   autoplay
   loop
@@ -10,9 +10,9 @@
   playsinline
   ></video>
  
-<div class="Content">
-  <p class="Text">Trenuj z nami</p>
-  <button class="Primary">Lorem Ipsum</button>
+<div class="content">
+  <p class="text">Trenuj z nami</p>
+  <button class="primary">Lorem Ipsum</button>
 </div>
 
 
@@ -33,7 +33,7 @@
 </script>
 
 <style scoped>
-.VideoContainer {
+.video-container {
   position: relative;
   width: calc(100svw - var(--scrollbarWidth));
   height: 50svh;
@@ -44,7 +44,7 @@
   overflow: hidden;
   
 }
- .VideoPlayer {
+ .video-player {
     position: absolute;
     top: 0;
     left: 0;
@@ -54,13 +54,13 @@
     z-index: -1;
  }
 
- .Content {
+ .content {
   position: relative;
   z-index: 1;
   text-align: center;
   
  }
-p.Text {
+p.text {
   
   width: 100%;
   color: #FFF;
@@ -75,7 +75,7 @@ p.Text {
 
 }
 
-button {
+button.primary {
   margin-top: 3rem;
   padding: 1.25rem 3rem;
   gap: 0.625rem;

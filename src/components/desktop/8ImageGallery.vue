@@ -1,5 +1,5 @@
 <template>
-<div class="Gallery">
+<div class="gallery">
 <img :src="photo" alt="boys">
 <img :src="photo" alt="boys">
 <img :src="photo" alt="boys">
@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
 
-.Gallery {
+.gallery {
     height: 50svh;
     max-width: calc(100svw - var(--scrollbarWidth));
     display: inline-flex;
