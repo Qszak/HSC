@@ -1,37 +1,38 @@
 <template>
-<div class="Wrapper">
+
 <nav>
     <div class="logo"> 
-        <LogoHSC />
+        <LogoHSC/>
     </div>
-    <div class="Content">
-        <div class="PrimaryItems">
-            <div class="MainPage">Strona Główna</div>
-            <div class="Offer">Oferta</div>
-            <div class="Crew">Kadra</div>
-            <RouterLink to="/o-nas">O nas</RouterLink>
+    <div class="content">
+        <div class="primary-items">
+            <RouterLink to="/" class="nav-link">Strona Główna</RouterLink>
+            <RouterLink to="/oferta" class="nav-link">Oferta</RouterLink>
+            <RouterLink to="/kadra" class="nav-link">Kadra</RouterLink>
+            <RouterLink to="/o-nas" class="nav-link">O nas</RouterLink>
         </div>
-        <div class="Separator"></div>
-        <div class="SecondaryItems">
-            <div class="Physio">Fizjoterapia</div>
-            <div class="Diet">Dietetyka</div>
+        <div class="separator"></div>
+        <div class="secondary-items">
+            <RouterLink to="/fizjoterapia" class="nav-link">Fizjoterapia</RouterLink>
+            <RouterLink to="/dietetyka" class="nav-link">Dietetyka</RouterLink>
         </div>
-        <div class="Separator"></div>
-        <div class="TertiaryItems">
-            <div class="Shop">Sklep</div>
         </div>
-        <div class="Separator"></div>
-        <div class="Facebook">
-            <FacebookIcon />
+        <div class="separator"></div>
+        <div class="tertiary-items">
+            <RouterLink to="/sklep" class="nav-link">Sklep</RouterLink>
         </div>
-        <div class="Instagram">
-            <InstagramIcon />
+        <div class="separator"></div>
+        <div class="facebook">
+            <FacebookIcon/>
         </div>
-    </div>
-    <button class="Contact" @click="showModal">Kontakt</button>
+        <div class="instagram">
+            <InstagramIcon/>
+        </div>
+    
+    <button class="contact" @click="showModal">Kontakt</button>
     <Modal :isVisible="isModalVisible" @close="closeModal">sialalala</Modal>  
 </nav>
-</div>
+
 </template>
 
 <script>
@@ -70,16 +71,10 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <style scoped>
-.Wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-    background: #181818;
-}
+
 nav {
     display: flex;
-    width: 99vw;
+    width: calc(100svw - var(--scrollbarWidth));
     padding: 0.75rem 4.5rem;
     justify-content: flex-end;
     align-items: center;
@@ -87,13 +82,13 @@ nav {
     background: #181818;
 }
 
-.Logo {
+.logo {
     width: 3.5rem; 
     height: 3.5rem; 
     flex-shrink: 0;
 }
 
-.Content {
+.content {
     display: flex;
     padding: var(--space-100, 0.5rem);
     justify-content: flex-end;
@@ -102,14 +97,14 @@ nav {
     flex: auto;
 }
 
-.PrimaryItems, .SecondaryItems, .TertiaryItems {
+.primary-items, .secondary-items, .tertiary-items {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
 }
 
-.MainPage, .Offer, .Crew, .AboutUs, .Physio, .Diet, .Shop {
+.nav-link {
     color: #FFF;
     text-align: center;
     font-family: "Montserrat";
@@ -119,16 +114,17 @@ nav {
     line-height: 1.5rem;
     letter-spacing: 0.00875rem;
     word-wrap: break-word;
+    text-decoration: none;
 }
 
 
-.Separator {
+.separator {
     width: 0.125rem;
     height: var(--space-300, 1.5rem);
     background-color: #FFF;
 }
 
-button.Contact {
+button.contact {
     display: flex;
     padding: 0.75rem 1.5rem;
     justify-content: center;
@@ -145,6 +141,7 @@ button.Contact {
     text-transform: uppercase;
     background-color: #E30613;
     border: none;
+    cursor: pointer;
 }
 
 

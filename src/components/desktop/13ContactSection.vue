@@ -1,26 +1,26 @@
 <template>
-    <section class="Contact">
-        <div class="SectionHeader">
-            <div class="SectionTitle">
-                <div class="PromoText">Kontakt</div>
-                <div class="Title">Pozostańmy w kontakcie</div>
+    <section class="contact">
+        <div class="section-header">
+            <div class="section-title">
+                <div class="promo-text">Kontakt</div>
+                <div class="title">Pozostańmy w kontakcie</div>
             </div>
         </div>
-        <div class="ContactZone">
-            <div class="Contact">
-                <div class="ContactText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                <div class="ContactData">
-                    <div class="ContactDataPhone">
-                        <div class="Icon"><phoneRed/></div>
-                        <div class="Text">+48 793 951 015</div>
+        <div class="contact-zone">
+            <div class="contact">
+                <div class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                <div class="contact-data">
+                    <div class="contact-data-phone">
+                        <div class="icon"><phoneRed/></div>
+                        <div class="text">+48 793 951 015</div>
                     </div>
-                    <div class="ContactDataMail">
-                        <div class="Icon"><mailRed/></div>
-                        <div class="Text">holisticsportcenter@gmail.com</div>
+                    <div class="contact-data-mail">
+                        <div class="icon"><mailRed/></div>
+                        <div class="text">holisticsportcenter@gmail.com</div>
                     </div>
-                    <div class="ContactDataAddress">
-                        <div class="Icon"><locationRed/></div>
-                        <div class="Text">
+                    <div class="contact-data-address">
+                        <div class="icon"><locationRed/></div>
+                        <div class="text">
                             <ul>
                                 <li>Holistic Sport Center</li>
                                 <li>ul. Krakowska 29C</li>
@@ -29,9 +29,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="ContactUs">Umów się na konsultacje</button>
+                <button class="contact-us">Umów się na konsultacje</button>
             </div>
-            <div class="Map">
+            <div class="map">
                <img :src="map" alt="mapka">
             </div>
         </div>
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style scoped>
-section.Contact {
+section.contact {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
@@ -71,7 +71,7 @@ section.Contact {
     align-items: center;
     gap: 4.5rem;
 }
-.SectionHeader {
+.section-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,14 +79,14 @@ section.Contact {
     gap: 2rem;
     align-self: stretch;
 }
-.SectionTitle {
+.section-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: -5rem;
     align-self: stretch;
 }
-.PromoText {
+.promo-text {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
     font-family: "Montserrat";
@@ -98,7 +98,7 @@ section.Contact {
     text-transform: uppercase;
     color: transparent;
 }
-.Title {
+.title {
     align-self: stretch;
     color: #000;
 
@@ -111,20 +111,20 @@ section.Contact {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
-.ContactZone {
+.contact-zone {
     display: flex;
     align-items: center;
     gap: 1.0625rem;
     align-self: stretch;
 }
-.Contact {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2.75rem;
     align-self: stretch;
 }
-.ContactText {
+.contact-text {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
 
@@ -136,28 +136,28 @@ section.Contact {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.ContactData {
+.contact-data {
     display: flex;
     width: 32.5625rem;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-300, 1.5rem);
 }
-.ContactDataPhone, .ContactDataMail {
+.contact-data-phone, .contact-data-mail {
     display: flex;
     align-items: flex-start;
     gap: var(--space-150, 0.75rem);
 }
-.ContactDataAddress {
+.contact-data-address {
     display: flex;
     align-items: flex-start;
     gap: var(--space-100, 0.5rem);
 }
-.Icon {
+.icon {
     width: var(--space-300, 1.5rem);
     height: var(--space-300, 1.5rem);
 }
-.Text {
+.text {
     width: 12rem;
     color: var(--Text-Primary, #181818);
     font-family: "Montserrat";
@@ -168,7 +168,7 @@ section.Contact {
     letter-spacing: 0.01rem;
 
 }
-button.ContactUs {
+button.contact-us {
     display: flex;
     padding: 1.25rem 3rem;
     justify-content: center;
@@ -185,7 +185,7 @@ button.ContactUs {
     text-transform: uppercase;
 }
 
-.Map {
+.map {
     flex: 1 0 0;
     align-self: stretch;
 }

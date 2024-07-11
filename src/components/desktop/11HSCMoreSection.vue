@@ -1,28 +1,28 @@
 <template>
-    <section class="HscMore">
-        <div class="SectionHeader">
-            <div class="SectionTitle">
-                <div class="PromoText">HSC</div>
-                <div class="Title">To nie tylko sport</div>
+    <section class="hsc-more">
+        <div class="section-header">
+            <div class="section-title">
+                <div class="promo-text">HSC</div>
+                <div class="title">To nie tylko sport</div>
             </div>
-            <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         </div>
-        <div class="Cards">
-            <div class="Card">
-                <div class="CardHeader">Dietetyka</div>
-                <div class="CardPhoto">
+        <div class="cards">
+            <div class="card">
+                <div class="card-header">Dietetyka</div>
+                <div class="card-photo">
                     <img src="" alt="">
                 </div>
-                <div class="CardInfo">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
-                <button class="ReadMore">Szczegóły usługi</button>
+                <div class="card-info">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
+                <button class="read-more">Szczegóły usługi</button>
             </div>
-            <div class="Card">
-                <div class="CardHeader">Fizjoterapia</div>
-                <div class="CardPhoto">
+            <div class="card">
+                <div class="card-header">Fizjoterapia</div>
+                <div class="card-photo">
                     <img src="" alt="">
                 </div>
-                <div class="CardInfo">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
-                <button class="ReadMore">Szczegóły usługi</button>
+                <div class="card-info">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
+                <button class="read-more">Szczegóły usługi</button>
             </div>
         </div>
 
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-section.HscMore {
+section.hsc-more {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
@@ -46,21 +46,21 @@ section.HscMore {
     align-items: center;
     gap: 4.5rem;
 }
-.SectionHeader {
+.section-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     align-self: stretch;
 }
-.SectionTitle {
+.section-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: -5rem;
     align-self: stretch;
 }
-.PromoText {
+.promo-text {
     align-self: stretch;
     text-align: center;
     -webkit-text-stroke-width: 1px;
@@ -74,7 +74,7 @@ section.HscMore {
     text-transform: uppercase;
     color: transparent;
 }
-.Title {
+.title {
     align-self: stretch;
     color: var(--Text-Primary, #181818);
     text-align: center;
@@ -88,7 +88,7 @@ section.HscMore {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
-.Text {
+.text {
     
     max-width: 50rem;
     align-self: center;
@@ -103,21 +103,21 @@ section.HscMore {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.Cards {
+.cards {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 7.5rem;
     align-self: stretch;
 }
-.Card {
+.card {
     display: flex;
     width: 25rem;
     flex-direction: column;
     align-items: center;
     gap: var(--space-300, 1.5rem);
 }
-.CardHeader {
+.card-header {
     align-self: stretch;
     color: #000;
     text-align: center;
@@ -130,13 +130,13 @@ section.HscMore {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.CardPhoto {
+.card-photo {
     width: 15rem;
     height: 15rem;
     border-radius: var(--radius-rounded, 62.5rem);
     background: #D9D9D9;
 }
-.CardInfo {
+.card-info {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;
@@ -149,7 +149,7 @@ section.HscMore {
     line-height: 1.5rem; /* 150% */
     letter-spacing: -0.005rem;
 }
-button.ReadMore {
+button.read-more {
     display: flex;
     padding: 1.25rem 3rem;
     justify-content: center;

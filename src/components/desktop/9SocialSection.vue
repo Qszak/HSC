@@ -1,13 +1,13 @@
 <template>
-<section class="Social">
-    <div class="SectionHeader">
-        <div class="SectionTitle">
-            <div class="PromoText">Sociale</div>
-            <div class="Title">Nasza społeczność</div>
+<section class="social">
+    <div class="section-header">
+        <div class="section-title">
+            <div class="promo-text">Sociale</div>
+            <div class="title">Nasza społeczność</div>
         </div>
-        <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
     </div>
-    <div class="Gallery">
+    <div class="gallery">
         <img :src="pic" alt="ziomki">
         <img :src="pic" alt="ziomki">
         <img :src="pic" alt="ziomki">
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-section.Social {
+section.social {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
@@ -40,7 +40,7 @@ section.Social {
     align-items: center;
     gap: 4.5rem;
 }
-.SectionHeader {
+.section-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,14 +48,14 @@ section.Social {
     gap: 2rem;
     align-self: stretch;
 }
-.SectionTitle {
+.section-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: -5rem;
     align-self: stretch;
 }
-.PromoText {
+.promo-text {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
     font-family: 'Montserrat';
@@ -67,7 +67,7 @@ section.Social {
     text-transform: uppercase;
     color: transparent;
 }
-.Title {
+.title {
     align-self: stretch;
     color: var(--Text-Primary, #181818);
 
@@ -80,7 +80,7 @@ section.Social {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
-.Text {
+.text {
     max-width: 37.5rem;
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
@@ -93,7 +93,7 @@ section.Social {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.Gallery {
+.gallery {
     display: flex;
     align-items: flex-start;
     gap: 2rem;

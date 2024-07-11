@@ -1,33 +1,33 @@
 <template>
-    <section class="Opinions">
-        <div class="SectionHeader">
-            <div class="SectionTitle">
-                <div class="PromoText">Opinie</div>
-                <div class="Title">Tak mówią o nas nasi klienci</div>
+    <section class="opinions">
+        <div class="section-header">
+            <div class="section-title">
+                <div class="promo-text">Opinie</div>
+                <div class="title">Tak mówią o nas nasi klienci</div>
             </div>
-            <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
         </div>
-        <div class="CardSlider">
-            <div class="Card">
-                <div class="CardPhoto">
-                    <div class="CardPhotoText">JK</div>
+        <div class="card-slider">
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">JK</div>
                 </div>
-                <div class="CardName">Jan Kowalski</div>
-                <div class="CardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                <div class="card-name">Jan Kowalski</div>
+                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
             </div>
-            <div class="Card">
-                <div class="CardPhoto">
-                    <div class="CardPhotoText">JK</div>
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">JK</div>
                 </div>
-                <div class="CardName">Jan Kowalski</div>
-                <div class="CardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                <div class="card-name">Jan Kowalski</div>
+                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
             </div>
-            <div class="Card">
-                <div class="CardPhoto">
-                    <div class="CardPhotoText">JK</div>
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">JK</div>
                 </div>
-                <div class="CardName">Jan Kowalski</div>
-                <div class="CardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                <div class="card-name">Jan Kowalski</div>
+                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
             </div>
         </div>
 
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped>
-section.Opinions {
+section.opinions {
     display: inline-flex;
     padding: 6rem 4.5rem;
     flex-direction: column;
@@ -50,7 +50,7 @@ section.Opinions {
     gap: 4.5rem;
     background: var(--Surface-Inverse-primary, #181818);
 }
-.SectionHeader {
+.section-header {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     flex-direction: column;
@@ -58,14 +58,14 @@ section.Opinions {
     align-items: center;
     gap: 2rem;
 }
-.SectionTitle {
+.section-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: -5rem;
     align-self: stretch;
 }
-.PromoText {
+.promo-text {
     text-align: center;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
@@ -77,7 +77,7 @@ section.Opinions {
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
-.Title {
+.title {
     align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
@@ -91,7 +91,7 @@ section.Opinions {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
-.Text {
+.text {
     align-self: stretch;
     color: var(--Text-Inverse-secondary, #E1E1E1);
     text-align: center;
@@ -104,12 +104,12 @@ section.Opinions {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.CardSlider {
+.card-slider {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
 }
-.Card {
+.card {
     display: flex;
     width: 25.6875rem;
     padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
@@ -120,7 +120,7 @@ section.Opinions {
     background: var(--Surface-Primary, #FFF);
     box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
 }
-.CardPhoto {
+.card-photo {
     display: flex;
     padding: var(--space-150, 0.75rem);
     flex-direction: column;
@@ -129,7 +129,7 @@ section.Opinions {
     border-radius: var(--radius-rounded, 62.5rem);
     background: #FB8903;
 }
-.CardPhotoText {
+.card-photo-text {
     display: flex;
     width: 2.5rem;
     height: 2.5rem;
@@ -146,7 +146,7 @@ section.Opinions {
     line-height: 1.5rem; /* 150% */
     letter-spacing: -0.005rem;
 }
-.CardName {
+.card-name {
     width: 25.8125rem;
     color: var(--Text-Primary, #181818);
     text-align: center;
@@ -159,7 +159,7 @@ section.Opinions {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.CardText {
+.card-text {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;

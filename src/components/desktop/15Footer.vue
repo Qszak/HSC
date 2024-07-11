@@ -1,49 +1,49 @@
 <template>
-    <div class="Footer">
-        <div class="Section">
-            <div class="Logo">
+    <footer>
+        <div class="section">
+            <div class="logo">
                <LogoHSC2/>
             </div>
-            <div class="Menu">
-                <div class="Item">
+            <div class="menu">
+                <div class="item">
                     Strona Główna
                 </div>
-                <div class="Item">
+                <div class="item">
                     O nas
                 </div>
-                <div class="Item">
+                <div class="item">
                     Oferta
                 </div>
-                <div class="Item">
+                <div class="item">
                     Kadra
                 </div>
-                <div class="Item">
+                <div class="item">
                     Kontakt
                 </div>
-                <div class="Item">
+                <div class="item">
                     Fizjoterapia
                 </div>
-                <div class="Item">
+                <div class="item">
                     Dietetyk
                 </div>
             </div>
-            <div class="ContactData">
-                <div class="InfoBar">
-                    <p class="Text">Kontakt</p>
-                    <div class="Line">
-                    <div class="Icon"><PhoneRed/></div>
-                    <div class="Data">+48 793 951 015</div>
+            <div class="contact-data">
+                <div class="info-bar">
+                    <p class="text">Kontakt</p>
+                    <div class="line">
+                    <div class="icon"><PhoneRed/></div>
+                    <div class="data">+48 793 951 015</div>
                     </div>
-                    <div class="Line">
-                    <div class="Icon"><MailRed/></div>
-                    <div class="Data">holisticsportcenter@gmail.com</div>
+                    <div class="line">
+                    <div class="icon"><MailRed/></div>
+                    <div class="data">holisticsportcenter@gmail.com</div>
                     </div>
                 </div>
-                <div class="InfoBar">
-                    <p class="Text">Adres</p>
-                    <div class="Line">
-                    <div class="Icon"><LocationRed/></div>
-                    <div class="Data">
+                <div class="info-bar">
+                    <p class="text">Adres</p>
+                    <div class="line">
+                    <div class="icon"><LocationRed/></div>
+                    <div class="data">
                         <ul>
                                 <li>Holistic Sport Center</li>
                                 <li>ul. Krakowska 29C</li>
@@ -51,9 +51,9 @@
                         </ul>
                     </div>
                     </div>
-                    <div class="Line">
-                    <div class="Icon"><ClockRed/></div>
-                    <div class="Data">
+                    <div class="line">
+                    <div class="icon"><ClockRed/></div>
+                    <div class="data">
                         <ul>
                                 <li>Godziny otwarcia</li>
                                 <li>Pon - Pt: 9:00 - 21:00</li>
@@ -62,23 +62,23 @@
                     </div>
                     </div>
                 </div>
-                <div class="InfoBar">
-                    <p class="Text">Media Społecznościowe</p>
-                    <div class="Line">
-                        <div class="Icon"><FacebookRed/></div>
-                    <div class="Data">facebook.com/holisticsportcenter</div>
+                <div class="info-bar">
+                    <p class="text">Media Społecznościowe</p>
+                    <div class="line">
+                        <div class="icon"><FacebookRed/></div>
+                    <div class="data">facebook.com/holisticsportcenter</div>
                     </div>
-                    <div class="Line">
-                        <div class="Icon"><InstagramRed/></div>
-                    <div class="Data">@holisticsportcenter</div>
+                    <div class="line">
+                        <div class="icon"><InstagramRed/></div>
+                    <div class="data">@holisticsportcenter</div>
                     </div>
 
                 </div>
             </div>
-            <p class="ARR">© 2024 Holistic Sport Center</p>
+            <p class="copy">© 2024 Holistic Sport Center</p>
         </div>
 
-    </div>
+    </footer>
     
     
     </template>
@@ -98,7 +98,7 @@ import PhoneRed from '../icons/phoneRed.vue';
 
 export default {
     name: 'Footer',
-    components:
+    components: {
     LogoHSC2,
     ClockRed,
     FacebookRed,
@@ -106,6 +106,7 @@ export default {
     LocationRed,
     MailRed,
     PhoneRed,
+    }
 
     
     
@@ -116,7 +117,7 @@ export default {
 <style scoped>
 
 
-.Footer {
+footer {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
@@ -126,7 +127,7 @@ export default {
     background: var(--Surface-Inverse-primary, #181818);
 }
 
-.Section {
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,13 +135,13 @@ export default {
     align-self: stretch;
 }
 
-.Logo {
+.logo {
     width: 6.25rem;
     height: 6.25rem;
     flex-shrink: 0;
 }
 
-.Menu {
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +151,7 @@ export default {
     flex-wrap: wrap;
 }
 
-.Item {
+.item {
     display: flex;
     padding: var(--space-150, 0.75rem) var(--space-200, 1rem);
     justify-content: center;
@@ -169,7 +170,7 @@ export default {
 
 }
 
-.ContactData {
+.contact-data {
     display: flex;
     padding: var(--space-300, 1.5rem) 0rem;
     justify-content: center;
@@ -178,7 +179,7 @@ export default {
     align-self: stretch;
 }
 
-.InfoBar {
+.info-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -186,7 +187,7 @@ export default {
     flex: 1 0 0;
 }
 
-p.Text {
+p.text {
     color: #FFF;
 
     /* Body/L/Bold */
@@ -201,18 +202,18 @@ p.Text {
 li {
     list-style: none;
 }
-.Line {
+.line {
     display: flex;
     align-items: flex-start;
     gap: var(--space-150, 0.75rem);
 }
-.Icon {
+.icon {
     width: 1.125rem;
     height: 1.125rem;
     flex-shrink: 0;
 }
 
-.Data {
+.data {
     color: var(--Text-Inverse-primary, #FFF);
 
     /* Body/M/Regular */
@@ -224,7 +225,7 @@ li {
     letter-spacing: -0.005rem;
     }
 
-p.ARR {
+p.copy {
     align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;

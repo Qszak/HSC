@@ -1,19 +1,19 @@
 <template>
-<div class="Wrapper">
-<section class="AboutUs">
-    <div class="Titlebanner">
-        <div class="PromoText">O nas</div>
-        <div class="SectionTitle">Poznaj naszych ziomków!</div>
+
+<section class="about-us">
+    <div class="title-banner">
+        <div class="promo-text">O nas</div>
+        <div class="section-title">Poznaj naszych ziomków!</div>
     </div>
-    <div class="AboutUsContent">
+    <div class="about-us-content">
         <img :src="image" alt="Siłka">
-        <div class="Content">
-            <p class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="ReadMore">Dowiedz się więcej</button>
+        <div class="content">
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="read-more">Dowiedz się więcej</button>
         </div>
     </div>
 </section>
-</div>
+
 
 
 
@@ -35,23 +35,17 @@ import GymPhoto from '@/assets/gym-photo.jpg';
 
 <style scoped>
 
-.Wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-}
 
-.AboutUs {
+.about-us {
     display: flex;
-    width: 99vw;
+    width: calc(100svw - var(--scrollbarWidth));
     padding: 6rem 4.5rem;
     flex-direction: column;
     align-items: center;
     gap: 4.5rem;
 }
 
-.TitleBanner {
+.title-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +53,7 @@ import GymPhoto from '@/assets/gym-photo.jpg';
     align-self: stretch;
 }
 
-.PromoText {
+.promo-text {
     text-align: center;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
@@ -73,7 +67,7 @@ import GymPhoto from '@/assets/gym-photo.jpg';
     color: transparent;
 }
 
-.SectionTitle {
+.section-title {
     color: var(--Text-Primary, #181818);
     text-align: center;
 
@@ -87,7 +81,7 @@ import GymPhoto from '@/assets/gym-photo.jpg';
     text-transform: uppercase;
 }
 
-.AboutUsContent {
+.about-us-content {
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
@@ -102,7 +96,7 @@ img {
     flex: 1 0 0;
 }
 
-.Content {
+.content {
     display: flex;
     width: 39.375rem;
     height: 26.4375rem;
@@ -111,7 +105,7 @@ img {
     gap: var(--space-300, 1.5rem);
 }
 
-p.Text {
+p.text {
     flex: 1 0 0;
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
@@ -126,7 +120,7 @@ p.Text {
 }
 
 
-button.ReadMore {
+button.read-more {
     display: flex;
     padding: 1.25rem 3rem;
     justify-content: center;

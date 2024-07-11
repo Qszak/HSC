@@ -1,13 +1,13 @@
 <template>
-<div class="Wrapper">
-<div class="ContactBanner">
-  <div class="Claim">Kontynuacja claimu z hero</div>
-  <div class="ContactInfo">
-    <div class="Location">
-      <div class="LocationOn">
+
+<div class="contact-banner">
+  <div class="claim">Kontynuacja claimu z hero</div>
+  <div class="contact-info">
+    <div class="location">
+      <div class="location-on">
        <Location />
       </div>
-      <div class="Address">
+      <div class="address">
         <ul>
           <li>Holistic Sport Center</li>
           <li>ul. Krakowska 29C</li>
@@ -15,21 +15,21 @@
         </ul>
       </div>
     </div>
-    <div class="Phone">
-      <div class="Phone">
+    <div class="phone">
+      <div class="phone">
        <Phone />
       </div>
-      <div class="PhoneNumber">+48 793 951 015</div>
+      <div class="phone-number">+48 793 951 015</div>
     </div>
-    <div class="E-mail">
-      <div class="Mail">
+    <div class="e-mail">
+      <div class="mail">
         <Mail />
       </div>
-      <div class="Email">holisticsportcenter@gmail.com</div>
+      <div class="email">holisticsportcenter@gmail.com</div>
     </div>
   </div>
 </div>
-</div>
+
 
 
 </template>
@@ -55,24 +55,18 @@ import Mail from '@/components/icons/mail.vue';
 
 <style scoped>
 
-.Wrapper {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-    background: #181818;
-}
 
-.ContactBanner {
+
+.contact-banner {
   display: flex;
-  width: 99vw;
+  width: calc(100svw - var(--scrollbarWidth));
   padding: 4.5rem;
   flex-direction: column;
   align-items: center;
   gap: 4.5rem;
   background: var(--Surface-Inverse-primary, #181818);
 }
-.Claim {
+.claim {
   align-self: stretch;
   text-align: center;
 
@@ -88,7 +82,7 @@ import Mail from '@/components/icons/mail.vue';
   text-transform: uppercase;  
 }
 
-.ContactInfo {
+.contact-info {
   display: flex;
   padding: 0rem var(--space-300, 1.5rem);
   justify-content: center;
@@ -103,13 +97,13 @@ ul {
   list-style: none;
 }
 
-.Location {
+.location {
   display: flex;
   align-items: center;
   gap: var(--space-100, 0.5rem);
 }
 
-.Address, .PhoneNumber, .Email {
+.address, .phone-number, .email {
   color: #FFF;
   font-family: "Montserrat";
   font-size: 1rem;
@@ -119,7 +113,7 @@ ul {
   letter-spacing: 0.01rem;
 }
 
-.Phone, .E-mail {
+.phone, .e-mail {
   display: flex;
   align-items: center;
   gap: var(--space-150, 0.75rem);

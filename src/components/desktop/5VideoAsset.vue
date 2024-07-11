@@ -1,8 +1,8 @@
 <template>
-<div class="VideoContainer">
+<div class="video-container">
 
 <video
-class="VideoAsset"
+class="video-asset"
 :src="VideoSrc"
 autoplay
 loop
@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 
-.VideoContainer {
+.video-container {
   position: relative;
   width: calc(100svw - var(--scrollbarWidth));
   height: 50svh;
@@ -38,7 +38,7 @@ export default {
   overflow: hidden;
   
 }
- .VideoAsset {
+ .video-asset {
     position: absolute;
     top: 0;
     left: 0;

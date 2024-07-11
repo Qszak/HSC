@@ -1,29 +1,55 @@
 <template>
-  <div class="Wrapper">
-    <div class="HeroContent">
-      <div class="HeroText">
-        <div class="HeroText__top">Zawsze jest powód</div>
-        <div class="HeroText__bottom">
-          <div class="HeroText__bottom-left">aby</div>
-          <div class="HeroText__bottom-slider">zacząć</div>
+  
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-text-top">Zawsze jest powód</div>
+        <div class="hero-text-bottom">
+          <div class="hero-text-bottom-left">aby</div>
+          <div class="hero-text-bottom-slider">zacząć</div>
         </div>
       </div>
-      <div class="HeroButtons">
-        <button class="Contact">Napisz do nas</button>
-        <button class="Offer">Przeglądaj ofertę</button>
+      <div class="hero-buttons">
+        <button class="contact" @click="showModal">Napisz do nas</button>
+        <Modal :isVisible="isModalVisible" @close="closeModal">sialalala</Modal> 
+        <button class="offer">Przeglądaj ofertę</button>
       </div>
     </div>
-  </div>
-
-
 
 </template>
 
 
 <script>
+import { ref } from 'vue';
+import Modal from '@/components/desktop/Modal.vue';
+
+
 export default {
   name: 'HeroContent',
+  components: {
+      Modal,
+  },
+  
+
+  setup() {
+        const isModalVisible = ref(false);
+        const showModal = () => {
+            isModalVisible.value = true;
+        };
+
+        const closeModal = () => {
+            isModalVisible.value = false;
+        };
+        
+        return {
+            isModalVisible,
+            showModal,
+            closeModal,
+        };
+    }
+
 }
+
+
 </script>
 
 <style scoped>
@@ -34,17 +60,9 @@ export default {
         box-sizing: border-box;
       }
 
-.Wrapper {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-    background: #181818;
-}
-
-.HeroContent {
+.hero-content {
     display: flex;
-    width: 99vw;
+    width: calc(100svw - var(--scrollbarWidth));
     height: 48.25rem;
     padding: 0rem 4.5rem;
     flex-direction: column;
@@ -55,14 +73,14 @@ export default {
     background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
 }
 
-.HeroText {
+.hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: stretch;  
 }
 
-.HeroText__top {
+.hero-text-top {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
@@ -75,7 +93,7 @@ export default {
   text-transform: uppercase;
 }
 
-.HeroText__bottom {
+.hero-text-bottom {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -83,7 +101,7 @@ export default {
   align-self: stretch;
 }
 
-.HeroText__bottom-left {
+.hero-text-bottom-left {
   color: var(--Text-Inverse-primary, #FFF);
 
   /* Headings/XXL */
@@ -96,7 +114,7 @@ export default {
   text-transform: uppercase;
 }
 
-.HeroText__bottom-slider {
+.hero-text-bottom-slider {
 -webkit-text-stroke-width: 1px;
 -webkit-text-stroke-color: var(--Border-Secondary, #FFF);
 font-family: Montserrat;
@@ -110,7 +128,7 @@ color: transparent;
 
 }
 
-.HeroButtons {
+.hero-buttons {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -120,7 +138,7 @@ color: transparent;
   flex-wrap: wrap;
 }
 
-button.Contact {
+button.contact {
   display: flex;
   width: 20rem;
   padding: 1.25rem 3rem;
@@ -131,6 +149,7 @@ button.Contact {
   border: 2px solid var(--Border-Primary, #E30613);
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
+  cursor: pointer;
 
   /* Action/Large/Bold */
   font-family: Montserrat;
@@ -141,7 +160,7 @@ button.Contact {
   text-transform: uppercase;
 }
 
-button.Offer {
+button.offer {
   display: flex;
   width: 20rem;
   padding: 1.25rem 3rem;

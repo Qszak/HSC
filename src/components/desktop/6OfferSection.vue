@@ -1,61 +1,61 @@
 <template>
-<div class="Wrapper">
-<section class="Offer">
-  <div class="SectionHeader">
-    <div class="TitleBanner">
-      <div class="PromoText">OFERTA</div>
-      <div class="SectionTitle">ZNAJDŹ COŚ DLA SIEBIE</div>
+
+<section class="offer">
+  <div class="section-header">
+    <div class="title-banner">
+      <div class="promo-text">OFERTA</div>
+      <div class="section-title">ZNAJDŹ COŚ DLA SIEBIE</div>
     </div>
-    <p class="SectionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-  <div class="Services">
-    <div class="ServicesTitle">Wybrane usługi</div>
-    <div class="OfferSlider">
-      <div class="OfferCard">
-        <div class="OfferCardTop">
-          <div class="ServiceName">Kickboxing</div>
-          <div class="Subtitle">SUBTYTUŁ</div>
+  <div class="services">
+    <div class="services-title">Wybrane usługi</div>
+    <div class="offer-slider">
+      <div class="offer-card">
+        <div class="offer-card-top">
+          <div class="service-name">Kickboxing</div>
+          <div class="subtitle">SUBTYTUŁ</div>
         </div>
-        <div class="OfferCardBottom">
-          <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <button class="More">Szczegóły usługi</button>
-        </div>
-      </div>
-      <div class="OfferCard">
-        <div class="OfferCardTop">
-          <div class="ServiceName">BOKS</div>
-          <div class="Subtitle">SUBTYTUŁ</div>
-        </div>
-        <div class="OfferCardBottom">
-          <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <button class="More">Szczegóły usługi</button>
+        <div class="offer-card-bottom">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+          <button class="more">Szczegóły usługi</button>
         </div>
       </div>
-      <div class="OfferCard">
-        <div class="OfferCardTop">
-          <div class="ServiceName">MMA</div>
-          <div class="Subtitle">SUBTYTUŁ</div>
+      <div class="offer-card">
+        <div class="offer-card-top">
+          <div class="service-name">BOKS</div>
+          <div class="subtitle">SUBTYTUŁ</div>
         </div>
-        <div class="OfferCardBottom">
-          <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <button class="More">Szczegóły usługi</button>
+        <div class="offer-card-bottom">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+          <button class="more">Szczegóły usługi</button>
         </div>
       </div>
-      <div class="OfferCard">
-        <div class="OfferCardTop">
-          <div class="ServiceName">BJJ</div>
-          <div class="Subtitle">SUBTYTUŁ</div>
+      <div class="offer-card">
+        <div class="offer-card-top">
+          <div class="service-name">MMA</div>
+          <div class="subtitle">SUBTYTUŁ</div>
         </div>
-        <div class="OfferCardBottom">
-          <div class="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <button class="More">Szczegóły usługi</button>
+        <div class="offer-card-bottom">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+          <button class="more">Szczegóły usługi</button>
+        </div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-card-top">
+          <div class="service-name">BJJ</div>
+          <div class="subtitle">SUBTYTUŁ</div>
+        </div>
+        <div class="offer-card-bottom">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+          <button class="more">Szczegóły usługi</button>
         </div>
       </div>
     </div>
   </div>
-    <button class="FullOffer">Zapoznaj się z pełną ofertą</button>
+    <button class="full-offer">Zapoznaj się z pełną ofertą</button>
 </section>
-</div>
+
 </template>
 
 
@@ -67,16 +67,10 @@
 
 <style scoped>
 
-.Wrapper {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100svw - var(--scrollbarWidth));
-}
 
-section.Offer {
+section.offer {
   display: flex;
-  width: 99vw;
+  width: calc(100svw - var(--scrollbarWidth));
   padding: 6rem 4.5rem;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +79,7 @@ section.Offer {
   background: var(--Surface-Inverse-primary, #181818);
 }
 
-.SectionHeader {
+.section-header {
   display: flex;
   max-width: 100%;
   flex-direction: column;
@@ -95,14 +89,14 @@ section.Offer {
   align-self: stretch;
 }
 
-.TitleBanner {
+.title-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: -5rem;
 }
 
-.PromoText {
+.promo-text {
   text-align: center;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
@@ -115,7 +109,7 @@ section.Offer {
   text-transform: uppercase;
 }
 
-.SectionTitle {
+.section-title {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
@@ -130,7 +124,7 @@ section.Offer {
 }
 
 
-p.SectionText {
+p.section-text {
   align-self: stretch;
   color: var(--Text-Inverse-secondary, #E1E1E1);
   text-align: center;
@@ -145,7 +139,7 @@ p.SectionText {
   letter-spacing: -0.00563rem;
 }
 
-.Services {
+.services {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -154,7 +148,7 @@ p.SectionText {
   align-self: stretch;
   }
 
-.ServicesTitle {
+.services-title {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
@@ -169,7 +163,7 @@ p.SectionText {
   text-transform: uppercase;
 }
 
-.OfferSlider {
+.offer-slider {
   display: flex;
   align-items: center;
   align-content: center;
@@ -179,7 +173,7 @@ p.SectionText {
   flex-wrap: wrap;
 }
 
-.OfferCard {
+.offer-card {
   display: flex;
   width: 18.75rem;
   height: 27rem;
@@ -189,7 +183,7 @@ p.SectionText {
   background: var(--Surface-Secondary, #F5F5F5);
 }
 
-.OfferCardTop {
+.offer-card-top {
   display: flex;
   padding: 3rem 0rem;
   flex-direction: column;
@@ -201,7 +195,7 @@ p.SectionText {
   background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/LOGO/Offer.jpg) lightgray 50% / cover no-repeat;
 }
 
-.ServiceName {
+.service-name {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
@@ -216,7 +210,7 @@ p.SectionText {
   text-transform: uppercase;
 }
 
-.Subtitle {
+.subtitle {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
@@ -230,7 +224,7 @@ p.SectionText {
   letter-spacing: -0.005rem;
 }
 
-.OfferCardBottom {
+.offer-card-bottom {
   display: flex;
   padding: var(--space-300, 1.5rem);
   flex-direction: column;
@@ -239,7 +233,7 @@ p.SectionText {
   align-self: stretch;
 }
 
-.Text {
+.text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -258,7 +252,7 @@ p.SectionText {
   letter-spacing: -0.005rem;
 }
 
-button.More {
+button.more {
   display: flex;
   padding: 1.25rem 1.5rem;
   justify-content: center;
@@ -279,7 +273,7 @@ button.More {
 
 }
 
-button.FullOffer {
+button.full-offer {
   display: flex;
   padding: 1.25rem 3rem;
   justify-content: center;
