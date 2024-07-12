@@ -61,24 +61,25 @@ export default {
 
 <style scoped>
 
-.gallery {
-    height: 50svh;
-    width: calc(100svw - var(--scrollbarWidth));
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-100, 0.5rem);
-    object-fit: cover;
-    overflow: hidden;
-    
-    
+.mySwiper {
+  width: calc(80svw - var(--scrollbarWidth));
+  height: 50svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
-    width: calc(100svw - var(--scrollbarWidth));
-    height: 50%;
-
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
-
-
-
 </style>

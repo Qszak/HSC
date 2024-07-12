@@ -2,16 +2,22 @@
   
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-text-top">Zawsze jest powód</div>
-        <div class="hero-text-bottom">
-          <div class="hero-text-bottom-left">aby</div>
-          <div class="hero-text-bottom-slider">zacząć</div>
+        <div class="hero-text-top-row">
+          <div class="hero-text-top">
+            <ul>
+              <li>Zawsze jest</li>
+              <li>powód, aby</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-text-bottom-row">
+          <p class="hero-text-bottom-slider">zacząć</p>
         </div>
       </div>
       <div class="hero-buttons">
         <button class="contact" @click="showModal">Napisz do nas</button>
         <Modal :isVisible="isModalVisible" @close="closeModal"></Modal> 
-        <RouterLink to="/o-nas" class="offer">Przeglądaj ofertę</RouterLink>
+        <RouterLink to="/oferta" class="offer">Przeglądaj ofertę</RouterLink>
       </div>
     </div>
 
@@ -70,7 +76,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 10rem;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
   background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
 }
 
@@ -78,27 +84,13 @@ export default {
 .hero-text {
   display: flex;
   flex-direction: column;
+  align-content: center;
   justify-content: center;
-  align-items: center;
-  align-self: stretch; 
+  align-self: stretch;
 
 }   
 
-.hero-text-top {
-  color: var(--Text-Inverse-primary, #FFF);
-  align-self: stretch;
-
-  /* Headings/Mobile/XXL */
-  font-family: Montserrat;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 3.375rem; /* 135% */
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-
-.hero-text-bottom {
+.hero-text-top-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -106,17 +98,25 @@ export default {
   align-self: stretch;
 }
 
-.hero-text-bottom-left {
+.hero-text-top {
   color: var(--Text-Inverse-primary, #FFF);
 
   /* Headings/Mobile/XXL */
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 3.375rem; /* 135% */
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+}
+
+.hero-text-bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-300, 1.5rem);
+  align-self: stretch;
 }
 
 .hero-text-bottom-slider {
@@ -181,8 +181,11 @@ button.contact {
   line-height: 1.5rem; /* 133.333% */
   text-transform: uppercase;
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: none; 
+}
 
+ul {
+  list-style: none;
 }
 }
 
@@ -208,7 +211,7 @@ button.contact {
   align-self: stretch;  
 }
 
-.hero-text-top {
+.hero-text-top-row {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
@@ -221,7 +224,7 @@ button.contact {
   text-transform: uppercase;
 }
 
-.hero-text-bottom {
+.hero-text-bottom-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -229,18 +232,7 @@ button.contact {
   align-self: stretch;
 }
 
-.hero-text-bottom-left {
-  color: var(--Text-Inverse-primary, #FFF);
 
-  /* Headings/XXL */
-  font-family: Montserrat;
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 6rem; /* 150% */
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-}
 
 .hero-text-bottom-slider {
 -webkit-text-stroke-width: 1px;
@@ -308,6 +300,10 @@ button.contact {
   line-height: 1.5rem; /* 133.333% */
   text-transform: uppercase;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 }
 

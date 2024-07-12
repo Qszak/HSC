@@ -80,9 +80,8 @@ import MailRed from '../icons/mailRed.vue';
 import PhoneRed from '../icons/phoneRed.vue';
 
 
-
 export default {
-    name: 'FooterMobile',
+    name: 'Footer',
     components: {
     LogoHSC2,
     ClockRed,
@@ -93,7 +92,7 @@ export default {
     PhoneRed,
     },
 
-};
+}
 </script>
 
 <style scoped>
@@ -219,3 +218,5 @@ p.copy {
     line-height: 1.25rem; /* 166.667% */
     letter-spacing: -0.00375rem;
 }
+
+</style>

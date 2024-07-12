@@ -170,7 +170,7 @@ ul {
   letter-spacing: 0.01rem;
 }
 
-.phone, .e-mail {
+.phone, .mail {
   display: flex;
   align-items: center;
   gap: var(--space-150, 0.75rem);

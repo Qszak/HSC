@@ -95,8 +95,7 @@ import { RouterLink } from 'vue-router';
 img {
     width: 20.8125rem;
     height: 13.875rem;
-    align-items: center;
-    align-content: center;
+    margin: 0 5vh;
 }
 
 .content {
@@ -165,8 +164,7 @@ p.text {
 
 .promo-text {
     text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    color: var(--Text-Background-text, #F5F5F5);
     font-family: Montserrat;
     font-size: 10rem;
     font-style: normal;
@@ -174,7 +172,6 @@ p.text {
     line-height: 10rem; /* 100% */
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    color: transparent;
 }
 
 .section-title {

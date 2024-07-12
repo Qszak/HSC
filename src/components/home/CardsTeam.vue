@@ -69,7 +69,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/public/images/Offer.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%);
 }
 .coach-info {
     display: flex;

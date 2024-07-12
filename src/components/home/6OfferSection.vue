@@ -213,8 +213,7 @@ section.offer {
 
 .promo-text {
   text-align: center;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+  color: var(--Text-Background-text-inverse, #313131);
   font-family: Montserrat;
   font-size: 10rem;
   font-style: normal;
