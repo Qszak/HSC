@@ -19,6 +19,8 @@
 <PMikulski v-show="isVisible('PMikulski')" data-teams="combat"/>
 <TMitrosz v-show="isVisible('TMitrosz')" data-teams="personal"/>
 <TRudolf v-show="isVisible('TRudolf')" data-teams="personal"/>
+<LSzefner v-show="isVisible('LSzefner')" data-teams="fizjo"/>
+<OLewandowska v-show="isVisible('OLewandowska')" data-teams="diet"/>
 
 </div>
 
@@ -30,8 +32,10 @@ import DWarmillo from '../CoachCards/DWarmillo.vue';
 import FKrasinski from '../CoachCards/FKrasinski.vue';
 import JKulej from '../CoachCards/JKulej.vue';
 import KZmijewska from '../CoachCards/KZmijewska.vue';
+import LSzefner from '../CoachCards/LSzefner.vue';
 import MFlejterski from '../CoachCards/MFlejterski.vue';
 import MKulej from '../CoachCards/MKulej.vue';
+import OLewandowska from '../CoachCards/OLewandowska.vue';
 import PMikulski from '../CoachCards/PMikulski.vue';
 
 import SCieslik from '../CoachCards/SCieslik.vue';
@@ -52,6 +56,8 @@ export default {
         PMikulski,
         TMitrosz,
         TRudolf,
+        LSzefner,
+        OLewandowska,
     },
     data() {
     return {
@@ -68,6 +74,8 @@ export default {
         PMikulski: 'combat',
         TMitrosz: 'personal',
         TRudolf: 'personal',
+        LSzefner: 'fizjo',
+        OLewandowska: 'diet',
       }
     }
   },
@@ -98,22 +106,22 @@ export default {
 
 button {
     display: flex;
-padding: var(--space-150, 0.75rem) var(--space-100, 0.5rem);
-justify-content: center;
-align-items: center;
-gap: 0.625rem;
-border-radius: var(--radius-rounded, 62.5rem);
-background: var(--Surface-Brand, #E30613);
-color: var(--Surface-Primary, #FFF);
-text-align: center;
+    padding: var(--space-150, 0.75rem) var(--space-100, 0.5rem);
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: var(--radius-rounded, 62.5rem);
+    background: var(--Surface-Brand, #E30613);
+    color: var(--Surface-Primary, #FFF);
+    text-align: center;
 
-/* Action/Small/Bold */
-font-family: Montserrat;
-font-size: 0.75rem;
-font-style: normal;
-font-weight: 700;
-line-height: 1rem; /* 133.333% */
-text-transform: uppercase;
+    /* Action/Small/Bold */
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1rem; /* 133.333% */
+    text-transform: uppercase;
 
 }
 .team-slider {

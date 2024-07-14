@@ -37,7 +37,7 @@
 
 <script>
 import { ref } from 'vue';
-import Modal from '@/components/home/Modal.vue';
+import Modal from './Modal.vue';
 import LogoHSC from '@/components/icons/LogoHSC.vue';    
 import FacebookIcon from '@/components/icons/facebook.vue';
 import InstagramIcon from '@/components/icons/instagram.vue';
