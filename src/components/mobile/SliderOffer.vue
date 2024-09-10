@@ -16,43 +16,32 @@
     class="mySwiper"
   >
       <swiper-slide>
-        <div class="offer-card">
-            <div class="offer-card-top">
-              <div class="service-name">Kickboxing</div>
-              <div class="subtitle">SUBTYTUŁ</div>
-            </div>
-            <div class="offer-card-bottom">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-              <button class="more">Szczegóły usługi</button>
-            </div>
-          </div>
+        <KickboxingCard/>
       </swiper-slide>
       <swiper-slide>
-        <div class="offer-card">
-            <div class="offer-card-top">
-              <div class="service-name">Boks</div>
-              <div class="subtitle">SUBTYTUŁ</div>
-            </div>
-            <div class="offer-card-bottom">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-              <button class="more">Szczegóły usługi</button>
-            </div>
-          </div>
+        <BoksCard/>
       </swiper-slide>
-      <swiper-slide><div class="offer-card">
-            <div class="offer-card-top">
-              <div class="service-name">BJJ</div>
-              <div class="subtitle">SUBTYTUŁ</div>
-            </div>
-            <div class="offer-card-bottom">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-              <button class="more">Szczegóły usługi</button>
-            </div>
-          </div></swiper-slide>
+      <swiper-slide>
+        <MMACard/>
+      </swiper-slide>
+      <swiper-slide>
+        <Bjj/>
+      </swiper-slide>
+      <swiper-slide>
+        <Kids/>
+      </swiper-slide>
+      <swiper-slide>
+        <Stretching/>
+      </swiper-slide>
     </swiper>
+    
   </template>
 
 <script>
+import KickboxingCard from '../OfferCards/kickboxing.vue';
+import BoksCard from '@/components/OfferCards/boks.vue';
+import MMACard from '@/components/OfferCards/mma.vue';
+
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -64,12 +53,23 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Bjj from '../OfferCards/bjj.vue';
+import Kids from '../OfferCards/kids.vue';
+import Stretching from '../OfferCards/stretching.vue';
+
 
 export default {
   name: 'SwiperOffer',
   components: {
     Swiper,
     SwiperSlide,
+    KickboxingCard,
+    BoksCard,
+    MMACard,
+    Bjj,
+    Kids,
+    Stretching,
+    
   },
   setup() {
     return {
@@ -80,136 +80,14 @@ export default {
 </script>
     
     <style scoped>
-    @media (max-width: 480px) {
-    
-    .offer-card {
-      display: flex;
-      width: 18.75rem;
-      height: 27rem;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.25rem;
-      background: var(--Surface-Secondary, #F5F5F5);
-    }
-    
-    .offer-card-top {
-      display: flex;
-      padding: 3rem 0rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: var(--space-050, 0.25rem);
-      flex: 1 0 0;
-      align-self: stretch;
-      background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%);
-    }
-    
-    .service-name {
-      align-self: stretch;
-      color: var(--Text-Inverse-primary, #FFF);
-      text-align: center;
-    
-      /* Headings/Mobile/XS */
-      font-family: Montserrat;
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 1.25rem; /* 125% */
-      letter-spacing: 0.02rem;
-      text-transform: uppercase;
-    }
-    
-    .subtitle {
-      align-self: stretch;
-      color: var(--Text-Inverse-primary, #FFF);
-      text-align: center;
-    
-      /* Body/M/Regular */
-      font-family: Montserrat;
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.5rem; /* 150% */
-      letter-spacing: -0.005rem;
-    }
-    
-    .offer-card-bottom {
-      display: flex;
-      padding: var(--space-300, 1.5rem);
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-300, 1.5rem);
-      align-self: stretch;
-    }
-    
-    .text {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      align-self: stretch;
-      overflow: hidden;
-      color: var(--Text-Secondary, #484848);
-      text-align: center;
-      text-overflow: ellipsis;
-    
-      /* Body/M/Regular */
-      font-family: Montserrat;
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.5rem; /* 150% */
-      letter-spacing: -0.005rem;
-    }
-    
-    button.more {
-      display: flex;
-      padding: 1rem 3rem;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      align-self: stretch;
-      border: 2px solid var(--Border-Primary, #181818);
-    
-      color: var(--Text-Primary, #181818);
-      text-align: center;
-    
-      /* Action/Large/Bold */
-      font-family: Montserrat;
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 1.5rem; /* 133.333% */
-      text-transform: uppercase;
-      }
-    
-    .full-offer {
-      display: flex;
-      padding: 1.25rem 3rem;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      align-self: stretch;
-      background: var(--Surface-Brand, #E30613);
-      color: var(--Text-Inverse-primary, #FFF);
-      text-align: center;
-    
-      /* Action/Large/Bold */
-      font-family: Montserrat;
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 1.5rem; /* 133.333% */
-      text-transform: uppercase;
-      text-decoration: none;
-      }
+    @media (max-width: 640px) {
       
     .swiper {
     display: flex;
     align-items: center;
     justify-content: center;
    
-  }
+    }
   
     .swiper-slide {
     align-self: center;
@@ -222,18 +100,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-    .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+    }  
     }
     
-    @media (min-width: 481px) {
+    @media (min-width: 640px) {
     section.offer {
       display: flex;
       width: calc(100svw - var(--scrollbarWidth));

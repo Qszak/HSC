@@ -60,26 +60,29 @@ export default {
 </script>
 
 <style scoped>
-
-.mySwiper {
-  width: calc(80svw - var(--scrollbarWidth));
-  height: 50svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  
+  .mySwiper {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie slajdów */
+    align-items: center;
+    width: 100vw;
+    height: 100%;
 }
 
 .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie każdego slajdu */
+    align-items: center;
+    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
 }
+
 
 img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80vw;
+  max-height: 80%;
   object-fit: contain;
 }
+
 </style>
+

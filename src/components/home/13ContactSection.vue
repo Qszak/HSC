@@ -8,6 +8,12 @@
         </div>
         <div class="contact-zone">
             <div class="contact">
+                <div class="map1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.09493335437787!2d17.059457537578407!3d51.09193416540685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3d85c0e4885%3A0x6baab33d1e13584f!2sHSC%20-%20Holistic%20Sport%20Center!5e1!3m2!1spl!2spl!4v1725899137791!5m2!1spl!2spl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map1_1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.09525044722716!2d17.059291103232322!3d51.09186160532498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3d85c0e4885%3A0x6baab33d1e13584f!2sHSC%20-%20Holistic%20Sport%20Center!5e1!3m2!1spl!2spl!4v1726000828558!5m2!1spl!2spl" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div class="contact-text">Jeśli masz jakieś pytania, zapraszamy serdecznie do kontaktu telefonicznego lub mailowego.
                     Czekamy na Was przy ul. Krakowskiej!</div>
                 <div class="contact-data">
@@ -33,8 +39,8 @@
                 <button class="contact-us" @click="showModal">Umów się na konsultacje</button>
                 <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
             </div>
-            <div class="map">
-               <img :src="map" alt="mapka">
+            <div class="map2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.09493335437787!2d17.059457537578407!3d51.09193416540685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3d85c0e4885%3A0x6baab33d1e13584f!2sHSC%20-%20Holistic%20Sport%20Center!5e1!3m2!1spl!2spl!4v1725899137791!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         
@@ -84,7 +90,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 section.contact {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -183,14 +189,13 @@ section.contact {
     height: var(--space-300, 1.5rem);
 }
 .text {
-    width: 12rem;
     color: var(--Text-Primary, #181818);
     font-family: "Montserrat";
     font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: 0.01rem;
+    font-weight: 700;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
 
 }
 button.contact-us {
@@ -212,25 +217,174 @@ button.contact-us {
     line-height: 1.5rem; /* 133.333% */
     text-transform: uppercase;
     cursor: pointer;
+    margin: 0 auto;
 }
 
-.map {
-    height: 21.4375rem;
-    align-self: stretch;
+.map1 {
+    align-self: center;
+    display: block;
 }
 
-img {
-    width: 23.7rem;
-    height: 23rem;
-    align-self: stretch;
+.map1_1 {
+    display: none;
 }
+.map2 {
+    display: none;
+}
+
 
 ul {
     list-style: none;
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+section.contact {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -2rem;
+    align-self: stretch;
+    }
+.promo-text {
+    color: var(--Text-Background-text, #F5F5F5);
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+.title {
+    align-self: stretch;
+    color: #000;
+
+    font-family: "Montserrat";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+.contact-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.0625rem;
+    align-self: stretch;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.75rem;
+    align-self: stretch;
+}
+.contact-text {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: -0.00563rem;
+}
+.contact-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-300, 1.5rem);
+    align-self: stretch;
+}
+.contact-data-phone, .contact-data-mail {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-150, 0.75rem);
+}
+.contact-data-address {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-100, 0.5rem);
+    align-self: stretch;
+}
+.icon {
+    width: var(--space-300, 1.5rem);
+    height: var(--space-300, 1.5rem);
+}
+.text {
+    width: 12rem;
+    color: var(--Text-Primary, #181818);
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: 0.01rem;
+
+}
+button.contact-us {
+    display: flex;
+    padding: 1.25rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--Surface-Brand, #E30613);
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; /* 133.333% */
+    text-transform: uppercase;
+    cursor: pointer;
+    border-color: #E30613;
+    margin: 0 auto;
+}
+
+.map1 {
+    display: none;
+}
+
+.map1_1 {
+    align-self: stretch;;
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+}
+.map2 {
+    display: none;
+}
+
+
+ul {
+    list-style: none;
+}
+}
+
+@media (min-width: 960px) {
 section.contact {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -354,14 +508,16 @@ button.contact-us {
     cursor: pointer;
 }
 
-.map {
-    flex: 1 0 0;
-    align-self: stretch;
+.map1 {
+    display: none;
 }
 
-img {
-    width: 47.375rem;
-    height: 30.25rem;
+.map1_1 {
+    display: none;
+}
+.map2 {
+    display: block;
+    align-self: stretch;
 }
 
 ul {

@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 481px) {
+@media (max-width: 640px) {
 footer {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -226,7 +226,131 @@ p.copy {
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+footer {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 3rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    background: var(--Surface-Inverse-primary, #181818);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+}
+
+.logo {
+    width: 6.25rem;
+    height: 6.25rem;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0.5rem var(--space-100, 0.5rem);
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    padding: var(--space-150, 0.75rem) var(--space-200, 1rem);
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-100, 0.5rem);
+    border-radius: var(--radius-150, 0.75rem);
+    color: var(--Text-Inverse-primary, #FFF);
+
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem; 
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.contact-data {
+    display: flex;
+    padding: var(--space-300, 1.5rem) 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+    align-self: stretch;
+}
+
+.info-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-300, 1.5rem);
+    align-self: stretch;
+}
+
+p.text {
+    color: #FFF;
+
+    /* Body/L/Bold */
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; /* 155.556% */
+    letter-spacing: -0.00563rem;
+}
+
+li {
+    list-style: none;
+}
+.line {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-150, 0.75rem);
+}
+.icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+}
+
+.data {
+    color: var(--Text-Inverse-primary, #FFF);
+
+    /* Body/M/Regular */
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: -0.005rem;
+    }
+
+p.copy {
+    align-self: stretch;
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+
+    /* caption */
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; /* 166.667% */
+    letter-spacing: -0.00375rem;
+}
+}
+
+@media (min-width: 960px) {
 footer {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));

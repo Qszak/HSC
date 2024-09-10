@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="coach-info">
-        <div class="coach-name">Sandra Cieślik</div>
+        <div class="coach-name">Sandra Cieślik-Kulej</div>
         <div class="coach-position">Trener Personalny</div>
     </div>
 </div>

@@ -48,7 +48,7 @@ import Mail from '@/components/icons/mail.vue';
 
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   
 
 .contact-banner {
@@ -113,7 +113,70 @@ ul {
 }
 }
 
-@media (min-width: 481px) {
+/* wersja na tablet */
+@media (min-width: 640px) and (max-width: 960px) {
+.contact-banner {
+  display: flex;
+  width: calc(100svw - var(--scrollbarWidth));
+  padding: 4.5rem var(--space-200, 1rem);
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: var(--Surface-Inverse-primary, #181818);
+}
+.claim {
+  align-self: stretch;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase; 
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100, 0.5rem);
+}
+
+.address, .phone-number, .email {
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55rem; /* 175% */
+  letter-spacing: -0.005rem;
+}
+
+.phone, .mail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-150, 0.75rem);
+}
+}
+
+
+/* wersja na komputer */
+@media (min-width: 960px) {
 .contact-banner {
   display: flex;
   width: calc(100svw - var(--scrollbarWidth));
@@ -127,14 +190,14 @@ ul {
   align-self: stretch;
   text-align: center;
 
-  /* Headings/Desktop/S */
+  
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FFF;
   font-family: Montserrat;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3rem; /* 150% */
+  line-height: 3rem;
   letter-spacing: 0.04rem;
   text-transform: uppercase;  
 }
@@ -166,7 +229,7 @@ ul {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem;
   letter-spacing: 0.01rem;
 }
 

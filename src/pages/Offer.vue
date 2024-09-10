@@ -1,7 +1,6 @@
 <template>
+<HeroOffer/>
 
-
-    <h1>OFERTA</h1>
 
   
 
@@ -9,14 +8,18 @@
 </template>
 
 <script>
+import HeroOffer from '@/components/offer/1HeroOffer.vue';
+
 
 
 
 export default {
     name: 'Offer',
     components: {
+        HeroOffer,
         
     }
 }
 
 </script>
+

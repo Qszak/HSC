@@ -8,32 +8,66 @@
         <div class="text">Działając od wielu lat na rynku, zebraliśmy sporo osób wokół, z którymi działamy nieprzerwanie nawet przez kilkanaście lat. Naszą misją jest tworzenie "holistycznej" społeczności, która będzie z nami wspólnie dzielić miłe chwilę na siłowni oraz poza nią.
             Zapraszamy do zapoznania się z naszym codziennym życiem w socjalach na Facebooku oraz Instagramie! </div>
     </div>
-    <div class="gallery">
-        <img :src="pic" alt="ziomki">
-        <img :src="pic" alt="ziomki">
-        <img :src="pic" alt="ziomki">
-        <img :src="pic" alt="ziomki">
-      
-    </div>
+   
+    <swiper
+    :effect="'coverflow'"
+    :grabCursor="true"
+    :centeredSlides="true"
+    :slidesPerView="'auto'"
+    :coverflowEffect="{
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    }"
+    :pagination="true"
+    :modules="modules"
+    class="mySwiper"
+  >
+  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
+  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
+  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
+  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
+  </swiper>   
 </section>
 </template>
 
 
 <script>
 import pic from "@/assets/ziomeczki.jpeg";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default {
     name: 'SocialSection',
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
     data () {
         return {
             pic
+        };
+    },
+    setup() {
+        return {
+            modules: [EffectCoverflow, Pagination],
         };
     },
 };
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 section.social {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -63,7 +97,7 @@ section.social {
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 4rem; 
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
@@ -72,12 +106,11 @@ section.social {
     color: var(--Text-Primary, #181818);
     text-align: center;
 
-    /* Headings/Mobile/S */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     letter-spacing: 0.0225rem;
     text-transform: uppercase;
 }
@@ -86,31 +119,123 @@ section.social {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
 
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
 }
-.gallery {
+
+.mySwiper {
     display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 1rem var(--space-200, 1rem);
-    align-self: stretch;
-    flex-wrap: wrap;
+    justify-content: center; /* Wyśrodkowanie slajdów */
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie każdego slajdu */
+    align-items: center;
+    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
 }
 
 img {
-    width: 10.1875rem;
-    height: 10.1875rem;
+    width: 11.5rem;
+    height: 11.5rem;
 }
 }
 
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px){
+section.social {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -2rem;
+    align-self: stretch;
+}
+.promo-text {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    font-family: 'Montserrat';
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: transparent;
+}
+.title {
+    align-self: stretch;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+.text {
+    max-width: 37.5rem;
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.005rem;
+    margin: 0 auto;
+}
+
+.mySwiper {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie slajdów */
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie każdego slajdu */
+    align-items: center;
+    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
+}
+
+img {
+    width: 22.5rem;
+    height: 22.5rem;
+    
+}
+}
+
+@media (min-width: 960px){
 section.social {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -141,7 +266,7 @@ section.social {
     font-size: 10rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 10rem; /* 100% */
+    line-height: 10rem; 
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: transparent;
@@ -149,22 +274,21 @@ section.social {
 .title {
     align-self: stretch;
     color: var(--Text-Primary, #181818);
+   
 
-    /* Headings/Desktop/S */
     font-family: 'Montserrat';
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
 .text {
-    max-width: 37.5rem;
+    
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
-
-    /* Body/L/Regular */
+    
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
@@ -172,19 +296,28 @@ section.social {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-.gallery {
+
+.mySwiper {
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    align-self: stretch;
-    justify-content: space-between;
+    justify-content: center; /* Wyśrodkowanie slajdów */
+    align-items: center;
+    width: 80vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie każdego slajdu */
+    align-items: center;
+    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
+    overflow: hidden;
 }
 
 img {
     width: 22.5rem;
     height: 22.5rem;
-    background-color: pink;
+    
 }
 }
-
 </style>

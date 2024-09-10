@@ -13,6 +13,7 @@
     <div class="services-title">Wybrane usługi</div>
     <div class="offer-slider">
       <SwiperOffer v-if="isSmallScreen"/>
+      <SwiperOfferMedium v-else-if="isMediumScreen"/>
       <CardsOffer v-else/>
     </div>
   </div>
@@ -26,29 +27,33 @@
 import { RouterLink } from 'vue-router';
 import SwiperOffer from '@/components/mobile/SliderOffer.vue';
 import CardsOffer from '@/components/home/CardsOffer.vue';
+import SwiperOfferMedium from '@/components/mobile/SliderOfferMedium.vue';
 
     export default {
       name: 'OfferSection',
       components: {
       SwiperOffer,
       CardsOffer,
+      SwiperOfferMedium,
       },
 
       data() {
     return {
-      isSmallScreen: false
+      isSmallScreen: false,
+      isMediumScreen: false,
     };
   },
   created() {
     window.addEventListener('resize', this.checkScreenSize);
     this.checkScreenSize(); // Sprawdzenie rozmiaru ekranu po załadowaniu komponentu
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener('resize', this.checkScreenSize);
   },
   methods: {
     checkScreenSize() {
-      this.isSmallScreen = window.innerWidth < 480; // Przykładowy próg dla małego ekranu
+      this.isSmallScreen = window.innerWidth < 640; // Przykładowy próg dla małego ekranu
+      this.isMediumScreen = window.innerWidth >= 640 && window.innerWidth < 960;
     }
   }
 
@@ -58,7 +63,7 @@ import CardsOffer from '@/components/home/CardsOffer.vue';
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 section.offer {
   display: flex;
   width: calc(100svw - var(--scrollbarWidth));
@@ -93,7 +98,7 @@ section.offer {
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 4rem; /* 100% */
+  line-height: 4rem;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
@@ -103,12 +108,12 @@ section.offer {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Headings/Mobile/S */
+  
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem; 
   letter-spacing: 0.0225rem;
   text-transform: uppercase;
 }
@@ -119,12 +124,12 @@ p.section-text {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Body/M/Regular */
+  
   font-family: Montserrat;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5rem; /* 150% */
+  line-height: 1.5rem; 
   letter-spacing: -0.005rem;
 }
 
@@ -142,12 +147,12 @@ p.section-text {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Headings/Mobile/S */
+  
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem; 
   letter-spacing: 0.0225rem;
   text-transform: uppercase;
 }
@@ -166,23 +171,145 @@ p.section-text {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  align-self: stretch;
+  align-self: center;
   background: var(--Surface-Brand, #E30613);
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Action/Large/Bold */
+  
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem; 
   text-transform: uppercase;
   text-decoration: none;
   }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px){
+section.offer {
+  display: flex;
+  width: calc(100svw - var(--scrollbarWidth));
+  padding: 4.5rem var(--space-300, 1.5rem);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--Surface-Inverse-primary, #181818);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+.title-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -2rem;
+}
+
+.promo-text {
+  text-align: center;
+  color: var(--Text-Background-text-inverse, #313131);
+  font-family: Montserrat;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  align-self: stretch;
+  color: var(--Text-Inverse-primary, #FFF);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+}
+
+
+p.section-text {
+  max-width: 35rem;
+  align-self: stretch;
+  color: var(--Text-Inverse-secondary, #E1E1E1);
+  text-align: center;
+  
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.005rem;
+  margin: 0 10vw;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+  }
+
+.services-title {
+  align-self: stretch;
+  color: var(--Text-Inverse-primary, #FFF);
+  text-align: center;
+
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.0225rem;
+  text-transform: uppercase;
+}
+
+.offer-slider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-300, 1.5rem);
+  align-self: stretch;
+ 
+}
+
+
+.full-offer {
+  display: flex;
+  padding: 1.25rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-200, 1rem);
+  background: var(--Surface-Brand, #E30613);
+  color: var(--Text-Inverse-primary, #FFF);
+  text-align: center;
+
+
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  }
+}
+
+@media (min-width: 960px) {
 section.offer {
   display: flex;
   width: calc(100svw - var(--scrollbarWidth));
@@ -218,7 +345,7 @@ section.offer {
   font-size: 10rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 10rem; /* 100% */
+  line-height: 10rem; 
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -227,12 +354,12 @@ section.offer {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Headings/Desktop/S */
+  
   font-family: Montserrat;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3rem; /* 150% */
+  line-height: 3rem;
   letter-spacing: 0.04rem;
   text-transform: uppercase;
 }
@@ -243,13 +370,11 @@ p.section-text {
   color: var(--Text-Inverse-secondary, #E1E1E1);
   text-align: center;
   
-
-  /* Body/L/Regular */
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.75rem; /* 155.556% */
+  line-height: 1.75rem; 
   letter-spacing: -0.00563rem;
 }
 
@@ -266,13 +391,12 @@ p.section-text {
   align-self: stretch;
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
-
-  /* Headings/Desktop/XS */
+  
   font-family: Montserrat;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2rem; /* 133.333% */
+  line-height: 2rem; 
   letter-spacing: 0.03rem;
   text-transform: uppercase;
 }
@@ -298,12 +422,11 @@ p.section-text {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Action/Large/Bold */
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem; 
   text-transform: uppercase;
   text-decoration: none;
   }

@@ -1,4 +1,5 @@
 <template>
+  <a href="https://maps.app.goo.gl/NtBM6WvEYJtFcmYm6" target="_blank" rel="noopener noreferrer"></a>
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <mask id="mask0_321_546" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
     <rect width="24" height="24" fill="white"/>

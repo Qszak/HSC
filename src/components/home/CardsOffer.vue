@@ -71,7 +71,7 @@ export default {
   gap: var(--space-050, 0.25rem);
   flex: 1 0 0;
   align-self: stretch;
-  background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/LOGO/Offer.jpg) lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), lightgray 50% / cover no-repeat;
 }
 
 .service-name {

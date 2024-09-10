@@ -38,7 +38,7 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 .about-us {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -63,7 +63,7 @@ import { RouterLink } from 'vue-router';
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 4rem; 
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
@@ -73,12 +73,12 @@ import { RouterLink } from 'vue-router';
     color: var(--Text-Primary, #181818);
     text-align: center;
 
-    /* Headings/Mobile/S */
+    
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     letter-spacing: 0.0225rem;
     text-transform: uppercase;
 
@@ -95,7 +95,7 @@ import { RouterLink } from 'vue-router';
 img {
     width: 20.8125rem;
     height: 13.875rem;
-    margin: 0 5vh;
+    margin: 0 auto;
 }
 
 .content {
@@ -105,18 +105,17 @@ img {
     align-items: flex-start;
     gap: var(--space-300, 1.5rem);
     align-self: stretch;
+    flex: 1 0 0;
 }
 
 p.text {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
     }
 
@@ -127,24 +126,123 @@ p.text {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    align-self: stretch;
+    align-self: center;
     background: var(--Surface-Brand, #E30613);
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
-    /* Action/Large/Bold */
+    
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+.about-us {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-200, 1rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -2rem;
+    align-self: stretch;
+}
+
+.promo-text {
+    color: var(--Text-Background-text, #F5F5F5);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem; 
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.section-title {
+    align-self: stretch;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; 
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-300, 1.5rem);
+    align-self: stretch;
+}
+
+img {
+    width: 24.3125rem;
+    height: 16.25rem;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-300, 1.5rem);
+    flex: 1 0 0;
+}
+
+p.text {
+    color: var(--Text-Secondary, #484848);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.005rem;
+    }
+
+
+.read-more {
+    display: flex;
+    padding: 1.25rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    background: var(--Surface-Brand, #E30613);
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+
+    
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; 
+    text-transform: uppercase;
+    text-decoration: none;
+}
+}
+
+
+/* wersja na komputer */
+@media (min-width: 1207px) {
 .about-us {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -210,6 +308,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-300, 1.5rem);
+    align-self: center;
 }
 
 p.text {

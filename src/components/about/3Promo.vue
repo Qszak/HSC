@@ -2,7 +2,7 @@
 <div class="promo">
     <div class="box">
         <div class="title-banner">
-            <p class="title">Hasło</p>
+            <p class="title">Ci co robią - mogą więcej!</p>
             <p class="subtitle">Działanie rozwiewa wątpliwości</p>
         </div>
         <p class="text">Zrób pierwszy krok i dołącz do naszej holistycznej społeczności! Wspólnie przejdziemy przez te ścieżkę pozytywnej zmiany, wspomagając Twój cały proces treningowy, dietetyczny, rehabilitacyjny oraz mentalny. 

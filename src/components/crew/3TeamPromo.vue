@@ -1,6 +1,6 @@
 <template>
 <div class="promo-content">
-    <p class="promo-text">Czekamy na Ciebie!</p>
+    <p class="promo-text">Zacznij swoją zmianę od pierwszego kroku!</p>
     <button class="primary" @click="showModal">Dołącz do nas!</button>
       <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
 </div>
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style scoped>
+
+
+@media (max-width: 480px) {
 .promo-content {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -69,9 +72,10 @@ export default {
     padding: 1.25rem 3rem;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-200, 1rem);
     align-self: stretch;
     background: var(--Surface-Brand, #E30613);
+
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
@@ -82,7 +86,54 @@ export default {
     font-weight: 700;
     line-height: 1.5rem; /* 133.333% */
     text-transform: uppercase;
-    border-color: #E30613;
+}
+}
+
+@media (min-width: 481px) {
+    .promo-content {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    height: 30rem;
+    padding: 0rem 4.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+    flex-shrink: 0;
+    background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
+}
+
+.promo-text {
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+
+    /* Headings/Desktop/L */
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem; /* 133.333% */
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+}
+.primary {
+    display: flex;
+    padding: 1.25rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+    background: var(--Surface-Brand, #E30613);
+
+    /* Action/Large/Bold */
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; /* 133.333% */
+    text-transform: uppercase;
+    }
 }
 
 </style>

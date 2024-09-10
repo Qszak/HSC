@@ -8,27 +8,8 @@
             <div class="text">Na naszej ścieżce trenerskiej pojawiło się wiele osób, które podjęły się współpracy z nami i kontynuują ją od nawet kilkunastu lat. Wiele osób nam zaufało, za co serdecznie dziękujemy, a do zapoznania się z ich opiniami zapraszamy poniżej!</div>
         </div>
         <div class="card-slider">
-            <div class="card">
-                <div class="card-photo">
-                    <div class="card-photo-text">JK</div>
-                </div>
-                <div class="card-name">Jan Kowalski</div>
-                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-            </div>
-            <div class="card">
-                <div class="card-photo">
-                    <div class="card-photo-text">JK</div>
-                </div>
-                <div class="card-name">Jan Kowalski</div>
-                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-            </div>
-            <div class="card">
-                <div class="card-photo">
-                    <div class="card-photo-text">JK</div>
-                </div>
-                <div class="card-name">Jan Kowalski</div>
-                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-            </div>
+            <SwiperReviews v-if="isSmallScreen"/>
+            <ReviewsCards v-else/>
         </div>
 
 
@@ -36,13 +17,38 @@
 </template>
 
 <script>
+import SwiperReviews from '@/components/mobile/SliderReviews.vue';
+import ReviewsCards from '@/components/home/ReviewsCards.vue';
+
 export default {
     name: 'ReviewsSection',
+    components: {
+        SwiperReviews,
+        ReviewsCards,
+    },
+
+    data() {
+    return {
+      isSmallScreen: false
+    };
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreenSize);
+    this.checkScreenSize(); // Sprawdzenie rozmiaru ekranu po załadowaniu komponentu
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.checkScreenSize);
+  },
+  methods: {
+    checkScreenSize() {
+      this.isSmallScreen = window.innerWidth < 640; // Przykładowy próg dla małego ekranu
+    }
+  }
 }
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 section.opinions {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -112,73 +118,82 @@ section.opinions {
     align-items: flex-start;
     gap: 2rem;
     align-self: stretch;
+    overflow: hidden;
 }
-.card {
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+section.opinions {
     display: flex;
-    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: var(--Surface-Inverse-primary, #181818);
+}
+.section-header {
+    display: flex;
+    max-width: 67.125rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--space-200, 1rem);
+    gap: 2rem;
     align-self: stretch;
-    background: var(--Surface-Primary, #FFF);
-    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
 }
-.card-photo {
+.section-title {
     display: flex;
-    padding: var(--space-150, 0.75rem);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: var(--radius-rounded, 62.5rem);
-    background: #FB8903;
+    gap: -2rem;
+    align-self: stretch;
 }
-.card-photo-text {
-    display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-direction: column;
-    justify-content: center;
+.promo-text {
+    color: var(--Text-Background-text-inverse, #313131);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem; 
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+.title {
+    align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
-    /* Body/M/Bold */
     font-family: Montserrat;
-    font-size: 1rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: -0.005rem;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
 }
-.card-name {
-    width: 25.8125rem;
-    color: var(--Text-Primary, #181818);
+.text {
+    align-self: stretch;
+    color: var(--Text-Inverse-secondary, #E1E1E1);
     text-align: center;
-
-    /* Body/L/Bold */
+ 
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
-    font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
+    font-weight: 400;
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
-.card-text {
-    align-self: stretch;
-    color: var(--Text-Secondary, #484848);
-    text-align: center;
-
-    /* Body/M/Regular */
-    font-family: Montserrat;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: -0.005rem;
-}
+.card-slider {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    overflow: hidden;
 }
 
-@media (min-width: 481px) {
+}
+
+@media (min-width: 960px){
 section.opinions {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -245,69 +260,8 @@ section.opinions {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    overflow: hidden;
 }
-.card {
-    display: flex;
-    width: 25.6875rem;
-    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-200, 1rem);
-    background: var(--Surface-Primary, #FFF);
-    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
-}
-.card-photo {
-    display: flex;
-    padding: var(--space-150, 0.75rem);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-rounded, 62.5rem);
-    background: #FB8903;
-}
-.card-photo-text {
-    display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--Text-Inverse-primary, #FFF);
-    text-align: center;
 
-    /* Body/M/Bold */
-    font-family: Montserrat;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: -0.005rem;
-}
-.card-name {
-    width: 25.8125rem;
-    color: var(--Text-Primary, #181818);
-    text-align: center;
-
-    /* Body/L/Bold */
-    font-family: Montserrat;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
-    letter-spacing: -0.00563rem;
-}
-.card-text {
-    align-self: stretch;
-    color: var(--Text-Secondary, #484848);
-    text-align: center;
-
-    /* Body/M/Regular */
-    font-family: Montserrat;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: -0.005rem;
-}
 }
 </style>

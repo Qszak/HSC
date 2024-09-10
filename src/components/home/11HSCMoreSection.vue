@@ -5,7 +5,7 @@
                 <div class="promo-text">HSC</div>
                 <div class="title">To nie tylko sport</div>
             </div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="text">Jak przystało na holistyczne centrum, znajdziesz u nas pomoc nie tylko z zakresu pracy nad sylwetką w formie treningowej, ale również wsparcie w innych dziedzinach, takich jak: dietetyka, fizjoterapia, a nawet hipnoterapia.</div>
         </div>
         <div class="cards">
             <div class="card">
@@ -13,7 +13,7 @@
                 <div class="card-photo">
                     <img src="" alt="">
                 </div>
-                <div class="card-info">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
+                <div class="card-info">Spersonalizowany plan żywieniowy stworzony przez naszego specjalistę od żywienia, pomoże Ci osiągnąć lepsze wyniki treningowe i poprawi Twoje samopoczucie. Odkryj, jak zdrowe odżywianie może dodać Ci energii i podnieść Twoją formę na wyższy poziom.</div>
                 <RouterLink to="/dietetyka" class="read-more">Szczegóły usługi</RouterLink>
             </div>
             <div class="card">
@@ -21,7 +21,15 @@
                 <div class="card-photo">
                     <img src="" alt="">
                 </div>
-                <div class="card-info">Wieloletni Trener Personalny we Wrocławiu, absolwent wrocławskiego AWF-u, ukończył Zarządzanie Biznesem na WSB oraz Psychologię Sportu.</div>
+                <div class="card-info">Odzyskaj sprawność i pozbądź się bólu, dzięki indywidualnie dopasowanej terapii prowadzonej przez naszych doświadczonych fizjoterapeutów. Skorzystaj z nowoczesnych metod, które przynoszą szybkie i trwałe efekty.</div>
+                <RouterLink to="/fizjoterapia" class="read-more">Szczegóły usługi</RouterLink>
+            </div>
+            <div class="card">
+                <div class="card-header">Hipnoterapia</div>
+                <div class="card-photo">
+                    <img src="" alt="">
+                </div>
+                <div class="card-info">Zyskaj kontrolę nad swoim życiem, redukując stres i wzmacniając motywację dzięki hipnoterapii. Przekonaj się, jak skutecznie ta metoda może pomóc Ci w osiągnięciu Twoich celów oraz kształtowaniu pozytywnych cech osobowości.</div>
                 <RouterLink to="/fizjoterapia" class="read-more">Szczegóły usługi</RouterLink>
             </div>
         </div>
@@ -40,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 section.hsc-more {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -91,6 +99,7 @@ section.hsc-more {
 }
 .text {
     max-width: 50rem;
+    
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;
@@ -170,7 +179,137 @@ section.hsc-more {
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+section.hsc-more {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -2rem;
+    align-self: stretch;
+}
+.promo-text {
+    align-self: stretch;
+    text-align: center;
+    color: var(--Text-Background-text, #F5F5F5);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem; 
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+.title {
+    align-self: stretch;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; 
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+.text {
+    
+    max-width: 50rem;
+    align-self: center;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+
+    /* Body/L/Regular */
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; /* 155.556% */
+    letter-spacing: -0.00563rem;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    align-self: stretch;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-300, 1.5rem);
+    align-self: stretch;
+}
+.card-header {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+
+    /* Body/L/Bold */
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; 
+    letter-spacing: -0.00563rem;
+}
+.card-photo {
+    width: 15rem;
+    height: 15rem;
+    border-radius: var(--radius-rounded, 62.5rem);
+    background: #D9D9D9;
+}
+.card-info {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+   
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.005rem;
+}
+.read-more {
+    display: flex;
+    padding: 1.25rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid var(--Border-Primary, #181818);
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; 
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none;
+}
+}
+
+@media (min-width: 960px) {
 section.hsc-more {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -240,7 +379,7 @@ section.hsc-more {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 7.5rem;
+    gap: 5.5rem;
     align-self: stretch;
 }
 .card {
@@ -255,12 +394,11 @@ section.hsc-more {
     color: #000;
     text-align: center;
 
-    /* Body/L/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem; 
     letter-spacing: -0.00563rem;
 }
 .card-photo {
@@ -273,13 +411,13 @@ section.hsc-more {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;
-
-    /* Body/M/Regular */
+    min-height: 35vh;
+    
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
 }
 .read-more {
@@ -292,12 +430,11 @@ section.hsc-more {
     color: var(--Text-Primary, #181818);
     text-align: center;
 
-    /* Action/Large/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     text-transform: uppercase;
     background-color: transparent;
     text-decoration: none;

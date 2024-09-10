@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 481px) {
+@media (max-width: 640px) {
 section.cooperations {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -57,7 +57,46 @@ section.cooperations {
 }
 
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+section.cooperations {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 4.5rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-300, 1.5rem);
+    background: var(--Surface-Inverse-primary, #181818);
+}
+.claim {
+    align-self: stretch;
+    text-align: center;
+
+    color: var(--Text-Background-text-inverse, #313131);
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; /* 150% */
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    
+}
+.brands {
+    display: flex;
+    padding: 0rem var(--space-300, 1.5rem);
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    align-self: stretch;
+}
+.logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: url(/LOGO/Offer.jpg) lightgray 50% / cover no-repeat;
+}
+}
+
+@media (min-width: 960px) {
 section.cooperations {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -71,9 +110,7 @@ section.cooperations {
     align-self: stretch;
     text-align: center;
 
-    /* Headings/Desktop/S */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFF;
+    color: var(--Text-Background-text-inverse, #313131);
     font-family: Montserrat;
     font-size: 2rem;
     font-style: normal;
@@ -81,7 +118,7 @@ section.cooperations {
     line-height: 3rem; /* 150% */
     letter-spacing: 0.04rem;
     text-transform: uppercase;
-    color: transparent;
+    
 }
 .brands {
     display: flex;
