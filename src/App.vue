@@ -17,6 +17,7 @@ export default {
   components: {
     Navigation,
     NavigationMobile,
+    RouterView,
   },
   data() {
     return {

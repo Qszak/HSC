@@ -16,6 +16,7 @@ import FooterMobile from '@/components/mobile/FooterMobile.vue';
 
 
 
+
 export default {
     name: 'Crew',
     components: {

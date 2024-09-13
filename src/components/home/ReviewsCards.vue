@@ -1,21 +1,5 @@
 <template>
-    <swiper
-        :effect="'coverflow'"
-        :grabCursor="true"
-        :centeredSlides="true"
-        :slidesPerView="'auto'"
-        :coverflowEffect="{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }"
-        :pagination="true"
-        :modules="modules"
-        class="mySwiper"
-      >
-            <swiper-slide>
+  <div class="reviews">
                 <div class="card">
                     <div class="card-photo">
                         <div class="card-photo-text">A</div>
@@ -23,8 +7,7 @@
                     <div class="card-name">Agata</div>
                     <div class="card-text">HSC to nowoczesne, czyste i ładne wnętrze. Profesjonalni, kompetentni i zawsze uśmiechnięci trenerzy tworzą przyjemny klimat tego miejsca, co skutkuje tym, że treningi stają się czystą przyjemnością, a nie tylko smutnym obowiązkiem. Polecam wszystkim z całego serca!</div>
                 </div>
-            </swiper-slide>
-            <swiper-slide>
+            
                 <div class="card">
                     <div class="card-photo">
                         <div class="card-photo-text">K</div>
@@ -32,8 +15,7 @@
                     <div class="card-name">Katarzyna</div>
                     <div class="card-text">Pierwsze i jedyne takie miejsce we Wrocławiu dla osób, które chcą zadbać o swoje zdrowie i sylwetkę. Profesjonalna kadra, która z należytą starannością zajmuje się Podopiecznymi. Miejsce ze wspaniałą sportową atmosferą , dla każdego. Polecam!. </div>
                 </div>
-            </swiper-slide>
-            <swiper-slide>
+        
                 <div class="card">
                     <div class="card-photo">
                         <div class="card-photo-text">G</div>
@@ -41,62 +23,36 @@
                     <div class="card-name">Gerard</div>
                     <div class="card-text">Super miejsce do treningu. Nowoczesne i przestronne wnętrze pachnące nowością i świeżością, z osobną salą przeznaczoną do treningów sztuk walki. Wykwalifikowana kadra trenerska. Miejsce spełniające wszelkie niezbędne warunki do „odhaczania” kolejnych celów treningowych. Polecam serdecznie. </div>
                 </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div class="card">
-                    <div class="card-photo">
-                        <div class="card-photo-text">O</div>
-                    </div>
-                    <div class="card-name">Olga</div>
-                    <div class="card-text">Fajne miejsce na treningi, super atmosfera i przyjazne dzieciom. Cały zespół jak duża rodzina.</div>
-                </div>
-            </swiper-slide>
-        </swiper>
-    
+    </div>
     
     </template>
     
     <script>
-    // Import Swiper Vue.js components
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    
-    // Import Swiper styles
-    import 'swiper/css';
-    import 'swiper/css/effect-coverflow';
-    import 'swiper/css/pagination';
-    
-    // import required modules
-    import { EffectCoverflow, Pagination } from 'swiper/modules';
+   
     
     export default {
         name: 'SwiperReviews',
-        components: {
-            Swiper,
-            SwiperSlide,
-        },
-    
-        setup() {
-        return {
-          modules: [EffectCoverflow, Pagination],
-        };
-      },
-    };
+    }
     </script>
     
     <style scoped>
+.reviews{
+    display: flex;
+align-items: flex-start;
+gap: 2rem;
+}
+
     .card {
         display: flex;
+        width: 25.6875rem;
         padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: var(--space-200, 1rem);
-        align-self: center;
-        max-width: 90vw;
-        min-height: 50vh;
         background: var(--Surface-Primary, #FFF);
-        box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
-        margin: 0 auto;
+box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
     }
     .card-photo {
         display: flex;

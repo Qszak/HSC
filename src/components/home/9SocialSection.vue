@@ -8,59 +8,28 @@
         <div class="text">Działając od wielu lat na rynku, zebraliśmy sporo osób wokół, z którymi działamy nieprzerwanie nawet przez kilkanaście lat. Naszą misją jest tworzenie "holistycznej" społeczności, która będzie z nami wspólnie dzielić miłe chwilę na siłowni oraz poza nią.
             Zapraszamy do zapoznania się z naszym codziennym życiem w socjalach na Facebooku oraz Instagramie! </div>
     </div>
-   
-    <swiper
-    :effect="'coverflow'"
-    :grabCursor="true"
-    :centeredSlides="true"
-    :slidesPerView="'auto'"
-    :coverflowEffect="{
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: false,
-    }"
-    :pagination="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
-  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
-  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
-  <swiper-slide><img :src="pic" alt="ziomki"></swiper-slide>
-  </swiper>   
+    
+
+  <div class="gallery">
+  <img :src="pic" alt="ziomki">
+  <img :src="pic" alt="ziomki">
+  <img :src="pic" alt="ziomki">
+
+</div>
 </section>
 </template>
 
 
 <script>
 import pic from "@/assets/ziomeczki.jpeg";
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default {
     name: 'SocialSection',
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
+   
     data () {
         return {
             pic
-        };
-    },
-    setup() {
-        return {
-            modules: [EffectCoverflow, Pagination],
         };
     },
 };
@@ -68,6 +37,7 @@ export default {
 
 <style scoped>
 @media (max-width: 640px) {
+
 section.social {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -127,25 +97,11 @@ section.social {
     letter-spacing: -0.005rem;
 }
 
-.mySwiper {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie slajdów */
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie każdego slajdu */
-    align-items: center;
-    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
-}
-
 img {
     width: 11.5rem;
     height: 11.5rem;
 }
+
 }
 
 
@@ -213,26 +169,13 @@ section.social {
     margin: 0 auto;
 }
 
-.mySwiper {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie slajdów */
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie każdego slajdu */
-    align-items: center;
-    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
-}
-
 img {
     width: 22.5rem;
     height: 22.5rem;
+    overflow: hidden;
     
 }
+
 }
 
 @media (min-width: 960px){
@@ -296,28 +239,17 @@ section.social {
     line-height: 1.75rem; /* 155.556% */
     letter-spacing: -0.00563rem;
 }
-
-.mySwiper {
+.gallery {
     display: flex;
-    justify-content: center; /* Wyśrodkowanie slajdów */
-    align-items: center;
-    width: 80vw;
-    height: 100%;
-    overflow: hidden;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie każdego slajdu */
-    align-items: center;
-    width: auto; /* Automatyczna szerokość, aby dopasować do zawartości */
-    overflow: hidden;
-}
-
+align-items: flex-start;
+gap: 2rem;
+align-self: stretch;
+}    
 img {
     width: 22.5rem;
     height: 22.5rem;
     
 }
+
 }
 </style>

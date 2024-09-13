@@ -66,7 +66,7 @@ export default {
         box-sizing: border-box;
       }
 /* wersja mobilna */
-@media (max-width: 640px) {
+@media (max-width: 639px) {
 .hero-content {
   display: flex;
   width: calc(100svw - var(--scrollbarWidth));
@@ -309,7 +309,7 @@ ul {
 }
 
 /* wersja na komputer */
-@media (min-width: 960px) {
+@media (min-width: 961px) {
 .hero-content {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));

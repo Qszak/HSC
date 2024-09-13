@@ -259,7 +259,7 @@ p.section-text {
 .services {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 2rem;
   align-self: stretch;
@@ -381,9 +381,9 @@ p.section-text {
 .services {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 2rem;
+  gap: 24px;
   align-self: stretch;
   }
 

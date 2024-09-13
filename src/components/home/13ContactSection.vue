@@ -513,15 +513,27 @@ button.contact-us {
 }
 
 .map1_1 {
-    display: none;
+    display: block;
 }
 .map2 {
-    display: block;
-    align-self: stretch;
+    display: none;
+ 
 }
 
 ul {
     list-style: none;
 }
+}
+
+@media (min-width: 1240px) {
+
+    .map1_1 {
+        display: none;
+    }
+
+    .map2 {
+        display: block;
+        align-self: stretch;
+    }
 }
 </style>

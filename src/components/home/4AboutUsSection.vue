@@ -242,7 +242,7 @@ p.text {
 
 
 /* wersja na komputer */
-@media (min-width: 1207px) {
+@media (min-width: 960px) {
 .about-us {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
