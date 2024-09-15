@@ -7,6 +7,18 @@
             <div class="logo"></div>
             <div class="logo"></div>
             <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
         </div>
     </section>
 </template>
@@ -26,18 +38,19 @@ section.cooperations {
     flex-direction: column;
     align-items: center;
     gap: var(--space-300, 1.5rem);
+    background: var(--Surface-Inverse-primary, #181818);
 }
 .claim {
     align-self: stretch;
     color: var(--Text-Background-text-inverse, #313131);
     text-align: center;
 
-    /* Headings/Desktop/S */
+    
     font-family: Montserrat;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -76,7 +89,7 @@ section.cooperations {
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem; 
     letter-spacing: 0.04rem;
     text-transform: uppercase;
     
@@ -112,10 +125,10 @@ section.cooperations {
 
     color: var(--Text-Background-text-inverse, #313131);
     font-family: Montserrat;
-    font-size: 2rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 4rem; 
     letter-spacing: 0.04rem;
     text-transform: uppercase;
     

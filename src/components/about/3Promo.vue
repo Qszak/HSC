@@ -50,10 +50,10 @@ export default {
     color: var(--Text-Background-text-inverse, #313131);
     text-align: center;
     font-family: Montserrat;
-    font-size: 4rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 2rem; /* 100% */
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }

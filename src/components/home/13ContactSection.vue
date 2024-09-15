@@ -409,8 +409,7 @@ section.contact {
     align-self: stretch;
 }
 .promo-text {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    color: var(--Text-Background-text, #F5F5F5);
     font-family: "Montserrat";
     font-size: 10rem;
     font-style: normal;
@@ -418,7 +417,6 @@ section.contact {
     line-height: 10rem; /* 100% */
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    color: transparent;
 }
 .title {
     align-self: stretch;

@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 .team-section {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -89,7 +89,72 @@ export default {
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
+.team-section {
+    display: flex;
+    width: calc(100svw - var(--scrollbarWidth));
+    padding: 2.5rem var(--space-200, 1rem);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-300, 1.5rem)
+}
+
+.title-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -2rem;
+    align-self: stretch;
+}
+
+.promo-text {
+    color: var(--Text-Background-text, #F5F5F5);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.section-title {
+    align-self: stretch;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-300, 1.5rem);
+    align-self: stretch;
+        
+}
+
+.content-text {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: -0.00563rem;
+}
+}
+
+@media (min-width: 960px) {
 .team-section {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -114,7 +179,7 @@ export default {
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 4rem;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
@@ -123,14 +188,12 @@ export default {
     align-self: stretch;
     color: var(--Text-Primary, #181818);
     text-align: center;
-
-    /* Headings/Mobile/S */
     font-family: Montserrat;
-    font-size: 1.125rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
-    letter-spacing: 0.0225rem;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
 
@@ -138,22 +201,20 @@ export default {
     display: flex;
     width: 39.5rem;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-300, 1.5rem);
-    
+        
 }
 
 .content-text {
     align-self: stretch;
     color: var(--Text-Secondary, #484848);
     text-align: center;
-
-    /* Body/L/Regular */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 }

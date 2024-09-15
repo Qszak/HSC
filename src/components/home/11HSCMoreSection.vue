@@ -8,30 +8,27 @@
             <div class="text">Jak przystało na holistyczne centrum, znajdziesz u nas pomoc nie tylko z zakresu pracy nad sylwetką w formie treningowej, ale również wsparcie w innych dziedzinach, takich jak: dietetyka, fizjoterapia, a nawet hipnoterapia.</div>
         </div>
         <div class="cards">
-            <div class="card">
-                <div class="card-header">Dietetyka</div>
-                <div class="card-photo">
-                    <img src="" alt="">
-                </div>
-                <div class="card-info">Spersonalizowany plan żywieniowy stworzony przez naszego specjalistę od żywienia, pomoże Ci osiągnąć lepsze wyniki treningowe i poprawi Twoje samopoczucie. Odkryj, jak zdrowe odżywianie może dodać Ci energii i podnieść Twoją formę na wyższy poziom.</div>
-                <RouterLink to="/dietetyka" class="read-more">Szczegóły usługi</RouterLink>
-            </div>
-            <div class="card">
-                <div class="card-header">Fizjoterapia</div>
-                <div class="card-photo">
-                    <img src="" alt="">
-                </div>
-                <div class="card-info">Odzyskaj sprawność i pozbądź się bólu, dzięki indywidualnie dopasowanej terapii prowadzonej przez naszych doświadczonych fizjoterapeutów. Skorzystaj z nowoczesnych metod, które przynoszą szybkie i trwałe efekty.</div>
-                <RouterLink to="/fizjoterapia" class="read-more">Szczegóły usługi</RouterLink>
-            </div>
-            <div class="card">
-                <div class="card-header">Hipnoterapia</div>
-                <div class="card-photo">
-                    <img src="" alt="">
-                </div>
-                <div class="card-info">Zyskaj kontrolę nad swoim życiem, redukując stres i wzmacniając motywację dzięki hipnoterapii. Przekonaj się, jak skutecznie ta metoda może pomóc Ci w osiągnięciu Twoich celów oraz kształtowaniu pozytywnych cech osobowości.</div>
-                <RouterLink to="/fizjoterapia" class="read-more">Szczegóły usługi</RouterLink>
-            </div>
+            <HSCMoreCard
+                header="Dietetyka"
+                photoSrc="/Szefner.JPG"
+                alt="Gabinet"
+                info="Spersonalizowany plan żywieniowy stworzony przez naszego specjalistę od żywienia, pomoże Ci osiągnąć lepsze wyniki treningowe i poprawi Twoje samopoczucie. Odkryj, jak zdrowe odżywianie może dodać Ci energii i podnieść Twoją formę na wyższy poziom."
+                link="/dietetyka"
+            />
+            <HSCMoreCard
+                header="Fizjoterapia"
+                photoSrc="/Szefner.JPG"
+                alt="Łukasz Szefner"
+                info="Odzyskaj sprawność i pozbądź się bólu, dzięki indywidualnie dopasowanej terapii prowadzonej przez naszych doświadczonych fizjoterapeutów. Skorzystaj z nowoczesnych metod, które przynoszą szybkie i trwałe efekty."
+                link="/fizjoterapia"
+            />
+            <HSCMoreCard
+                header="Hipnoterapia"
+                photoSrc="/Szefner.JPG"
+                alt="Natalia Zieniewicz"
+                info="Zyskaj kontrolę nad swoim życiem, redukując stres i wzmacniając motywację dzięki hipnoterapii. Przekonaj się, jak skutecznie ta metoda może pomóc Ci w osiągnięciu Twoich celów oraz kształtowaniu pozytywnych cech osobowości."
+                link="/hipnoterapia"
+            />
         </div>
 
 
@@ -39,12 +36,10 @@
     </section>
 </template>
 
-<script>
+<script setup>
 import { RouterLink, RouterView } from 'vue-router';
+import HSCMoreCard from '../OfferCards/HSCMoreCard.vue';
 
-export default {
-    name: 'HSCMoreSection',
-}
 </script>
 
 <style scoped>
@@ -335,8 +330,7 @@ section.hsc-more {
 .promo-text {
     align-self: stretch;
     text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    color: var(--Text-Background-text, #F5F5F5);
     font-family: Montserrat;
     font-size: 10rem;
     font-style: normal;
@@ -344,7 +338,6 @@ section.hsc-more {
     line-height: 10rem; /* 100% */
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    color: transparent;
 }
 .title {
     align-self: stretch;

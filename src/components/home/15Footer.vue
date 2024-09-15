@@ -93,6 +93,7 @@ export default {
     LocationRed,
     MailRed,
     PhoneRed,
+    RouterLink,
     },
 
     
@@ -146,12 +147,11 @@ footer {
     border-radius: var(--radius-150, 0.75rem);
     color: var(--Text-Inverse-primary, #FFF);
 
-    /* Action/Small/Semibold */
     font-family: Montserrat;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 1rem; /* 133.333% */
+    line-height: 1rem;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -176,13 +176,11 @@ footer {
 
 p.text {
     color: #FFF;
-
-    /* Body/L/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 
@@ -201,13 +199,11 @@ li {
 
 .data {
     color: var(--Text-Inverse-primary, #FFF);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     letter-spacing: -0.005rem;
 }
 
@@ -216,17 +212,16 @@ p.copy {
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
-    /* caption */
     font-family: Montserrat;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.25rem; /* 166.667% */
+    line-height: 1.25rem;
     letter-spacing: -0.00375rem;
 }
 }
 
-@media (min-width: 640px) and (max-width: 960px) {
+@media (min-width: 640px) and (max-width: 1103px) {
 footer {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -299,13 +294,11 @@ footer {
 
 p.text {
     color: #FFF;
-
-    /* Body/L/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 
@@ -325,13 +318,11 @@ li {
 
 .data {
     color: var(--Text-Inverse-primary, #FFF);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     letter-spacing: -0.005rem;
     }
 
@@ -339,18 +330,16 @@ p.copy {
     align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
-
-    /* caption */
     font-family: Montserrat;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.25rem; /* 166.667% */
+    line-height: 1.25rem; 
     letter-spacing: -0.00375rem;
 }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1103px) {
 footer {
     display: flex;
     width: calc(100svw - var(--scrollbarWidth));
@@ -393,13 +382,11 @@ footer {
     gap: var(--space-100, 0.5rem);
     border-radius: var(--radius-150, 0.75rem);
     color: var(--Text-Inverse-primary, #FFF);
-
-    /* Action Medium/Semibold */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     letter-spacing: 0.01875rem;
     text-decoration: none;
 
@@ -424,13 +411,11 @@ footer {
 
 p.text {
     color: #FFF;
-
-    /* Body/L/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 
@@ -450,13 +435,11 @@ li {
 
 .data {
     color: var(--Text-Inverse-primary, #FFF);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
     }
 
@@ -464,13 +447,11 @@ p.copy {
     align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
-
-    /* caption */
     font-family: Montserrat;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.25rem; /* 166.667% */
+    line-height: 1.25rem;
     letter-spacing: -0.00375rem;
 }
 }

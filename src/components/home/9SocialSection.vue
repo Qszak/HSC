@@ -11,26 +11,74 @@
     
 
   <div class="gallery">
-  <img :src="pic" alt="ziomki">
-  <img :src="pic" alt="ziomki">
-  <img :src="pic" alt="ziomki">
-
+    <swiper
+    :effect="'coverflow'"
+    :grabCursor="true"
+    :centeredSlides="true"
+    :slidesPerView="'1'"
+    :coverflowEffect="{
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+    }"
+    :pagination="true"
+    :modules="modules"
+    :breakpoints="{ 1300:{
+      slidesPerView: 2,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -30,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+    },
+    }"
+    class="swiper-dynamic">
+      <swiper-slide>
+        <img :src="pic" alt="ziomki">
+      </swiper-slide>
+      <swiper-slide>
+        <img :src="pic" alt="ziomki">>
+      </swiper-slide>
+      <swiper-slide>
+        <img :src="pic" alt="ziomki">
+      </swiper-slide>
+      <swiper-slide>
+        <img :src="pic" alt="ziomki">
+      </swiper-slide>
+  </swiper> 
 </div>
 </section>
 </template>
 
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import pic from "@/assets/ziomeczki.jpeg";
 
 
 export default {
     name: 'SocialSection',
-   
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
     data () {
         return {
             pic
         };
+    },
+    setup() {
+      return {
+        modules: [EffectCoverflow, Pagination],
+      };
     },
 };
 </script>
@@ -96,11 +144,35 @@ section.social {
     line-height: 1.5rem; 
     letter-spacing: -0.005rem;
 }
+.gallery {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1rem var(--space-200, 1rem);
+    align-self: stretch;
+    flex-wrap: wrap;
+}
 
 img {
-    width: 11.5rem;
-    height: 11.5rem;
+  display: flex;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+
 }
+
+.swiper-slide {
+    align-self: flex-start;
+    justify-self: flex-start;
+    text-align: center;
+    font-size: 18px;
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
 
 }
 
@@ -169,12 +241,34 @@ section.social {
     margin: 0 auto;
 }
 
-img {
-    width: 22.5rem;
-    height: 22.5rem;
-    overflow: hidden;
-    
+.gallery {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1rem var(--space-200, 1rem);
+    align-self: stretch;
+    flex-wrap: wrap;
 }
+img {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+
+}
+
+
+.swiper-slide {
+    align-self: flex-start;
+    justify-self: flex-start;
+    text-align: center;
+    font-size: 18px;
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
 
 }
 
@@ -203,8 +297,7 @@ section.social {
     align-self: stretch;
 }
 .promo-text {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    color: var(--Text-Background-text, #F5F5F5);
     font-family: 'Montserrat';
     font-size: 10rem;
     font-style: normal;
@@ -212,7 +305,6 @@ section.social {
     line-height: 10rem; 
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    color: transparent;
 }
 .title {
     align-self: stretch;
@@ -241,15 +333,30 @@ section.social {
 }
 .gallery {
     display: flex;
-align-items: flex-start;
-gap: 2rem;
-align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    align-self: stretch;
 }    
 img {
-    width: 22.5rem;
-    height: 22.5rem;
-    
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+
 }
+
+.swiper-slide {
+    align-self: flex-start;
+    justify-self: flex-start;
+    text-align: center;
+    font-size: 18px;
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
 
 }
 </style>

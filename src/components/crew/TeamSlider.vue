@@ -22,7 +22,7 @@
   </template>
   
   <script>
-  import CoachCard from '../CoachCards/CoachCard.vue';
+  import CoachCard from '../CoachCards/xCoachCards.vue';
   
   export default {
     name: 'TeamSlider2',

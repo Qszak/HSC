@@ -3,7 +3,7 @@
 <Section/>
 <Promo/>
 <VideoContentMobile/>
-<FooterMobile/>
+<Footer/>
 
 
 </template>
@@ -13,7 +13,7 @@ import HeroContent from '@/components/about/1Hero-Content.vue';
 import Section from '@/components/about/2Section.vue';
 import Promo from '@/components/about/3Promo.vue';
 import VideoContentMobile from '@/components/mobile/VideoContentMobile.vue';
-import FooterMobile from '@/components/mobile/FooterMobile.vue';
+import Footer from '@/components/home/15Footer.vue';
 
 export default {
     name: 'About',
@@ -22,7 +22,7 @@ export default {
         Section,
         Promo,
         VideoContentMobile,
-        FooterMobile,
+        Footer,
     }
 }
 

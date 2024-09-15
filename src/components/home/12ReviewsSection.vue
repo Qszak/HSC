@@ -8,8 +8,27 @@
             <div class="text">Na naszej ścieżce trenerskiej pojawiło się wiele osób, które podjęły się współpracy z nami i kontynuują ją od nawet kilkunastu lat. Wiele osób nam zaufało, za co serdecznie dziękujemy, a do zapoznania się z ich opiniami zapraszamy poniżej!</div>
         </div>
         <div class="card-slider">
-            <SwiperReviews v-if="isSmallScreen"/>
-            <ReviewsCards v-else/>
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">A</div>
+                </div>
+                <div class="card-name">Agata</div>
+                <div class="card-text">HSC to nowoczesne, czyste i ładne wnętrze. Profesjonalni, kompetentni i zawsze uśmiechnięci trenerzy tworzą przyjemny klimat tego miejsca, co skutkuje tym, że treningi stają się czystą przyjemnością, a nie tylko smutnym obowiązkiem. Polecam wszystkim z całego serca!</div>
+            </div>
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">K</div>
+                </div>
+                <div class="card-name">Katarzyna</div>
+                <div class="card-text">Pierwsze i jedyne takie miejsce we Wrocławiu dla osób, które chcą zadbać o swoje zdrowie i sylwetkę. Profesjonalna kadra, która z należytą starannością zajmuje się Podopiecznymi. Miejsce ze wspaniałą sportową atmosferą , dla każdego. Polecam!. </div>
+            </div>
+            <div class="card">
+                <div class="card-photo">
+                    <div class="card-photo-text">G</div>
+                </div>
+                <div class="card-name">Gerard</div>
+                <div class="card-text">Super miejsce do treningu. Nowoczesne i przestronne wnętrze pachnące nowością i świeżością, z osobną salą przeznaczoną do treningów sztuk walki. Wykwalifikowana kadra trenerska. Miejsce spełniające wszelkie niezbędne warunki do „odhaczania” kolejnych celów treningowych. Polecam serdecznie. </div>
+            </div>
         </div>
 
 
@@ -17,33 +36,10 @@
 </template>
 
 <script>
-import SwiperReviews from '@/components/mobile/SliderReviews.vue';
-import ReviewsCards from '@/components/home/ReviewsCards.vue';
+
 
 export default {
     name: 'ReviewsSection',
-    components: {
-        SwiperReviews,
-        ReviewsCards,
-    },
-
-    data() {
-    return {
-      isSmallScreen: false
-    };
-  },
-  created() {
-    window.addEventListener('resize', this.checkScreenSize);
-    this.checkScreenSize(); // Sprawdzenie rozmiaru ekranu po załadowaniu komponentu
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.checkScreenSize);
-  },
-  methods: {
-    checkScreenSize() {
-      this.isSmallScreen = window.innerWidth < 640; // Przykładowy próg dla małego ekranu
-    }
-  }
 }
 </script>
 
@@ -81,7 +77,7 @@ section.opinions {
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 4rem;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
@@ -89,13 +85,11 @@ section.opinions {
     align-self: stretch;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
-
-    /* Headings/Mobile/S */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem;
     letter-spacing: 0.0225rem;
     text-transform: uppercase;
 }
@@ -103,13 +97,11 @@ section.opinions {
     align-self: stretch;
     color: var(--Text-Inverse-secondary, #E1E1E1);
     text-align: center;
-
-    /* Body/L/Regular */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 .card-slider {
@@ -118,8 +110,67 @@ section.opinions {
     align-items: flex-start;
     gap: 2rem;
     align-self: stretch;
-    overflow: hidden;
 }
+.card {
+    display: flex;
+    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    align-self: stretch;
+    background: var(--Surface-Primary, #FFF);
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.card-photo {
+    display: flex;
+    padding: var(--space-150, 0.75rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-rounded, 62.5rem);
+    background: #FB8903;
+}
+.card-photo-text {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: -0.005rem;
+}
+.card-name {
+    width: 25.8125rem;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; 
+    letter-spacing: -0.00563rem;
+}
+.card-text {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+
+    
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
+}
+
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -186,9 +237,72 @@ section.opinions {
 }
 .card-slider {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     overflow: hidden;
+}
+.card {
+    display: flex;
+    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    align-self: stretch;
+    background: var(--Surface-Primary, #FFF);
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+    max-width: 90vw;
+
+}
+.card-photo {
+    display: flex;
+    padding: var(--space-150, 0.75rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-rounded, 62.5rem);
+    background: #FB8903;
+}
+.card-photo-text {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
+}
+.card-name {
+    width: 25.8125rem;
+    color: var(--Text-Primary, #181818);
+    text-align: center;   
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; 
+    letter-spacing: -0.00563rem;
+}
+.card-text {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+
+   
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
 }
 
 }
@@ -219,13 +333,12 @@ section.opinions {
 }
 .promo-text {
     text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--Border-Idle, #C2C2C2);
+    color: var(--Text-Background-text-inverse, #313131);
     font-family: Montserrat;
     font-size: 10rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 10rem; /* 100% */
+    line-height: 10rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
@@ -234,12 +347,12 @@ section.opinions {
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
-    /* Headings/Desktop/S */
+    
     font-family: Montserrat;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem; 
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -248,19 +361,100 @@ section.opinions {
     color: var(--Text-Inverse-secondary, #E1E1E1);
     text-align: center;
 
-    /* Body/L/Regular */
+   
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 .card-slider {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     overflow: hidden;
+}
+.card {
+    display: flex;
+    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+    align-self: stretch;
+    background: var(--Surface-Primary, #FFF);
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+    max-width: 80vw;
+}
+.card-photo {
+    display: flex;
+    padding: var(--space-150, 0.75rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-rounded, 62.5rem);
+    background: #FB8903;
+}
+.card-photo-text {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--Text-Inverse-primary, #FFF);
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
+}
+.card-name {
+    width: 25.8125rem;
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+
+    
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; 
+    letter-spacing: -0.00563rem;
+}
+.card-text {
+    align-self: stretch;
+    color: var(--Text-Secondary, #484848);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    letter-spacing: -0.005rem;
+}
+
+@media (min-width: 1250px) {
+.card-slider {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+}
+
+.card {
+    display: flex;
+    width: 30vw;
+    padding: var(--space-300, 1.5rem) var(--space-300, 1.5rem) 3rem var(--space-300, 1.5rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-200, 1rem);
+}
 }
 
 }

@@ -2,7 +2,7 @@
 <div class="modal" v-if="isVisible">
     <div class="header">
         <div class="close-box">
-        <div class="close-modal" @click="closeModal"><closeModal/></div>
+        <CloseModal @click="closeModal" style="cursor: pointer;"/>
         </div>
         <div class="contact-form">Formularz kontaktowy</div>
         <div class="text">Jeśli są Państwo zainteresowani naszą ofertą, prosimy o wypełnienie poniższego formularza kontaktowego.</div>
@@ -19,7 +19,7 @@
         <input type="number" id="phone" placeholder="Numer telefonu (opcjonalny)">
         </div>
         <div class="input-box2">
-        <textarea type="text" id="text" placeholder="Treść wiadomości (obowiązkowe)" style="height: 7rem;"></textarea>
+        <textarea type="text" id="text" placeholder="Treść wiadomości (obowiązkowe)" style="height: 6rem;"></textarea>
         </div>
     </form>
     <button class="send">Wyślij wiadomość</button>
@@ -30,11 +30,13 @@
 </template>
 
 <script>
-import closeModal from '../icons/closeModal.vue';
+import CloseModal from '../icons/closeModal.vue';
 
 export default {
   name: 'Modal',
-  components: closeModal,
+  components: {
+    CloseModal,
+  },
   props: {
     isVisible: {
         type: Boolean,
@@ -59,7 +61,7 @@ export default {
     top: 0;
     display: flex;
     width: 23.4375rem;
-    height: 95vh;
+    height: 100vh;
     padding: 3rem var(--space-300, 1.5rem);
     flex-direction: column;
     align-items: flex-end;
@@ -109,13 +111,11 @@ export default {
 .text {
     align-self: stretch;
     color: var(--Text-Background-text-inverse, #313131);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     letter-spacing: -0.005rem;
 
 }
@@ -152,7 +152,7 @@ form {
 
 .input-box2 {
     display: flex;
-    height: 9rem;
+    height: 8rem;
     min-width: 20rem;
     padding: 1rem;
     align-items: flex-start;
@@ -165,13 +165,11 @@ form {
 input, textarea {
     flex: 1 0 0;
     color: #545454;
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
     border: none;
 }
@@ -186,13 +184,11 @@ button.send {
     background: var(--Surface-Brand, #E30613);
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
-
-    /* Action/Large/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     text-transform: uppercase;
 }
 }
@@ -205,8 +201,8 @@ button.send {
     top: 0;
     display: flex;
     width: 57.8125rem;
-    height: 95vh;
-    padding: 3rem 4.5rem;
+    height: 100vh;
+    padding: 2rem 4.5rem;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-300, 1.5rem);
@@ -231,13 +227,11 @@ button.send {
 .contact-form {
     align-self: stretch;
     color: #000;
-
-    /* Headings/Desktop/S */
     font-family: Montserrat;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -245,20 +239,17 @@ button.send {
 .close-modal {
     width: var(--space-300, 1.5rem);
     height: var(--space-300, 1.5rem);
-    background-color: grey;
 }
 
 .text {
     max-width: 40rem;
     align-self: stretch;
     color: var(--Text-Background-text-inverse, #313131);
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     letter-spacing: -0.005rem;
 }
 
@@ -266,7 +257,7 @@ button.send {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2rem;
     align-self: stretch;
 }
 
@@ -274,7 +265,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2rem;
     align-self: stretch;
 }
 
@@ -283,24 +274,22 @@ form {
     display: flex;
     height: 3.625rem;
     min-width: 20rem;
-    padding: 1rem;
+    padding: 1.25rem;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: 0.5rem;
     align-self: stretch;
     border-bottom: 1px solid #545454;
     background: #FFF;
-    
-
 }
 
 .input-box2 {
     display: flex;
-    height: 9rem;
+    height: 8rem;
     min-width: 20rem;
-    padding: 1rem;
+    padding: 1.25rem;
     align-items: flex-start;
-    gap: 0.625rem;
+    gap: 0.5rem;
     align-self: stretch;
     border-bottom: 1px solid #545454;
     background: #FFF;
@@ -309,34 +298,32 @@ form {
 input, textarea {
     flex: 1 0 0;
     color: #545454;
-
-    /* Body/M/Regular */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1rem;
     letter-spacing: -0.005rem;
     border: none;
 }
 
 button.send {
     display: flex;
-    padding: 1.25rem 3rem;
+    padding: 1rem 3rem;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
     background: var(--Surface-Brand, #E30613);
-
-    /* Action/Large/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem;
     text-transform: uppercase;
+    border-color: #E30613;
+    cursor: pointer;
 }
 }
 </style>

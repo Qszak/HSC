@@ -134,7 +134,7 @@ export default {
 
 <style scoped>
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   
 .filter-buttons {
     display: flex;
@@ -185,7 +185,7 @@ button.active {
 }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 640px) and (max-width: 960px) {
   
   .filter-buttons {
       display: flex;
@@ -195,6 +195,57 @@ button.active {
       gap: 1rem var(--space-200, 1rem);
       align-self: stretch;
       flex-wrap: wrap;
+  }
+  
+  button {
+    display: flex;
+    
+    padding: var(--space-150, 0.75rem) var(--space-200, 1rem);
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: var(--radius-rounded, 62.5rem);
+    border: 2px solid var(--Border-Primary, #181818);
+    color: var(--Text-Primary, #181818);
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem; /* 200% */
+    letter-spacing: 0.02rem;
+    transform: 0.3s ease;
+    cursor: pointer;
+  
+  }
+  
+  button.active {
+    background: var(--Surface-Brand, #E30613);
+    color: var(--Surface-Primary, #FFF);
+    border-color: #E30613;
+  }
+  .team-slider {
+    display: flex;
+    padding: 2.5rem 0rem;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+  }
+
+  @media (min-width: 960px) {
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1.5rem var(--space-300, 1.5rem);
+    align-self: stretch;
+    flex-wrap: wrap;
   }
   
   button {

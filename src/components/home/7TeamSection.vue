@@ -9,9 +9,40 @@
             <div class="text">W naszej kadrze znajdują się pasjonaci różnych dziedzin czy dyscyplin sportowych tj. sporty siłowe, kulturystyczne, kickboxingu, boksu piłki nożnej czy kalisteniki. W naszej siłowni prowadzi zajęcia wielu doświadczonych trenerów, gotowych wesprzeć Cię w procesie treningowym.
                 Zapoznaj się z naszą kadrą poniżej!</div>
             <div class="team-slider">
-            <SliderTeam v-if="isSmallScreen"/>
-            <SliderTeamMedium v-else-if="isMediumScreen"/>
-            <CardsTeam v-else/>
+                <swiper
+                    :effect="'coverflow'"
+                    :grabCursor="true"
+                    :centeredSlides="true"
+                    :slidesPerView="'1'"
+                    :coverflowEffect="{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                    }"
+                    :pagination="true"
+                    :modules="modules"
+                    class="swiper-dynamic">
+                        <swiper-slide>
+                            <MKulej/>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <JKulej/>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <FKrasinski/>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <SCieslik/>
+                        </swiper-slide>
+                    </swiper>
+                    <div class="static">
+                        <MKulej/>
+                        <JKulej/>
+                        <FKrasinski/>
+                        <SCieslik/>
+                    </div>
             </div>
                 
             
@@ -25,37 +56,34 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import SliderTeam from '@/components/mobile/SliderTeam.vue';
-import CardsTeam from '@/components/home/CardsTeam.vue';
-import SliderTeamMedium from '../mobile/SliderTeamMedium.vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import MKulej from '../CoachCards/MKulej.vue';
+import JKulej from '../CoachCards/JKulej.vue';
+import FKrasinski from '../CoachCards/FKrasinski.vue';
+import SCieslik from '../CoachCards/SCieslik.vue';
 
 export default {
     name: 'TeamSection',
     components: {
-        SliderTeam,
-        CardsTeam,
-        SliderTeamMedium,
+        Swiper,
+        SwiperSlide,
+        MKulej,
+        JKulej,
+        FKrasinski,
+        SCieslik,
+        RouterLink,
     },
-    data() {
+    setup() {
     return {
-      isSmallScreen: false,
-      isMediumScreen: false,
+      modules: [EffectCoverflow, Pagination],
     };
   },
-  created() {
-    window.addEventListener('resize', this.checkScreenSize);
-    this.checkScreenSize(); // Sprawdzenie rozmiaru ekranu po załadowaniu komponentu
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.checkScreenSize);
-  },
-  methods: {
-    checkScreenSize() {
-      this.isSmallScreen = window.innerWidth < 640; // Przykładowy próg dla małego ekranu
-      this.isMediumScreen = window.innerWidth >=640 && window.innerWidth <960;
-    }
-  }
-}
+};
 
 </script>
 
@@ -92,7 +120,7 @@ section.team {
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 4rem; /* 100% */
+    line-height: 4rem;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     
@@ -102,12 +130,11 @@ section.team {
     color: var(--Text-Primary, #181818);
     text-align: center;
 
-    /* Headings/Mobile/S */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     letter-spacing: 0.0225rem;
     text-transform: uppercase;
 }
@@ -116,12 +143,11 @@ section.team {
     color: var(--Text-Secondary, #484848);
     text-align: center;
 
-    /* Body/M/Light */
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem; 
     letter-spacing: -0.005rem;
 }
 .team-slider {
@@ -142,14 +168,34 @@ section.team {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
 
-  /* Action/Large/Bold */
   font-family: Montserrat;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
+  }
+
+.swiper-dynamic {
+    display: block;
+  }
+
+.swiper-slide {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 18px;
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }  
+
+.static {
+    display: none;
   }
 }
 
@@ -242,6 +288,27 @@ section.team {
     text-transform: uppercase;
     text-decoration: none;
 }
+
+.swiper-dynamic {
+    display: block;
+  }
+
+.swiper-slide {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 18px;
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }  
+
+.static {
+    display: none;
+  }
 }
 
 @media (min-width: 960px){
@@ -255,19 +322,20 @@ section.team {
 }
 .section-header {
     display: flex;
-    max-width: 100%;
+    max-width: 67.125rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     align-self: stretch;
+    margin: 0 auto;
 }
 .section-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: -5rem;
-    align-self: stretch;
+    
 }
 .promo-text {
     text-align: center;
@@ -276,7 +344,7 @@ section.team {
     font-size: 10rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 10rem; /* 100% */
+    line-height: 10rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 
@@ -286,12 +354,12 @@ section.team {
     color: var(--Text-Primary, #181818);
     text-align: center;
 
-    /* Headings/Desktop/S */
+
     font-family: Montserrat;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 150% */
+    line-height: 3rem; 
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -300,22 +368,21 @@ section.team {
     color: var(--Text-Secondary, #484848);
     text-align: center;
 
-    /* Body/L/Regular */
+    
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.75rem; /* 155.556% */
+    line-height: 1.75rem;
     letter-spacing: -0.00563rem;
 }
 .team-slider {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    align-content: flex-start;
     gap: 2rem;
     align-self: stretch;
-    flex-wrap: wrap;
+ 
 }
 
 .meet-crew {
@@ -328,15 +395,41 @@ section.team {
     color: var(--Text-Inverse-primary, #FFF);
     text-align: center;
 
-    /* Action/Large/Bold */
     font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem; /* 133.333% */
+    line-height: 1.5rem; 
     text-transform: uppercase;
     text-decoration: none;
 }
+
+.swiper-dynamic {
+    display: none;
+  }
+  .static {
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: calc(5rem + 5vw);
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1440px) {
+  .static {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+    flex-wrap: nowrap;
+  }
+
 }
 
 </style>

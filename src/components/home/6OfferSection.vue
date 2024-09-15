@@ -12,9 +12,41 @@
   <div class="services">
     <div class="services-title">Wybrane usługi</div>
     <div class="offer-slider">
-      <SwiperOffer v-if="isSmallScreen"/>
-      <SwiperOfferMedium v-else-if="isMediumScreen"/>
-      <CardsOffer v-else/>
+      <swiper
+        :effect="'coverflow'"
+        :grabCursor="true"
+        :centeredSlides="true"
+        :slidesPerView="'1'"
+        :coverflowEffect="{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }"
+        :pagination="true"
+        :modules="modules"
+        class="swiper-dynamic">
+        <swiper-slide>
+          <KickboxingCard/>
+        </swiper-slide>
+        <swiper-slide>
+          <Stretching/>
+        </swiper-slide>
+        <swiper-slide>
+          <Kids/>
+        </swiper-slide>
+        <swiper-slide>
+          <MMACard/>
+        </swiper-slide>
+      </swiper>
+      <div class="static">
+        <KickboxingCard/>
+        <Stretching/>
+        <Kids/>
+        <MMACard/>
+      
+      </div>
     </div>
   </div>
     <RouterLink to="/oferta" class="full-offer">Zapoznaj się z pełną ofertą</RouterLink>
@@ -25,44 +57,49 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import SwiperOffer from '@/components/mobile/SliderOffer.vue';
-import CardsOffer from '@/components/home/CardsOffer.vue';
-import SwiperOfferMedium from '@/components/mobile/SliderOfferMedium.vue';
+import KickboxingCard from '../OfferCards/kickboxing.vue';
+import MMACard from '@/components/OfferCards/mma.vue';
+import Bjj from '../OfferCards/bjj.vue';
+import Kids from '../OfferCards/kids.vue';
+import Stretching from '../OfferCards/stretching.vue';
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 
     export default {
       name: 'OfferSection',
       components: {
-      SwiperOffer,
-      CardsOffer,
-      SwiperOfferMedium,
+      Swiper,
+      SwiperSlide,
+      KickboxingCard,
+      MMACard,
+      Bjj,
+      Kids,
+      Stretching,
+      RouterLink,
       },
-
-      data() {
+      setup() {
     return {
-      isSmallScreen: false,
-      isMediumScreen: false,
-    };
-  },
-  created() {
-    window.addEventListener('resize', this.checkScreenSize);
-    this.checkScreenSize(); // Sprawdzenie rozmiaru ekranu po załadowaniu komponentu
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.checkScreenSize);
-  },
-  methods: {
-    checkScreenSize() {
-      this.isSmallScreen = window.innerWidth < 640; // Przykładowy próg dla małego ekranu
-      this.isMediumScreen = window.innerWidth >= 640 && window.innerWidth < 960;
+      modules: [EffectCoverflow, Pagination],
+       };
+      },
     }
-  }
 
-
-
-    }
 </script>
 
 <style scoped>
+
+
 @media (max-width: 640px) {
 section.offer {
   display: flex;
@@ -185,6 +222,27 @@ p.section-text {
   text-transform: uppercase;
   text-decoration: none;
   }
+
+  .swiper-dynamic {
+    display: block;
+  }
+
+  .swiper-slide {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 18px;
+    background: var(--Surface-Inverse-primary, #181818);
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }  
+
+  .static {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 960px){
@@ -253,7 +311,7 @@ p.section-text {
   font-weight: 400;
   line-height: 1.5rem;
   letter-spacing: -0.005rem;
-  margin: 0 10vw;
+  margin: 0 auto;
 }
 
 .services {
@@ -307,6 +365,27 @@ p.section-text {
   text-transform: uppercase;
   text-decoration: none;
   }
+
+  .swiper-dynamic {
+    display: block;
+  }
+
+  .swiper-slide {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 18px;
+    background: var(--Surface-Inverse-primary, #181818);
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }  
+
+    .static {
+    display: none;
+  }
 }
 
 @media (min-width: 960px) {
@@ -323,12 +402,13 @@ section.offer {
 
 .section-header {
   display: flex;
-  
+  max-width: 53.375rem;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   align-self: stretch;
+  margin: 0 auto;
 }
 
 .title-banner {
@@ -353,8 +433,6 @@ section.offer {
 .section-title {
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
-
-  
   font-family: Montserrat;
   font-size: 2rem;
   font-style: normal;
@@ -403,12 +481,11 @@ p.section-text {
 
 .offer-slider {
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  gap: 2rem;
-  align-self: stretch;
-  flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 2rem;
+align-self: stretch;
 }
 
 
@@ -430,5 +507,31 @@ p.section-text {
   text-transform: uppercase;
   text-decoration: none;
   }
+
+  .swiper-dynamic {
+    display: none;
+  }
+  .static {
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: calc(5rem + 5vw);
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
 }
+
+@media (min-width: 1440px) {
+  .static {
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  align-self: stretch;
+  }
+}
+
 </style>

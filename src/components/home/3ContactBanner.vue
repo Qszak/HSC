@@ -64,20 +64,21 @@ import Mail from '@/components/icons/mail.vue';
   align-self: stretch;
   text-align: center;
 
-  /* Headings/Mobile/L */
+  
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FFF;
   font-family: Montserrat;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2rem; /* 133.333% */
+  line-height: 2rem; 
   letter-spacing: 0.03rem;
   text-transform: uppercase;
 }
 
 .contact-info {
   display: flex;
+  flex-direction: column;
   padding: 0rem var(--space-300, 1.5rem);
   align-items: center;
   align-content: center;
@@ -98,7 +99,7 @@ import Mail from '@/components/icons/mail.vue';
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem; 
   letter-spacing: 0.01rem;
 }
 
@@ -140,6 +141,7 @@ ul {
 
 .contact-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -163,7 +165,7 @@ ul {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.55rem; /* 175% */
+  line-height: 1.5rem;
   letter-spacing: -0.005rem;
 }
 
@@ -211,6 +213,7 @@ ul {
   gap: 3rem 4.5rem;
   align-self: stretch;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 ul {
@@ -240,7 +243,11 @@ ul {
 }
 }
 
-
+@media (min-width: 1086px) {
+  .contact-info {
+    flex-direction:unset;
+  }
+}
 
 </style>
 

@@ -49,7 +49,8 @@ import { RouterLink } from 'vue-router';
         LogoHSC,
         FacebookIcon,
         InstagramIcon,
-        Modal,  
+        Modal,
+        RouterLink,  
     },
     setup() {
         const isModalVisible = ref(false);
