@@ -1,4 +1,5 @@
 <template>
+   <a href="https://maps.app.goo.gl/NtBM6WvEYJtFcmYm6" target="_blank" rel="noopener noreferrer"></a>
   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
         <g clip-path="url(#clip0_258_5376)">
         <path d="M24 4C16.26 4 10 10.26 10 18C10 28.5 24 44 24 44C24 44 38 28.5 38 18C38 10.26 31.74 4 24 4ZM14 18C14 12.48 18.48 8 24 8C29.52 8 34 12.48 34 18C34 23.76 28.24 32.38 24 37.76C19.84 32.42 14 23.7 14 18Z" fill="white"/>

@@ -1,6 +1,7 @@
 <template>
  
     
+    
     <HeroContent/>
     <ContactBanner/>
     <AboutUsSection/>
@@ -23,22 +24,27 @@
   <script>
   
   
-  import HeroContent from '@/components/desktop/2HeroContent.vue';
-  import ContactBanner from '@/components/desktop/3ContactBanner.vue';
-  import AboutUsSection from '@/components/desktop/4AboutUsSection.vue';
-  import VideoAsset from '@/components/desktop/5VideoAsset.vue';
-  import OfferSection from '@/components/desktop/6OfferSection.vue';
-  import TeamSection from '@/components/desktop/7TeamSection.vue';
-  import ImageGallery from '@/components/desktop/8ImageGallery.vue';
-  import SocialSection from '@/components/desktop/9SocialSection.vue';
-  import Cooperation from '@/components/desktop/10Cooperation.vue';
-  import HSCMoreSection from '@/components/desktop/11HSCMoreSection.vue';
-  import ReviewsSection from '@/components/desktop/12ReviewsSection.vue';
-  import ContactSection from '@/components/desktop/13ContactSection.vue';
-  import VideoContent from '@/components/desktop/14VideoContent.vue';
-  import Footer from '@/components/desktop/15Footer.vue';
-  import Modal from '@/components/desktop/Modal.vue';
+  import HeroContent from '@/components/home/2HeroContent.vue';
+  import ContactBanner from '@/components/home/3ContactBanner.vue';
+  import AboutUsSection from '@/components/home/4AboutUsSection.vue';
+  import VideoAsset from '@/components/home/5VideoAsset.vue';
+  import OfferSection from '@/components/home/6OfferSection.vue';
+  import TeamSection from '@/components/home/7TeamSection.vue';
+  import ImageGallery from '@/components/home/8ImageGallery.vue';
+  import SocialSection from '@/components/home/9SocialSection.vue';
+  import Cooperation from '@/components/home/10Cooperation.vue';
+  import HSCMoreSection from '@/components/home/11HSCMoreSection.vue';
+  import ReviewsSection from '@/components/home/12ReviewsSection.vue';
+  import ContactSection from '@/components/home/13ContactSection.vue';
+  import VideoContent from '@/components/home/14VideoContent.vue';
+  import Footer from '@/components/home/15Footer.vue';
+  import Modal from '@/components/home/Modal.vue';
   
+  
+  
+
+
+
   
   
   
@@ -60,11 +66,7 @@
       ContactSection,
       VideoContent,
       Footer,
-      Modal,  
-  
-      
-      
-  
-    }
+      Modal,
+    },
   }
   </script>
