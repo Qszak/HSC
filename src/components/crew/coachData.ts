@@ -1,4 +1,5 @@
 export const coachData = [
+
     {
         name: "Michal Kulej",
         position: "Trener Personalny",
@@ -10,119 +11,132 @@ export const coachData = [
         name: "Jakub Kulej",
         position: "Trener Personalny",
         skills: "personal, combat",
-        imgSrc: "JKulej",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Jakuba Kuleja"
     },
     {
         name: "Filip Krasiński",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "FKrasinski",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Filipa Krasińskiego"
     },
     {
         name: "Klaudia Żmijewska",
         position: "Trener Personalny",
         skills: "personal, medical",
-        imgSrc: "KZmijewska",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Klaudii Żmijewskiej"
     },
     {
         name: "Mateusz Flejterski",
         position: "Trener Personalny",
         skills: "personal, medical, combat, motor",
-        imgSrc: "MFlejterski",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Mateusza Flejterskiego"
     },
     {
         name: "Tomasz Rudolf",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "TRudolf",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Tomasza Rudolfa"
     },
     {
         name: "Sandra Cieślik-Kulej",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "SCieslik",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Sandry Cieślik-Kulej"
     },
     {
         name: "Adrian Spetany",
         position: "Trener Kickboxingu",
         skills: "combat",
-        imgSrc: "ASpetany",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Adriana Spętanego"
     },
     {
         name: "Kamil Łata",
         position: "Trener BJJ (dla dzieci)",
         skills: "combat",
-        imgSrc: "KLata",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Kamila Łaty"
     },
     {
         name: "Dominik Warmiłło",
         position: "Trener Personalny",
         skills: "personal, combat",
-        imgSrc: "DWarmillo",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Dominika Warmiłło"
     },
     {
         name: "Patryk Mikulski",
         position: "Trener MMA",
         skills: "combat",
-        imgSrc: "PMikulski",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Patryka Mikulskiego"
     },
     {
         name: "Tomasz Mitrosz",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "TMitrosz",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Tomasza Mitrosza"
     },
     {
         name: "Grzegorz Skołuda",
         position: "Trener Personalny",
         skills: "personal, combat",
-        imgSrc: "GSkoluda",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Grzegorza Skołudy"
     },
     {
         name: "Przemysław Gąska",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "PGaska",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Przemysława Gąski"
     },
     {
         name: "Marcin Woźniak",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "MWozniak",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Marcina Woźniaka"
     },
     {
         name: "Tomasz Wroński",
         position: "Trener Personalny",
         skills: "personal, motor",
-        imgSrc: "TWronski",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Tomasza Wrońskiego"
     },
     {
         name: "Marcin Bachórz",
         position: "Trener Kickboxingu",
         skills: "combat",
-        imgSrc: "MBachorz",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Marcina Bachórz"
     },
     {
         name: "Vladyslav Filenko",
         position: "Trener BJJ",
         skills: "combat",
-        imgSrc: "VFilenko",
+        imgSrc: "/images/MKulej.png",
         imgAlt: "Zdjęcie Vladyslava Filenko"
     },
-]
+    {
+        name: "Łukasz Szefner",
+        position: "Fizjoterapeuta",
+        skills: "office",
+        imgSrc: "/images/MKulej.png",
+        imgAlt: "Zdjęcie Łukasza Szefnera"
+    },
+    {
+        name: "Natalia Zieniewicz",
+        position: "Hipnoterapeutka",
+        skills: "office",
+        imgSrc: "/images/MKulej.png",
+        imgAlt: "Zdjęcie Natalii Zieniewicz"
+    },]
