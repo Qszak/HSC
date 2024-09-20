@@ -24,7 +24,7 @@
     :effect="'coverflow'"
     :grabCursor="true"
     :centeredSlides="true"
-    :slidesPerView="'1'"
+    :slidesPerView="1"
     :coverflowEffect="{
     rotate: 0,
     stretch: 0,
@@ -35,7 +35,7 @@
     :pagination="true"
     :modules="modules"
     :breakpoints="{ 1300:{
-      slidesPerView: 2,
+      slidesPerView:2,
       coverflowEffect: {
         rotate: 0,
         stretch: -30,
@@ -66,7 +66,12 @@
         <p class="section-3-header">Kadra</p>
         <p class="section-3-text">Na naszej trenerskiej ścieżce pojawiło się wielu specjalistów, którzy wyróżniają się swoim profesjonalnym podejściem do ludzi jako Trener, ale też jako dobry znajomy czy przyjaciel. Każdy z nas ma ciągłą chęć rozwoju i wspólnie wspieramy się w tym aspekcie, tworząc małą "siłownianą rodzinę". Zgrywając się na wielu płaszczyznach, tworzymy w naszym klubie niesamowity i przyjazny klimat, który jest naszym niebywałym atutem, co również odczuwają nasi podopieczni. Zapoznaj się z naszą kadrą!</p>
     </div>
-<SwiperTeam/>
+<div class="slider-team">   
+<SliderTeam/>
+</div> 
+<div class="slider-static">
+<SliderTeamStatic/>
+</div>
 </div>
 <RouterLink to="/kadra" class="meet-crew">Zobacz naszą kadrę</RouterLink>
 
@@ -74,7 +79,6 @@
 
 <script>
 import photo from '@/assets/team/Michał Kulej.jpg';
-import SwiperTeam from '@/components/mobile/SliderTeam.vue';
 import { RouterLink } from 'vue-router';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
@@ -82,14 +86,17 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import photos from '@/assets/gym-photo.jpg';
+import SliderTeam from '../crew/SliderTeam.vue';
+import SliderTeamStatic from '../crew/SliderTeamStatic.vue';
 
 export default {
     name: 'Section',
     components: {
-        SwiperTeam,
+        SliderTeam,
         RouterLink,
         Swiper,
         SwiperSlide,
+        SliderTeamStatic,
     },
 
     data() {
@@ -269,10 +276,12 @@ img.single {
 }
 
 .slider {
+    max-width: 90vw;
     display: flex;
     align-items: center;
     gap: var(--space-300, 1.5rem);
 }
+
 
 img.slide {
   max-width: 80vw;
@@ -292,7 +301,13 @@ img.slide {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.slider-team {
+   display: block;
 }  
+.slider-static {
+    display: none;
+}
 
 }
 
@@ -453,6 +468,7 @@ img.single {
 }
 
 .slider {
+    max-width: 90vw;
     display: flex;
     align-items: center;
     gap: var(--space-300, 1.5rem);
@@ -465,6 +481,7 @@ img.slide {
 
 }
 
+
 .swiper-slide {
     align-self: flex-start;
     justify-self: flex-start;
@@ -476,7 +493,13 @@ img.slide {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.slider-team {
+   display: block;
 }  
+.slider-static {
+    display: none;
+}
 
 }
 
@@ -637,6 +660,7 @@ img.single {
 }
 
 .slider {
+    max-width: 90vw;
     display: flex;
     align-items: center;
     gap: var(--space-300, 1.5rem);
@@ -661,6 +685,30 @@ img.slide {
     justify-content: center;
     align-items: center;
 }  
+.slider-team {
+   display: none;
+}  
+.slider-static {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: calc(5rem + 2vw);
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+}
+@media (min-width: 1440px) {
+  .slider-static {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+    flex-wrap: nowrap;
+  }
 
 }
 </style>

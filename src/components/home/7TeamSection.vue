@@ -24,24 +24,17 @@
                     :pagination="true"
                     :modules="modules"
                     class="swiper-dynamic">
-                        <swiper-slide>
-                            <MKulej/>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <JKulej/>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <FKrasinski/>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <SCieslik/>
+                    <swiper-slide v-for="(coach, index) in coachData" :key="index">
+                        <CoachCards 
+                            :coachName="coach.name" 
+                            :coachPosition="coach.position" 
+                            :imgSrc="coach.imgSrc" 
+                            :imgAlt="coach.imgAlt" 
+                        />
                         </swiper-slide>
                     </swiper>
                     <div class="static">
-                        <MKulej/>
-                        <JKulej/>
-                        <FKrasinski/>
-                        <SCieslik/>
+                        <SwiperTeamStatic/>
                     </div>
             </div>
                 
@@ -61,26 +54,54 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import CoachCards from '../CoachCards/CoachCards.vue';
+import SwiperTeamStatic from '../crew/SliderTeamStatic.vue'
 
-import MKulej from '../CoachCards/MKulej.vue';
-import JKulej from '../CoachCards/JKulej.vue';
-import FKrasinski from '../CoachCards/FKrasinski.vue';
-import SCieslik from '../CoachCards/SCieslik.vue';
+
+const coachData = [
+{
+  name: "Michal Kulej",
+  position: "Trener Personalny",
+  skills: "personal, medical, combat, motor",
+  imgSrc: "/images/MKulej.png",
+  imgAlt: "Zdjęcie Michała Kuleja"
+},
+{
+  name: "Jakub Kulej",
+  position: "Trener Personalny",
+  skills: "personal, combat",
+  imgSrc: "/images/MKulej.png",
+  imgAlt: "Zdjęcie Jakuba Kuleja"
+},
+{
+  name: "Filip Krasiński",
+  position: "Trener Personalny",
+  skills: "Personal",
+  imgSrc: "/images/MKulej.png",
+  imgAlt: "Zdjęcie Filipa Krasińskiego"
+},
+{
+  name: "Sandra Cieślik-Kulej",
+  position: "Trener Personalny",
+  skills: "personal",
+  imgSrc: "/images/MKulej.png",
+  imgAlt: "Zdjęcie Sandry Cieślik-Kulej"
+},
+]
 
 export default {
     name: 'TeamSection',
     components: {
         Swiper,
         SwiperSlide,
-        MKulej,
-        JKulej,
-        FKrasinski,
-        SCieslik,
         RouterLink,
+        CoachCards,
+        SwiperTeamStatic,
     },
     setup() {
     return {
       modules: [EffectCoverflow, Pagination],
+      coachData,
     };
   },
 };
@@ -163,7 +184,7 @@ section.team {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  align-self: stretch;
+  /* align-self: stretch; */
   background: var(--Surface-Brand, #E30613);
   color: var(--Text-Inverse-primary, #FFF);
   text-align: center;
