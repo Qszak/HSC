@@ -379,8 +379,9 @@ section.team {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: calc(5rem + 5vw);
     align-self: stretch;
+    flex-wrap: wrap;
  
 }
 
@@ -412,14 +413,12 @@ section.team {
     align-items: center;
     align-content: center;
     justify-content: center;
-    gap: calc(5rem + 5vw);
-    align-self: stretch;
-    flex-wrap: wrap;
+ 
   }
 }
 
 @media (min-width: 1440px) {
-  .static {
+  .team-slider {
     display: flex;
     flex-direction: row;
     justify-content: center;

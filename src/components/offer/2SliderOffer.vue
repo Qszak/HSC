@@ -1,24 +1,31 @@
 <template>
 
-    <div class="offer-slider">
-        <KickboxingCard/>
-        <BoksCard/>
-        <MMACard/>
+<div class="offer-slider">
+        <OfferCard
+            v-for="(offer, index) in offers" 
+            :key="index"
+            :service="offer.service"
+            :subtitle="offer.subtitle"
+            :imgSrc="offer.imgSrc"
+            :description="offer.description"
+        />
     </div>
-
 </template>
 
 <script>
-import KickboxingCard from '../OfferCards/kickboxing.vue';
-import BoksCard from '@/components/OfferCards/boks.vue';
-import MMACard from '@/components/OfferCards/mma.vue';
+import { offerData } from '@/data/offerData';
+import OfferCard from '../OfferCards/OfferCard.vue';
+
 
 export default {
     name: 'OfferSlider',
     components: {
-        KickboxingCard,
-        BoksCard,
-        MMACard,
+      OfferCard,
+    },
+    data() {
+        return {
+            offers: offerData,
+        };
     }
 }
 </script>
@@ -28,13 +35,13 @@ export default {
 
 .offer-slider {
     display: flex;
-    width: calc(100svw - var(--scrollbarWidth));
-    align-items: center;
-    align-content: center;
+    padding: 6rem 4.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
     gap: 2rem;
+    align-self: stretch;
     flex-wrap: wrap;
-    margin: 0 5vw;
-    overflow: hidden;
 }
 
 </style>

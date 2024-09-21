@@ -27,25 +27,22 @@
         :pagination="true"
         :modules="modules"
         class="swiper-dynamic">
-        <swiper-slide>
-          <KickboxingCard/>
-        </swiper-slide>
-        <swiper-slide>
-          <Stretching/>
-        </swiper-slide>
-        <swiper-slide>
-          <Kids/>
-        </swiper-slide>
-        <swiper-slide>
-          <MMACard/>
+        <swiper-slide v-for="(offer, index) in selectedServices" :key="index">>
+          <OfferCard
+            :service="offer.service"
+            :subtitle="offer.subtitle"
+            :imgSrc="offer.imgSrc"
+            :description="offer.description"
+        />
         </swiper-slide>
       </swiper>
-      <div class="static">
-        <KickboxingCard/>
-        <Stretching/>
-        <Kids/>
-        <MMACard/>
-      
+      <div class="static" v-for="(offer, index) in selectedServices" :key="index">
+        <OfferCard
+            :service="offer.service"
+            :subtitle="offer.subtitle"
+            :imgSrc="offer.imgSrc"
+            :description="offer.description"
+        />
       </div>
     </div>
   </div>
@@ -57,22 +54,13 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import KickboxingCard from '../OfferCards/kickboxing.vue';
-import MMACard from '@/components/OfferCards/mma.vue';
-import Kids from '../OfferCards/kids.vue';
-import Stretching from '../OfferCards/stretching.vue';
-
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
-
-// import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import OfferCard from '../OfferCards/OfferCard.vue';
+import { offerData } from '@/data/offerData';
 
 
     export default {
@@ -80,15 +68,24 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
       components: {
       Swiper,
       SwiperSlide,
-      KickboxingCard,
-      MMACard,
-      Kids,
-      Stretching,
       RouterLink,
+      OfferCard,
       },
       setup() {
+        const selectedOfferServices = ["Trening siłowy", "Kickboxing", "Boks", "Stretching"];
+
+        const selectedServices = offerData.filter(service => {
+      if (selectedOfferServices.includes(service.service)) {
+        if (service.service === "Kickboxing" || service.service === "Boks") {
+          return service.subtitle === "Grupowy";
+        }
+        return true;
+      }
+      return false;
+    });
     return {
       modules: [EffectCoverflow, Pagination],
+      selectedServices,
        };
       },
     }
@@ -479,11 +476,11 @@ p.section-text {
 
 .offer-slider {
   display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: flex-start;
-gap: 2rem;
+gap: calc(5rem + 5vw);
 align-self: stretch;
+flex-wrap: wrap;
 }
 
 
@@ -512,17 +509,12 @@ align-self: stretch;
   .static {
     
     display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    gap: calc(5rem + 5vw);
-    align-self: stretch;
-    flex-wrap: wrap;
+
   }
 }
 
 @media (min-width: 1440px) {
-  .static {
+  .offer-slider {
     display: flex;
   flex-direction: row;
   justify-content: center;
