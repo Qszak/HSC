@@ -1,5 +1,6 @@
 <template>
-    <div class="coach-card">
+  <RouterLink class="link" :to="{ name: 'Karta-Trenera', params: { coachName: coachName } }">
+    <div class="coach-card" @click="'goToCoachPage'">
         <div class="gallery-image">
             <div class="ratio-image">
                 <img :src="imgSrc" :alt="imgAlt"/>
@@ -10,9 +11,12 @@
             <div class="coach-position">{{ coachPosition }}</div>
         </div>
     </div>
+  </RouterLink>
     </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 
 
 export default {
@@ -22,18 +26,22 @@ export default {
     coachPosition: String,
     imgSrc: String,
     imgAlt: String,
-  }
-}
+  },
+};
 
 </script>
 
 <style scoped>
+  .link {
+    text-decoration: none;
+  }
   .coach-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--Surface-Secondary, #F5F5F5);
     cursor: pointer;
+    
   }
  
   .gallery-image {

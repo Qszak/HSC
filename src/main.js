@@ -10,7 +10,7 @@ import Crew from '@/pages/Crew.vue';
 import Physio from './pages/Physio.vue';
 import Diet from './pages/Diet.vue';
 import Shop from './pages/Shop.vue';
-import CoachPage from './pages/CoachPage.vue';
+import CoachPage from './components/CoachCards/CoachPage.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },

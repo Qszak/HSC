@@ -24,7 +24,7 @@
                     :pagination="true"
                     :modules="modules"
                     class="swiper-dynamic">
-                    <swiper-slide v-for="(coach, index) in coachData" :key="index">
+                    <swiper-slide v-for="(coach, index) in selectedCoaches" :key="index">
                         <CoachCards 
                             :coachName="coach.name" 
                             :coachPosition="coach.position" 
@@ -33,8 +33,13 @@
                         />
                         </swiper-slide>
                     </swiper>
-                    <div class="static">
-                        <SwiperTeamStatic/>
+                    <div class="static" v-for="(coach, index) in selectedCoaches" :key="index">
+                        <CoachCards 
+                            :coachName="coach.name" 
+                            :coachPosition="coach.position" 
+                            :imgSrc="coach.imgSrc" 
+                            :imgAlt="coach.imgAlt" 
+                        />
                     </div>
             </div>
                 
@@ -55,39 +60,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import CoachCards from '../CoachCards/CoachCards.vue';
-import SwiperTeamStatic from '../crew/SliderTeamStatic.vue'
+import { coachData } from '@/data/coachData';
 
-
-const coachData = [
-{
-  name: "Michal Kulej",
-  position: "Trener Personalny",
-  skills: "personal, medical, combat, motor",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Michała Kuleja"
-},
-{
-  name: "Jakub Kulej",
-  position: "Trener Personalny",
-  skills: "personal, combat",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Jakuba Kuleja"
-},
-{
-  name: "Filip Krasiński",
-  position: "Trener Personalny",
-  skills: "Personal",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Filipa Krasińskiego"
-},
-{
-  name: "Sandra Cieślik-Kulej",
-  position: "Trener Personalny",
-  skills: "personal",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Sandry Cieślik-Kulej"
-},
-]
 
 export default {
     name: 'TeamSection',
@@ -96,16 +70,20 @@ export default {
         SwiperSlide,
         RouterLink,
         CoachCards,
-        SwiperTeamStatic,
     },
     setup() {
-    return {
-      modules: [EffectCoverflow, Pagination],
-      coachData,
-    };
-  },
-};
+        // Tablica trenerów, których chcesz wybrać
+        const selectedCoachNames = ["Michał Kulej", "Jakub Kulej", "Filip Krasiński", "Sandra Cieślik-Kulej"];
 
+        // Filtrowanie trenerów na podstawie wybranych nazw
+        const selectedCoaches = coachData.filter(coach => selectedCoachNames.includes(coach.name));
+
+        return {
+            modules: [EffectCoverflow, Pagination],
+            selectedCoaches,
+        };
+    },
+};
 </script>
 
 

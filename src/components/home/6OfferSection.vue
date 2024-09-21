@@ -59,7 +59,6 @@
 import { RouterLink } from 'vue-router';
 import KickboxingCard from '../OfferCards/kickboxing.vue';
 import MMACard from '@/components/OfferCards/mma.vue';
-import Bjj from '../OfferCards/bjj.vue';
 import Kids from '../OfferCards/kids.vue';
 import Stretching from '../OfferCards/stretching.vue';
 
@@ -83,7 +82,6 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
       SwiperSlide,
       KickboxingCard,
       MMACard,
-      Bjj,
       Kids,
       Stretching,
       RouterLink,
