@@ -17,14 +17,14 @@
   
     class="mySwiper"
   >
-    <swiper-slide v-for="(coach, index) in coachData" :key="index">
-      <CoachCards 
-        :coachName="coach.name" 
-        :coachPosition="coach.position" 
-        :imgSrc="coach.imgSrc" 
-        :imgAlt="coach.imgAlt" 
-      />
-    </swiper-slide>
+  <swiper-slide v-for="(coach, index) in selectedCoaches" :key="index">
+                        <CoachCards 
+                            :coachName="coach.name" 
+                            :coachPosition="coach.position" 
+                            :imgSrc="coach.imgSrc" 
+                            :imgAlt="coach.imgAlt" 
+                        />
+                        </swiper-slide>
   </swiper>
 </div>
 </template>
@@ -41,37 +41,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import CoachCards from '../CoachCards/CoachCards.vue';
-
-const coachData = [
-{
-  name: "Michal Kulej",
-  position: "Trener Personalny",
-  skills: "personal, medical, combat, motor",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Michała Kuleja"
-},
-{
-  name: "Jakub Kulej",
-  position: "Trener Personalny",
-  skills: "personal, combat",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Jakuba Kuleja"
-},
-{
-  name: "Filip Krasiński",
-  position: "Trener Personalny",
-  skills: "Personal",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Filipa Krasińskiego"
-},
-{
-  name: "Sandra Cieślik-Kulej",
-  position: "Trener Personalny",
-  skills: "personal",
-  imgSrc: "/images/MKulej.png",
-  imgAlt: "Zdjęcie Sandry Cieślik-Kulej"
-},
-]
+import { coachData } from '@/data/coachData';
 
 export default {
 name: 'SwiperTeam',
@@ -81,22 +51,22 @@ components: {
   CoachCards
 },
 setup() {
+  const selectedCoachNames = ["Michał Kulej", "Jakub Kulej", "Filip Krasiński", "Sandra Cieślik-Kulej"];
+
+  const selectedCoaches = coachData.filter(coach => selectedCoachNames.includes(coach.name));
+
   return {
     modules: [EffectCoverflow, Pagination],
-    coachData,
-  };
-}
+    selectedCoaches,
+    };
+  },
 };
 </script>
 
 
 <style scoped>
-/* .slider {
-    max-width: 90vw;
-    display: flex;
-    align-items: center;
-    gap: var(--space-300, 1.5rem);
-} */
+
+
 
 .myswiper {
     max-width: 90vw;

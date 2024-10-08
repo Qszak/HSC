@@ -379,7 +379,7 @@ section.team {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: calc(5rem + 5vw);
+    gap: calc(2rem + 5vw);
     align-self: stretch;
     flex-wrap: wrap;
  

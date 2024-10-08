@@ -1,0 +1,1048 @@
+<template>
+    <div class="offer-hero">
+        <div class="offer-promo">
+            <div class="subtitle">Gabinet</div>
+            <div class="service">Hipnoterapia</div>
+        </div>
+    </div>
+    <div class="description-section">
+        <div class="text-block">
+            <p class="text-block-header">Hipnoterapeutka Natalia Zieniewicz</p>
+            <p class="text-block-text">
+                Psycholog, psychodietetyk oraz certyfikowana hipnoterapeutka.
+                Jej podejście łączy psychologię, dietetykę i hipnoterapię, co
+                pozwala kompleksowo, szybko i skutecznie pomagać pacjentom w
+                osiąganiu celów i pokonywaniu przeszkód. Swoje doświadczenie
+                zawodowe zdobywała w szpitalu psychiatrycznym, ośrodku leczenia
+                zaburzeń odżywiania, poradniach psychologicznych oraz
+                stowarzyszeniach pomagających osobom w kryzysie zdrowia
+                psychicznego. Jeżeli mierzysz się z emocjonalnym jedzeniem, nie
+                możesz schudnąć mimo diety i treningów, cierpisz na zaburzenia
+                lękowe, fobie, bezsenność, mierzysz się z nałogiem, chcesz
+                pozbyć się ograniczających przekonań, lub wręcz przeciwnie -
+                poprawić swoje osiągnięcia i skutecznie się zmotywować,
+                zapraszamy na sesje indywidualne.
+            </p>
+        </div>
+        <div class="photo"></div>
+    </div>
+    <div class="service-section">
+        <p class="service-section-header">Zakres usług</p>
+        <div class="service-section-block">
+            <div class="service-section-block-column">
+                <p class="service-section-block-column-text">
+                    emocjonalne jedzenie
+                </p>
+                <p class="service-section-block-column-text">
+                    zaburzenia lękowe
+                </p>
+                <p class="service-section-block-column-text">fobie</p>
+                <p class="service-section-block-column-text">bezsenność</p>
+                <p class="service-section-block-column-text">nałogi</p>
+            </div>
+        </div>
+    </div>
+    <div class="contact-block">
+        <div class="contact">
+            <p class="contact-header">KONTAKT</p>
+            <div class="contact-info">
+                <div class="phone"><Phone />+ 48 793 951 015</div>
+                <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
+            </div>
+        </div>
+        <div class="working-hours">
+            <p class="working-hours-header">Godziny pracy</p>
+            <div class="hours-box">
+                <div class="hours">
+                    <p class="day">Poniedziałek</p>
+                    <p class="time">9:00-17:00</p>
+                </div>
+                <div class="hours">
+                    <p class="day">Środa</p>
+                    <p class="time">9:00-17:00</p>
+                </div>
+                <div class="hours">
+                    <p class="day">Piątek</p>
+                    <p class="time">9:00-17:00</p>
+                </div>
+                <div class="hours">
+                    <p class="day">Sobota</p>
+                    <p class="time">9:00-10:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="promo">
+        <div class="video-container">
+            <video
+                class="video-player"
+                :src="VideoSrc"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+            <div class="content">
+                <p class="text">Trenuj z nami</p>
+                <button class="primary" @click="showModal">Zapisz się!</button>
+                <Modal :isVisible="isModalVisible" @close="closeModal"></Modal>
+            </div>
+        </div>
+    </div>
+    <Footer />
+</template>
+
+<script>
+import Footer from "../home/15Footer.vue";
+import VideoContent from "@/assets/VideoContent.mp4";
+import Phone from "../icons/phone.vue";
+import Mail from "../icons/mail.vue";
+
+export default {
+    name: "Hypno",
+    components: {
+        Footer,
+        Phone,
+        Mail,
+    },
+    data() {
+        return {
+            VideoSrc: VideoContent,
+        };
+    },
+};
+</script>
+
+<style scoped>
+@media (max-width: 640px) {
+    .offer-hero {
+        width: 100%;
+        height: 30rem;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4.5rem;
+        flex-shrink: 0;
+        background-image: url(/public/images/Image.png);
+    }
+
+    .offer-promo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        margin: auto 0;
+    }
+
+    .subtitle {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .service {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.375rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    .description-section {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 5vh 2vw;
+    }
+
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-200, 1rem);
+        align-self: stretch;
+    }
+
+    .text-block-header {
+        align-self: stretch;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.0225rem;
+        text-transform: uppercase;
+    }
+
+    .text-block-text {
+        align-self: stretch;
+        color: var(--Text-Background-text-inverse, #313131);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+    .photo {
+        height: 21.4375rem;
+        align-self: stretch;
+    }
+
+    .service-section {
+        display: flex;
+        width: 90vw;
+        padding: 3rem var(--space-100, 0.5rem);
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-300, 1.5rem);
+        border-radius: var(--Corner-Small, 0.5rem);
+        background: var(--Surface-Secondary, #f5f5f5);
+        margin: 0 auto;
+    }
+
+    .service-section-header {
+        align-self: stretch;
+        color: var(--Text-Primary, #181818);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.0225rem;
+        text-transform: uppercase;
+    }
+
+    .service-section-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-300, 1.5rem);
+        align-self: stretch;
+    }
+
+    .service-section-block-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .service-section-block-column-text {
+        align-self: stretch;
+        color: var(--Text-Secondary, #484848);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .contact-block {
+        display: flex;
+        width: calc(100svw - var(--scrollbarWidth));
+        padding: 3rem var(--space-200, 1rem);
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+        border-radius: var(--Corner-None, 0rem);
+        background: var(--Surface-Inverse-primary, #181818);
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .contact-header,
+    .working-hours-header {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.0225rem;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-200, 1rem);
+        align-self: stretch;
+    }
+
+    .phone,
+    .mail {
+        display: flex;
+        align-items: center;
+        gap: var(--space-150, 0.75rem);
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .hours-box {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: center;
+        gap: var(--space-300, 1.5rem) var(--space-200, 1rem);
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .hours {
+        display: flex;
+        min-width: 7.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-100, 0.5rem);
+    }
+
+    .day {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .time {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .promo {
+        width: calc(100svw - var(--scrollbarWidth));
+        background: rgba(7, 7, 7, 0.5);
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    p.text {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.5rem;
+        letter-spacing: 0.09rem;
+        text-transform: uppercase;
+    }
+
+    button.primary {
+        margin-top: 2rem;
+        padding: 1.25rem 3rem;
+        justify-content: center;
+        gap: 1rem;
+        background: var(--Surface-Brand, #e30613);
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-color: #e30613;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+    .offer-hero {
+        width: 100%;
+        height: 30rem;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4.5rem;
+        flex-shrink: 0;
+        background-image: url(/public/images/Image.png);
+    }
+
+    .offer-promo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        margin: auto 0;
+    }
+
+    .subtitle {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .service {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.375rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    .description-section {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 5vh 2vw;
+    }
+
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-200, 1rem);
+    }
+
+    .text-block-header {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .text-block-text {
+        align-self: stretch;
+        color: var(--Text-Background-text-inverse, #313131);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+    .photo {
+        height: 49.125rem;
+        align-self: stretch;
+    }
+
+    .service-section {
+        display: flex;
+        width: 90vw;
+        padding: 3rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        border-radius: var(--Corner-Small, 0.5rem);
+        background: var(--Surface-Secondary, #f5f5f5);
+        margin: 0 auto;
+    }
+
+    .service-section-header {
+        width: 100%;
+        color: var(--Text-Primary, #181818);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .service-section-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .service-section-block-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .service-section-block-column-text {
+        align-self: stretch;
+        color: var(--Text-Secondary, #484848);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .contact-block {
+        display: flex;
+        width: calc(100svw - var(--scrollbarWidth));
+        padding: 3rem var(--space-300, 1.5rem);
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+        border-radius: var(--Corner-None, 0rem);
+        background: var(--Surface-Inverse-primary, #181818);
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .contact-header,
+    .working-hours-header {
+        width: 100%;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4.5rem;
+        align-self: stretch;
+    }
+
+    .phone,
+    .mail {
+        display: flex;
+        align-items: center;
+        gap: var(--space-150, 0.75rem);
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .hours-box {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .hours {
+        display: flex;
+        min-width: 12.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-100, 0.5rem);
+        flex: 1 0 0;
+    }
+
+    .day {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .time {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .promo {
+        width: calc(100svw - var(--scrollbarWidth));
+        background: rgba(7, 7, 7, 0.5);
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    p.text {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.5rem;
+        letter-spacing: 0.09rem;
+        text-transform: uppercase;
+    }
+
+    button.primary {
+        margin-top: 2rem;
+        padding: 1.25rem 3rem;
+        justify-content: center;
+        gap: 1rem;
+        background: var(--Surface-Brand, #e30613);
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-color: #e30613;
+    }
+}
+
+@media (min-width: 960px) {
+    .offer-hero {
+        width: 100%;
+        height: 30rem;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4.5rem;
+        flex-shrink: 0;
+        background-image: url(/public/images/Image.png);
+    }
+
+    .offer-promo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        margin: auto 0;
+    }
+
+    .subtitle {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .service {
+        align-self: stretch;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.375rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    .description-section {
+        display: flex;
+        width: 90vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 5vh 2vw;
+    }
+
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-200, 1rem);
+    }
+
+    .text-block-header {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .text-block-text {
+        align-self: stretch;
+        color: var(--Text-Background-text-inverse, #313131);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+    .photo {
+        width: 32.5625rem;
+        height: 32.5625rem;
+    }
+
+    .service-section {
+        display: flex;
+        width: 90vw;
+        padding: 3rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        border-radius: var(--Corner-Small, 0.5rem);
+        background: var(--Surface-Secondary, #f5f5f5);
+        margin: 0 auto;
+    }
+
+    .service-section-header {
+        width: 100%;
+        color: var(--Text-Primary, #181818);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .service-section-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .service-section-block-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .service-section-block-column-text {
+        align-self: stretch;
+        color: var(--Text-Secondary, #484848);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .contact-block {
+        display: flex;
+        width: calc(100svw - var(--scrollbarWidth));
+        padding: 3rem var(--space-300, 1.5rem);
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+        border-radius: var(--Corner-None, 0rem);
+        background: var(--Surface-Inverse-primary, #181818);
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .contact-header,
+    .working-hours-header {
+        width: 100%;
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4.5rem;
+        align-self: stretch;
+    }
+
+    .phone,
+    .mail {
+        display: flex;
+        align-items: center;
+        gap: var(--space-150, 0.75rem);
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .hours-box {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .hours {
+        display: flex;
+        min-width: 12.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-100, 0.5rem);
+        flex: 1 0 0;
+    }
+
+    .day {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: -0.005rem;
+    }
+
+    .time {
+        align-self: stretch;
+        color: var(--Text-Inverse-secondary, #e1e1e1);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: -0.00563rem;
+    }
+
+    .promo {
+        width: calc(100svw - var(--scrollbarWidth));
+        background: rgba(7, 7, 7, 0.5);
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        padding: 0rem var(--space-200, 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    p.text {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.5rem;
+        letter-spacing: 0.09rem;
+        text-transform: uppercase;
+    }
+
+    button.primary {
+        margin-top: 2rem;
+        padding: 1.25rem 3rem;
+        justify-content: center;
+        gap: 1rem;
+        background: var(--Surface-Brand, #e30613);
+        color: var(--Text-Inverse-primary, #fff);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-color: #e30613;
+    }
+}
+</style>

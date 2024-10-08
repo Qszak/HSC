@@ -79,6 +79,9 @@ import { offerData } from '@/data/offerData';
         if (service.service === "Kickboxing" || service.service === "Boks") {
           return service.subtitle === "Grupowy";
         }
+        if (service.service === "Trening siłowy") {
+          return service.subtitle === "Personalny";
+        }
         return true;
       }
       return false;

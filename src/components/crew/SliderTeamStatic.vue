@@ -1,5 +1,5 @@
 <template>
-  <div class="static" v-for="(coach, index) in coachData" :key="index">
+  <div class="static" v-for="(coach, index) in selectedCoaches" :key="index">
     <CoachCards 
       :coachName="coach.name" 
       :coachPosition="coach.position" 
@@ -11,56 +11,46 @@
 
 <script>
 import CoachCards from '../CoachCards/CoachCards.vue';
+import { coachData } from '@/data/coachData';
 
 export default {
 name: 'SwiperTeamStatic',
 components: {
   CoachCards
 },
-data() {
-  return {
-    coachData: [
-      {
-        name: "Michal Kulej",
-        position: "Trener Personalny",
-        skills: "personal, medical, combat, motor",
-        imgSrc: "/images/MKulej.png",
-        imgAlt: "Zdjęcie Michała Kuleja"
-      },
-      {
-        name: "Jakub Kulej",
-        position: "Trener Personalny",
-        skills: "personal, combat",
-        imgSrc: "/images/MKulej.png",
-        imgAlt: "Zdjęcie Jakuba Kuleja"
-      },
-      {
-        name: "Filip Krasiński",
-        position: "Trener Personalny",
-        skills: "Personal",
-        imgSrc: "/images/MKulej.png",
-        imgAlt: "Zdjęcie Filipa Krasińskiego"
-      },
-      {
-        name: "Sandra Cieślik-Kulej",
-        position: "Trener Personalny",
-        skills: "personal",
-        imgSrc: "/images/MKulej.png",
-        imgAlt: "Zdjęcie Sandry Cieślik-Kulej"
-      },
-    ]
-  };
-}
+setup() {
+  const selectedCoachNames = ["Michał Kulej", "Jakub Kulej", "Filip Krasiński", "Sandra Cieślik-Kulej"];
+
+  const selectedCoaches = coachData.filter(coach => selectedCoachNames.includes(coach.name));
+
+   return {
+      selectedCoaches,
+    };
+  },
 };
+
 </script>
 
 <style scoped>
 .static {
-  width: calc(100svw - var(--scrollbarWidth));
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: calc(5rem + 8vw);
+    align-self: stretch;
+    flex-wrap: wrap;
 }
+@media (min-width: 1440px) {
+  .static {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+    flex-wrap: nowrap;
+  }
+
+}
+
 </style>

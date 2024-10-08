@@ -1,80 +1,90 @@
 <template>
-  <RouterLink class="link" :to="{ name: 'Karta-Trenera', params: { coachName: coachName } }">
-    <div class="coach-card" @click="'goToCoachPage'">
-        <div class="gallery-image">
-            <div class="ratio-image">
-                <img :src="imgSrc" :alt="imgAlt"/>
+    <RouterLink
+        class="link"
+        :to="{ name: 'Karta-Trenera', params: { coachName: coachName } }"
+    >
+        <div class="coach-card" @click="goToCoachPage">
+            <div class="gallery-image">
+                <div class="ratio-image">
+                    <img :src="imgSrc" :alt="imgAlt" />
+                </div>
+            </div>
+            <div class="coach-info">
+                <div class="coach-name">{{ coachName }}</div>
+                <div class="coach-position">{{ coachPosition }}</div>
             </div>
         </div>
-        <div class="coach-info">
-            <div class="coach-name">{{ coachName }}</div>
-            <div class="coach-position">{{ coachPosition }}</div>
-        </div>
-    </div>
-  </RouterLink>
-    </template>
+    </RouterLink>
+</template>
 
 <script>
-import { RouterLink } from 'vue-router';
-
-
+import { RouterLink } from "vue-router";
 
 export default {
-  name: 'CoachCards',
-  props: {
-    coachName: String,
-    coachPosition: String,
-    imgSrc: String,
-    imgAlt: String,
-  },
+    name: "CoachCards",
+    components: {
+        RouterLink,
+    },
+    props: {
+        coachName: {
+            type: String,
+        },
+        coachPosition: {
+            type: String,
+        },
+        imgSrc: {
+            type: String,
+        },
+        imgAlt: {
+            type: String,
+        },
+    },
 };
-
 </script>
 
 <style scoped>
-  .link {
+.link {
     text-decoration: none;
-  }
-  .coach-card {
+}
+.coach-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--Surface-Secondary, #F5F5F5);
+    background: var(--Surface-Secondary, #f5f5f5);
     cursor: pointer;
-    
-  }
- 
-  .gallery-image {
+}
+
+.gallery-image {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-self: stretch;
-  }
-  .ratio-image {
+}
+.ratio-image {
     display: flex;
     max-width: 43.75rem;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-  }
-  img {
+}
+img {
     /* max-width: 100%;
     max-height: 100%;
     object-fit: cover; */
     width: 100%;
     height: auto;
     display: block;
-  }
-  .coach-info {
+}
+.coach-info {
     display: flex;
     padding: var(--space-300, 1.5rem) 0rem;
     flex-direction: column;
     align-items: center;
     gap: var(--space-050, 0.25rem);
     align-self: stretch;
-  }
-  .coach-name {
+}
+.coach-name {
     width: 18.75rem;
     color: var(--Text-Primary, #181818);
     text-align: center;
@@ -84,8 +94,8 @@ export default {
     font-weight: 700;
     line-height: 1.75rem;
     letter-spacing: -0.00563rem;
-  }
-  .coach-position {
+}
+.coach-position {
     width: 18.75rem;
     color: var(--Text-Tertiary, #747474);
     text-align: center;
@@ -95,5 +105,5 @@ export default {
     font-weight: 400;
     line-height: 1.25rem;
     letter-spacing: -0.00438rem;
-  }
-  </style>
+}
+</style>
