@@ -9,7 +9,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.2",
     "core-js": "^3.8.3",
-    "swiper": "^11.1.4",
+    "swiper": "^11.1.14",
     "vue": "^3.2.13",
     "vue-burger-menu": "^2.0.5",
     "vue-router": "^4.0.13",
