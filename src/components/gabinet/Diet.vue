@@ -10,7 +10,9 @@
             <p class="text-block-header">Dietetyka</p>
             <p class="text-block-text"></p>
         </div>
-        <div class="photo"></div>
+        <div class="photo">
+            <img src="/images/HSCdiettransparent.png" alt="" />
+        </div>
     </div>
     <div class="service-section">
         <p class="service-section-header">Zakres usług</p>
@@ -115,7 +117,13 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
-        background-image: url(/public/images/Image.png);
+        background: linear-gradient(
+                0deg,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
+            ),
+            url(/public/images/promo/gabinet.jpg) lightgray 50% / cover
+                no-repeat;
     }
 
     .offer-promo {
@@ -156,7 +164,7 @@ export default {
         width: 90vw;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 2rem;
         margin: 5vh 2vw;
     }
@@ -193,6 +201,10 @@ export default {
     }
     .photo {
         height: 21.4375rem;
+    }
+
+    img {
+        height: 343px;
         align-self: stretch;
     }
 
@@ -427,7 +439,13 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
-        background-image: url(/public/images/Image.png);
+        background: linear-gradient(
+                0deg,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
+            ),
+            url(/public/images/promo/gabinet.jpg) lightgray 50% / cover
+                no-repeat;
     }
 
     .offer-promo {
@@ -468,7 +486,7 @@ export default {
         width: 90vw;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 2rem;
         margin: 5vh 2vw;
     }
@@ -502,8 +520,13 @@ export default {
         letter-spacing: -0.00563rem;
     }
     .photo {
-        height: 49.125rem;
-        align-self: stretch;
+        max-width: 521px;
+        max-height: 521px;
+    }
+
+    img {
+        max-width: 521px;
+        max-height: 521px;
     }
 
     .service-section {
@@ -737,7 +760,13 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
-        background-image: url(/public/images/Image.png);
+        background: linear-gradient(
+                0deg,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
+                var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
+            ),
+            url(/public/images/promo/gabinet.jpg) lightgray 50% / cover
+                no-repeat;
     }
 
     .offer-promo {
@@ -814,6 +843,11 @@ export default {
     .photo {
         width: 32.5625rem;
         height: 32.5625rem;
+    }
+
+    img {
+        max-width: 521px;
+        max-height: 521px;
     }
 
     .service-section {

@@ -2,7 +2,7 @@
     <div>
         <div
             class="offer-hero"
-            :style="{ backgroundImage: `url(${trainingData.imgSrc})` }"
+            :style="{ backgroundImage: `url(${trainingData.imgSrc0})` }"
         >
             <div class="offer-promo">
                 <div class="subtitle">{{ trainingData.subtitle }}</div>
@@ -195,6 +195,9 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .offer-promo {
@@ -437,6 +440,9 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .offer-promo {
@@ -675,6 +681,9 @@ export default {
         align-items: center;
         gap: 4.5rem;
         flex-shrink: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .offer-promo {

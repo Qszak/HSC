@@ -9,9 +9,8 @@
 
 <script>
 export default {
-    name: 'Hero-Content',
-}
-
+    name: "Hero-Content",
+};
 </script>
 
 <style scoped>
@@ -25,7 +24,12 @@ export default {
     align-items: center;
     gap: 0.5rem;
     flex-shrink: 0;
-    background: linear-gradient(0deg, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 0%, var(--Background-shade-Moderate, rgba(0, 0, 0, 0.60)) 100%), url(/src/assets/o-nas.jpeg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(
+            0deg,
+            var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
+            var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
+        ),
+        url(/public/images/promo/ekipa.png) lightgray 50% / cover no-repeat;
 }
 
 .text {
@@ -37,7 +41,7 @@ export default {
 
 .text-up {
     align-self: stretch;
-    color: var(--Text-Inverse-primary, #FFF);
+    color: var(--Text-Inverse-primary, #fff);
     text-align: center;
 
     /* Body/L/Regular */
@@ -52,7 +56,7 @@ export default {
 
 .text-down {
     align-self: stretch;
-    color: var(--Text-Inverse-primary, #FFF);
+    color: var(--Text-Inverse-primary, #fff);
     text-align: center;
 
     /* Headings/Mobile/XXL */
@@ -64,5 +68,4 @@ export default {
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
-
 </style>

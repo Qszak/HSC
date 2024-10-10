@@ -118,7 +118,8 @@ export default {
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
             ),
-            url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
+            url(/public/images//promo/CAŁA\ EKIPA.png) lightgray 50% / cover
+                no-repeat;
     }
 
     .hero-text {
@@ -256,7 +257,8 @@ export default {
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
             ),
-            url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
+            url(/public/images//promo/CAŁA\ EKIPA.png) lightgray 50% / cover
+                no-repeat;
     }
 
     .hero-text {
@@ -387,7 +389,8 @@ export default {
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
                 var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
             ),
-            url(/LOGO/HSC\ logopak/hero.jpg) lightgray 50% / cover no-repeat;
+            url(/public/images//promo/CAŁA\ EKIPA.png) lightgray 50% / cover
+                no-repeat;
     }
 
     .hero-text {

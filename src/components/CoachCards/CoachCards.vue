@@ -3,10 +3,23 @@
         class="link"
         :to="{ name: 'Karta-Trenera', params: { coachName: coachName } }"
     >
-        <div class="coach-card" @click="goToCoachPage">
+        <div
+            class="coach-card"
+            @mouseover="isHovered = true"
+            @mouseleave="isHovered = false"
+        >
             <div class="gallery-image">
                 <div class="ratio-image">
-                    <img :src="imgSrc" :alt="imgAlt" />
+                    <img
+                        :src="imgSrc"
+                        :alt="imgAlt"
+                        :style="{
+                            filter: isHovered
+                                ? 'grayscale(0%)'
+                                : 'grayscale(100%)',
+                            transition: 'filter 0.3s ease',
+                        }"
+                    />
                 </div>
             </div>
             <div class="coach-info">
@@ -18,6 +31,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -38,6 +52,13 @@ export default {
         imgAlt: {
             type: String,
         },
+    },
+    setup() {
+        const isHovered = ref(false); // Zmienna śledząca hover
+
+        return {
+            isHovered,
+        };
     },
 };
 </script>

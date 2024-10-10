@@ -1,8 +1,16 @@
 <template>
-    <div class="offer-card">
+    <div
+        class="offer-card"
+        @mouseover="isHovered = true"
+        @mouseleave="isHovered = false"
+    >
         <div
             class="offer-card-top"
-            :style="{ backgroundImage: `url(${imgSrc})` }"
+            :style="{
+                backgroundImage: `url(${imgSrc})`,
+                filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
+                transition: 'filter 0.3s ease',
+            }"
         >
             <div class="service-name">{{ service }}</div>
             <div class="subtitle">{{ subtitle }}</div>
@@ -22,6 +30,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -34,6 +43,13 @@ export default {
         description: String,
     },
     components: [RouterLink],
+    setup() {
+        const isHovered = ref(false); // Zmienna śledząca hover
+
+        return {
+            isHovered,
+        };
+    },
 };
 </script>
 
@@ -64,6 +80,12 @@ export default {
             var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 0%,
             var(--Background-shade-Moderate, rgba(0, 0, 0, 0.6)) 100%
         );
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .offer-card-top:hover {
+        filter: grayscale(0%);
     }
 
     img {

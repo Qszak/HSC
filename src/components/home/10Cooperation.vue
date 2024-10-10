@@ -6,14 +6,13 @@
             :autoplay="true"
             :slidesPerView="3"
             :spaceBetween="20"
-            modules="[Autoplay]"
             :modules="[Autoplay]"
             class="brands"
         >
             <swiper-slide class="logo">
                 <a href="https://www.borkowskiwspolnicy.pl/">
                     <img
-                        src="/images/Borkowski logo rgb.png"
+                        src="/images/logos/Borkowski logo rgb.png"
                         alt="Logo Borkowski i Wspólnicy"
                     />
                 </a>
@@ -21,20 +20,20 @@
 
             <swiper-slide class="logo">
                 <a href="https://cudostudio.pl/">
-                    <img src="/images/cudo.png" alt="Logo Studio CUDO" />
+                    <img src="/images/logos/cudo.png" alt="Logo Studio CUDO" />
                 </a>
             </swiper-slide>
 
             <swiper-slide class="logo">
                 <a href="https://iron-gym.pl/">
-                    <img src="/images/irongym.jpg" alt="Logo IronGym" />
+                    <img src="/images/logos/irongym.jpg" alt="Logo IronGym" />
                 </a>
             </swiper-slide>
 
             <swiper-slide class="logo">
                 <a href="https://berserkersteamwroclaw.com/">
                     <img
-                        src="/images/berserkers.jpg"
+                        src="/images/logos/berserkers.jpg"
                         alt="Logo Berserkers Team"
                     />
                 </a>
@@ -42,19 +41,22 @@
 
             <swiper-slide class="logo">
                 <a href="https://sandras.fit/">
-                    <img src="/images/sandras.png" alt="Logo Sandra's" />
+                    <img src="/images/logos/sandras.png" alt="Logo Sandra's" />
                 </a>
             </swiper-slide>
 
             <swiper-slide class="logo">
                 <a href="https://imprimature.co/">
-                    <img src="/images/imprimature.png" alt="Logo Imprimature" />
+                    <img
+                        src="/images/logos/imprimature.png"
+                        alt="Logo Imprimature"
+                    />
                 </a>
             </swiper-slide>
 
             <swiper-slide class="logo">
                 <a href="https://ocludo.pl/">
-                    <img src="/images/ocludo.png" alt="Logo Ocludo" />
+                    <img src="/images/logos/ocludo.png" alt="Logo Ocludo" />
                 </a>
             </swiper-slide>
         </swiper>
@@ -110,8 +112,8 @@ export default {
 }
 
 .logo img {
-    max-width: 100%;
-    height: 500px;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -159,12 +161,12 @@ export default {
     }
 
     img {
-        width: 100%;
-        height: 100%;
+        max-width: 80%;
+        max-height: 80%;
     }
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
     .swiper {
         padding: 20px;
     }
@@ -174,9 +176,9 @@ export default {
     }
 
     .logo {
-        width: 120px; /* Mniejsza szerokość na mobilnych */
+        width: 120px;
     }
-}
+} */
 @media (min-width: 640px) and (max-width: 960px) {
     section.cooperations {
         display: flex;
@@ -209,12 +211,12 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 12rem;
-        height: 12rem;
+        width: 72px;
+        height: 72px;
     }
     img {
-        width: 100%;
-        height: 100%;
+        max-width: 80%;
+        max-height: 80%;
         object-fit: contain;
     }
 }
@@ -251,12 +253,13 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 18rem;
-        height: 18rem;
+        width: 120px;
+        height: 120px;
     }
-    img {
-        width: 100%;
-        height: 100%;
+    .logo img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
     }
 }
 </style>

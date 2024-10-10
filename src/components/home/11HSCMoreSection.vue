@@ -16,21 +16,21 @@
         <div class="cards">
             <HSCMoreCard
                 header="Dietetyka"
-                photoSrc="\images\LSzefner.png"
+                photoSrc="\images\HSCdiettransparent.png"
                 alt="Gabinet"
                 info="Spersonalizowany plan żywieniowy stworzony przez naszego specjalistę od żywienia, pomoże Ci osiągnąć lepsze wyniki treningowe i poprawi Twoje samopoczucie. Odkryj, jak zdrowe odżywianie może dodać Ci energii i podnieść Twoją formę na wyższy poziom."
                 link="/dietetyka"
             />
             <HSCMoreCard
                 header="Fizjoterapia"
-                photoSrc="\images\LSzefner.png"
+                photoSrc="\images\kadra\ŁukaszSzefner.png"
                 alt="Łukasz Szefner"
                 info="Odzyskaj sprawność i pozbądź się bólu, dzięki indywidualnie dopasowanej terapii prowadzonej przez naszych doświadczonych fizjoterapeutów. Skorzystaj z nowoczesnych metod, które przynoszą szybkie i trwałe efekty."
                 link="/fizjoterapia"
             />
             <HSCMoreCard
                 header="Hipnoterapia"
-                photoSrc="\images\LSzefner.png"
+                photoSrc="\images\kadra\NataliaZieniewicz.png"
                 alt="Natalia Zieniewicz"
                 info="Zyskaj kontrolę nad swoim życiem, redukując stres i wzmacniając motywację dzięki hipnoterapii. Przekonaj się, jak skutecznie ta metoda może pomóc Ci w osiągnięciu Twoich celów oraz kształtowaniu pozytywnych cech osobowości."
                 link="/hipnoterapia"
