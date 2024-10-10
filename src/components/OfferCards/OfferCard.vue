@@ -64,6 +64,7 @@ export default {
         justify-content: center;
         border-radius: 0.25rem;
         background: var(--Surface-Secondary, #f5f5f5);
+        background-image: cover;
     }
 
     .offer-card-top {

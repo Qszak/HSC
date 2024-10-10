@@ -150,7 +150,7 @@ export const offerData = [
                 day: "Czwartek",
                 time: "19:00-20:00",
                 coach: "Adrian Spętany",
-                groupType: "Średnio-zaawansowany",
+                groupType: "Średnio zaawansowany",
             },
         ],
     },

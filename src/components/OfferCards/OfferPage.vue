@@ -2,7 +2,7 @@
     <div>
         <div
             class="offer-hero"
-            :style="{ backgroundImage: `url(${trainingData.imgSrc0})` }"
+            :style="{ backgroundImage: `url(${trainingData.imgSrc})` }"
         >
             <div class="offer-promo">
                 <div class="subtitle">{{ trainingData.subtitle }}</div>
@@ -141,12 +141,12 @@ export default {
         };
 
         const trainingData = computed(() => {
-            return offerData.find((item) => item.service === props.service);
+            return offerData.find(
+                (item) =>
+                    item.service === props.service &&
+                    item.subtitle === props.subtitle
+            );
         });
-
-        const getCoachCardData = (id) => {
-            return coachData.find((item) => item.id === id);
-        };
 
         const coachCardData = computed(() => {
             return trainingData.value?.coachIds?.map((id) => {
@@ -168,7 +168,6 @@ export default {
             showModal,
             closeModal,
             trainingData,
-            getCoachCardData,
             coachCardData,
         };
     },
@@ -503,14 +502,14 @@ export default {
         align-items: center;
         align-content: center;
         gap: 1rem var(--space-200, 1rem);
-        align-self: stretch;
+        /* align-self: stretch; */
         flex-wrap: wrap;
         margin-bottom: 10vh;
     }
 
     .timetable-box {
         display: flex;
-        padding: var(--space-200, 1rem);
+        padding: var(--space-200, 3rem);
         flex-direction: column;
         align-items: center;
         gap: var(--space-200, 1rem);
@@ -745,14 +744,14 @@ export default {
         align-items: center;
         align-content: center;
         gap: 1rem var(--space-200, 1rem);
-        align-self: stretch;
+        /* align-self: stretch; */
         flex-wrap: wrap;
         margin-bottom: 10vh;
     }
 
     .timetable-box {
         display: flex;
-        padding: var(--space-200, 1rem);
+        padding: var(--space-200, 2rem);
         flex-direction: column;
         align-items: center;
         gap: var(--space-200, 1rem);
