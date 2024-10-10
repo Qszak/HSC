@@ -4,7 +4,7 @@ export const coachData = [
         name: "Michał Kulej",
         position: "Trener Personalny",
         skills: "personal, medical, combat, motor",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MichałKulej.png",
         imgAlt: "Zdjęcie Michała Kuleja",
         description:
             "Sport towarzyszy mi od wielu lat – miałem okazję zgłębiać tajniki wielu dyscyplin, od zapasów i BJJ, przez kickboxing, koszykówkę i piłkę nożną, aż po pływanie, dwubój, EMS i trening siłowy. To właśnie trening siłowy okazał się kluczowy dla mojego rozwoju – zarówno sylwetki, jak i zdrowia.\nJako trener już z 10-letnim doświadczeniem, pracowałem z setkami podopiecznych, doskonaląc umiejętność indywidualnego dopasowania treningu do potrzeb każdego z nich.\nMoje studia na Akademii Wychowania Fizycznego we Wrocławiu dały mi solidne podstawy wiedzy z zakresu anatomii, biochemii, fizjologii i dydaktyki, niezbędne do bezpiecznej pracy z ciałem człowieka. Nie poprzestałem jednak na tym – ukończyłem kilkadziesiąt kursów i szkoleń w dziedzinach takich jak metodyka treningowa, technika ćwiczeń, dietetyka, trening medyczny oraz fizjoterapia.\nZauważając różnorodność osobowości moich podopiecznych, zdecydowałem się pogłębić swoją wiedzę o psychologię sportu. Ukończenie studiów w tej dziedzinie pozwoliło mi lepiej wspierać klientów w osiąganiu pozytywnych zmian – zarówno psychologicznych, jak i fizycznych.",
@@ -14,7 +14,7 @@ export const coachData = [
         name: "Jakub Kulej",
         position: "Trener Personalny",
         skills: "personal, combat",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/JakubKulej.png",
         imgAlt: "Zdjęcie Jakuba Kuleja",
         description:
             "Trener Personalny, Absolwent Akademii Wychowania Fizycznego we Wrocławiu z tytułem magistra Sportu o specjalizacji Trener Przygotowania Motorycznego.\nUzyskał również tytuł Menedżera Sportu. Ukończył również kurs Przygotowania Pedagogicznego.Trener II klasy piłki nożnej z dyplomem UEFA B, instruktor Kulturystyki, instruktor Kettlebell, instruktor Boksu, a także instruktor Kickboxingu wystawiony przez Polski Związek Kickboxingu. Ukończył wiele kursów związanych z szeroko pojętym treningiem i przygotowaniem motorycznym, a także z zagadnieniami związanymi z dietetyką i suplementacją. Od najmłodszych lat związany ze sportem, ma za sobą 24 lata uprawiania piłki nożnej na poziomie 3 i 4 ligi, wystartował w debiutach kulturystycznych w kategorii Męska Sylwetka, aktualnie posiada 3 stopień uczniowski Kickboxingu, startuje na zawodach i galach w formule K1.\nWieloletni, doświadczony trener personalny, pracujący od ponad 12 lat we Wrocławiu z wieloma podopiecznymi, którym pomaga w uzyskaniu określonych celów tj.: poprawa zdrowia, zmiana sylwetki, polepszenie zdolności motorycznych, przygotowanie do rywalizacji sportowej, zmiana nawyków żywieniowych.",
@@ -24,7 +24,7 @@ export const coachData = [
         name: "Filip Krasiński",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/FilipKrasiński.png",
         imgAlt: "Zdjęcie Filipa Krasińskiego",
         description:
             "Trener Personalny, sportowiec, absolwent Szkoły Mistrzostwa Sportowego “SMS Junior Wrocław”. Pasjonat sportu, podróżowania i rozwoju osobistego. Wieloletni siatkarz z dużymi osiągnięciami sportowymi na różnych szczeblach. Ukończył dziesiątki szkoleń z zakresu dietetyki, suplementacji oraz kursów związanych z programowaniem treningowym.\nMa za sobą już dziesiątki przemian swoich podopiecznych. Jego mottem jest „Dziś zrób to czego innym się nie chce, a jutro będziesz miał to czego inni pragną.”\nW ofercie możecie znaleźć takie usługi jak: treningi siłowe indywidualne lub w parze, trening medyczny oraz współpraca online. Stawia na dobre relacje ze swoimi podopiecznymi, jak i również zmian stylu życia tak, aby efekty sylwetkowe byłby jak najlepsze.",
@@ -34,7 +34,7 @@ export const coachData = [
         name: "Klaudia Żmijewska",
         position: "Trener Personalny",
         skills: "personal, medical",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/KlaudiaŻmijewska.png",
         imgAlt: "Zdjęcie Klaudii Żmijewskiej",
         description:
             "Absolwentka AWF Wrocław na kierunku sport. Mgr żywienia i suplementacji w sporcie oraz licencjat na kierunku menager sportu.\nTrener personalny, trener medyczny oraz trener pływania. Od najmłodszych lat związana ze sportem jako zawodniczka w pływaniu sportowym oraz pływaniu synchronicznym w kadrze wojewódzkiej.\nOd 2015 roku pomagająca w odzyskaniu siły, sprawności oraz wymarzonej sylwetki dziesiątkom podopiecznych.\nSpecjalizuje się w treningu medycznym pomagając w walce z bólem, wadami postawy i przywracaniu sprawności, która z różnych życiowych przyczyn została zatracona, również po zabiegach operacyjnych.\nPrywatnie miłośniczka adrenaliny, surfingu i pogłębiania wiedzy z zakresu budowy człowieka i ruchu.",
@@ -44,7 +44,7 @@ export const coachData = [
         name: "Mateusz Flejterski",
         position: "Trener Personalny",
         skills: "personal, medical, combat, motor",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Mateusza Flejterskiego",
         description:
             "Odkąd rozpocząłem pracę jako trener personalny w 2017 roku, współpracuję z różnorodnymi grupami ludzi, zarówno ogólną populacją, pomagając poprawić ich kondycję i zdrowie, jak i ze sportowcami, dostarczając specjalistyczne treningi motoryczne. Moim celem jest podniesienie wydajności sportowców na nowy poziom oraz wspieranie wszechstronnego rozwoju zawodników.\nDzięki ukończonym studiom, licznym szkoleniom i wieloletniemu doświadczeniu, moja filozofia pracy opiera się na indywidualnym podejściu do procesu treningowego, które uwzględnia konkretne cele, umiejętności i potrzeby każdej osoby.\nJestem aktywnym zawodnikiem BJJ, pasjonatem MMA czy treningu Kettlebells, propaguję również udział w kulturze fizycznej wśród dorosłych i młodzieży.\nCieszę się, że mogę uczestniczyć w tworzeniu marki Holistic Sport Center, wśród ludzi z podobną pasją i zaangażowaniem.",
@@ -54,7 +54,7 @@ export const coachData = [
         name: "Tomasz Rudolf",
         position: "Trener Personalny",
         skills: "personal, motor",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Tomasza Rudolfa",
         description:
             "Trener personalny, Trener przygotowania motorycznego, Trener piłki nożnej z Dyplomem UEFA B, zarówno grup młodzieżowych, treningów piłkarskich indywidualnych jak i Drużyn Seniorskich. Specjalista treningu Obwodowego jak i strumieniowego w grupach. Wieloletni Piłkarz Profesjonalny, występował w takich klubach jak m.in.: Ekstraklasowy Śląsk Wrocław, Flota Świnoujście, Stomil Olsztyn czy Chemik Bydgoszcz. Kapitan i zawodnik wszystkich reprezentacji młodzieżowych w piłce nożnej. Uczestnik Mistrzostw Polski w Armwrestlingu.",
@@ -64,7 +64,7 @@ export const coachData = [
         name: "Sandra Cieślik-Kulej",
         position: "Trener Personalny",
         skills: "personal",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Sandry Cieślik-Kulej",
         description:
             "Z wykształcenia Prawniczka, z zamiłowania Trenerka Personalna.\nJest pasjonatką sportów siłowych, zdrowego stylu życia, literatury psychologicznej. Wolny czas, poza treningiem siłowym, lubi spędzać także szlifując umiejętności w sportach walki.\nPrzez lata zdobywała specjalistyczną wiedzę aby w pełni profesjonalnie móc zacząć wykorzystywać ją w praktyce z podopiecznymi i zarażać innych miłością do sportu oraz szeregu zdrowotnych i psychicznych benefitów, jakie za sobą niesie.\nSiłownia to jej terapia, odskocznia od codzienności, możliwość wyładowania negatywnych i celebrowania pozytywnych emocji. Jej misją jest pomaganie swoim podopiecznym w stawaniu się najlepszą wersją siebie.",
@@ -74,7 +74,7 @@ export const coachData = [
         name: "Adrian Spetany",
         position: "Trener Kickboxingu",
         skills: "combat",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Adriana Spętanego",
         description:
             "Cześć, nazywam się Adrian i jestem trenerem Kickboxingu!\nMoja przygoda z tym pięknym sportem rozpoczęła się 15 lat temu, dzięki niemu nauczyłem się dyscypliny, systematyczności oraz konsekwencji. Od ponad 5 lat nabyte doświadczenie oraz wiedzę przekazuje prowadząc treningi indywidualne i grupowe dla każdego niezależnie od wieku czy poziomu zaawansowania.",
@@ -84,7 +84,7 @@ export const coachData = [
         name: "Kamil Łata",
         position: "Trener BJJ (dla dzieci)",
         skills: "combat",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Kamila Łaty",
         description:
             "Odkąd w 2020 roku rozpocząłem pracę jako trener dziecięcy, moje zaangażowanie skierowane jest na współpracę z różnorodnymi grupami wiekowymi, obejmując zarówno maluchy w wieku 3-6 lat, jak i starsze dzieci w przedziale wiekowym 7-12 lat. Moim głównym celem jest nie tylko poprawa motoryki, kondycji i zdrowia podopiecznych, lecz także rozwijanie ich umiejętności ruchowych, pewności siebie oraz samodyscypliny już na wczesnym etapie ich eksploracji świata sportu.\nJako rodzic dwójki dzieci doskonale zdaję sobie sprawę, jak istotny wpływ na życie malucha mogą mieć aktywność fizyczna, praca nad emocjami, rywalizacja i uczestnictwo w grupie rówieśniczej. Moje doświadczenia osobiste kształtują moje podejście do pracy z młodymi sportowcami, umożliwiając mi bardziej kompleksowe zrozumienie ich potrzeb i wyzwań. Hobbystyczne uprawianie brazilian jiu-jitsu od wielu lat pozwala mi nie tylko propagować korzyści płynące z aktywności fizycznej wśród młodzieży, ale także przekazywać im wartości związane z tym sportem, takie jak dyscyplina, szacunek i rozwijanie umiejętności interpersonalnych.\nCieszę się z możliwości uczestniczenia w tworzeniu marki Holistic Sport Center, gdzie mogę dzielić się swoją pasją i zaangażowaniem z ludźmi o podobnych wartościach. To dla mnie nie tylko praca, ale także aktywny udział w kształtowaniu środowiska sprzyjającego kompleksowemu rozwojowi dzieci i młodzieży.",
@@ -94,7 +94,7 @@ export const coachData = [
         name: "Dominik Warmiłło",
         position: "Trener Personalny",
         skills: "personal, combat",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Dominika Warmiłło",
         description:
             "Jestem związany ze sportem od najmłodszych lat. Już jako 8 latek, chodziłem na zacięcia sportów walki. Pierwszy raz wybrałem się na siłownię gdy miałem 12 lat. To właśnie od tamtej chwili nie będąc świadomy, zagłębiałem się i pokochałem metodykę treningową. Po jakimś czasie doszła do tego psychologia i literatura, z której czerpie duże pokłady wiedzy. Jestem także studentem psychologii i dietetyki.\nW podejściu do podopiecznych staram się kierować indywidualnym podejściem, ponieważ każdy jest inny. Ważne jest dla mnie tu i teraz, to żebyś wiedział po co tutaj przyszedłeś i wiesz czego chcesz. Staram się dobierać różne metody treningowe do tego abyś mógł osiągnąć swoje cele. Nie ważne czy chcesz być zdrowy, czy chcesz nabrać masy mięśniowej, a może zrzucić parę kilogramów. Nigdy nie pracuje z dwoma osobami w jeden sposób. Chcę także wzmocnić Ciebie mentalnie, tak abyś pracował nad sobą nie tylko na siłowni. Każdego dnia, stawał się lepszą wersją siebie.",
@@ -104,7 +104,7 @@ export const coachData = [
         name: "Patryk Mikulski",
         position: "Trener MMA",
         skills: "combat",
-        imgSrc: "/images/MKulej.png",
+        imgSrc: "images/MKulej.png",
         imgAlt: "Zdjęcie Patryka Mikulskiego",
         description:
             "Siemanko z tej strony Patryk Mikulski, wasz trener grupy podstawowej MMA!\nJestem certyfikowanym Trenerem Personalnym, Instruktorem o specjalizacji MMA oraz dietetykiem. Ze sportem związany od 15 lat, przekrojowo od Boksu przez Tajski Boks, Kickboxing oraz BJJ i Judo. Gwarantuje, że na zajęciach będą pełne ręce dobrej roboty.\nDo zobaczenia na macie!",

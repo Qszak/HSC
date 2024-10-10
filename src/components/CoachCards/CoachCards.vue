@@ -69,11 +69,8 @@ export default {
     align-self: stretch;
 }
 img {
-    /* max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; */
-    width: 100%;
-    height: auto;
+    max-width: 301px;
+    max-height: 300px;
     display: block;
 }
 .coach-info {

@@ -7,6 +7,7 @@
             :slidesPerView="3"
             :spaceBetween="20"
             modules="[Autoplay]"
+            :modules="[Autoplay]"
             class="brands"
         >
             <swiper-slide class="logo">
@@ -63,10 +64,11 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
-import { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules";
 
 export default {
     name: "Cooperation",
+    methods: { Autoplay },
     components: {
         Swiper,
         SwiperSlide,
@@ -109,7 +111,7 @@ export default {
 
 .logo img {
     max-width: 100%;
-    height: auto;
+    height: 500px;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -152,8 +154,8 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
     }
 
     img {
@@ -207,12 +209,13 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 5rem;
-        height: 5rem;
+        width: 12rem;
+        height: 12rem;
     }
     img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -248,8 +251,8 @@ export default {
         align-self: stretch;
     }
     .logo {
-        width: 10rem;
-        height: 10rem;
+        width: 18rem;
+        height: 18rem;
     }
     img {
         width: 100%;
