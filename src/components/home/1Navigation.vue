@@ -1,8 +1,8 @@
 <template>
     <nav>
-        <div class="logo">
+        <RouterLink to="/" class="logo">
             <LogoHSC />
-        </div>
+        </RouterLink>
         <div class="content">
             <div class="primary-items">
                 <RouterLink to="/" class="nav-link">Strona Główna</RouterLink>

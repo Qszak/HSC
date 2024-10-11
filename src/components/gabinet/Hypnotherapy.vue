@@ -28,7 +28,10 @@
             </p>
         </div>
         <div class="photo">
-            <img src="/images/NataliaZieniewicz.png" alt="Natalia Zieniewicz" />
+            <img
+                src="/images//kadra/NataliaZieniewicz.png"
+                alt="Natalia Zieniewicz"
+            />
         </div>
     </div>
     <div class="service-section">

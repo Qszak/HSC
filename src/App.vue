@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         checkScreenSize() {
-            this.isSmallScreen = window.innerWidth < 1032; // Przykładowy próg dla małego ekranu
+            this.isSmallScreen = window.innerWidth < 1063; // Przykładowy próg dla małego ekranu
         },
     },
 };

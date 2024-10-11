@@ -1,8 +1,8 @@
 <template>
     <nav>
-        <div class="Logo">
+        <RouterLink to="/" class="Logo">
             <LogoHSC />
-        </div>
+        </RouterLink>
         <div class="Content">
             <div class="Menu">
                 <button class="contact" @click="showModal">Kontakt</button>
@@ -213,7 +213,7 @@ nav {
     display: none;
     background-color: #181818;
     transition: 0.5s ease-in;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
     background: var(--Surface-Inverse-primary, #181818);
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.04),

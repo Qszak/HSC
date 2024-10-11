@@ -36,13 +36,18 @@
                     <p class="text">Adres</p>
                     <div class="line">
                         <div class="icon"><LocationRed /></div>
-                        <div class="data">
+                        <a
+                            href="https://maps.app.goo.gl/BH8SCxM5tmfjSJ1R8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="data"
+                        >
                             <ul>
                                 <li>Holistic Sport Center</li>
                                 <li>ul. Krakowska 29C</li>
                                 <li>50-424 Wrocław</li>
                             </ul>
-                        </div>
+                        </a>
                     </div>
                     <div class="line">
                         <div class="icon"><ClockRed /></div>

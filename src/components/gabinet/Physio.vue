@@ -22,7 +22,7 @@
             </p>
         </div>
         <div class="photo">
-            <img src="/images/ŁukaszSzefner.png" alt="Łukasz Szefner" />
+            <img src="/images/kadra/ŁukaszSzefner.png" alt="Łukasz Szefner" />
         </div>
     </div>
     <div class="service-section">
