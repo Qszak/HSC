@@ -15,10 +15,10 @@
                 dysfunkcji w obrębie narządu ruchu. Ukończył specjalistyczne
                 kursy i szkolenia z zakresu medycyny manualnej, terapii tkanek
                 miękkich, masażu tkanek głębokich, igłoterapii suchej,
-                pinoterapii, treningu funkcjonalnego.\nZdobytą wiedzę
-                teoretyczną i praktyczną oraz doświadczenie zawodowe
-                wykorzystuje, aby sprawnie i kompleksowo pomagać pacjentom
-                powrócić do pełnej sprawności.
+                pinoterapii, treningu funkcjonalnego. Zdobytą wiedzę teoretyczną
+                i praktyczną oraz doświadczenie zawodowe wykorzystuje, aby
+                sprawnie i kompleksowo pomagać pacjentom powrócić do pełnej
+                sprawności.
             </p>
         </div>
         <div class="photo">
@@ -56,7 +56,7 @@
                 <div class="mail"><Mail />holisticsportcenter@gmail.com</div>
             </div>
         </div>
-        <div class="working-hours">
+        <!-- <div class="working-hours">
             <p class="working-hours-header">Godziny pracy</p>
             <div class="hours-box">
                 <div class="hours">
@@ -76,7 +76,7 @@
                     <p class="time">9:00-10:00</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="promo">
         <div class="video-container">
@@ -283,6 +283,7 @@ export default {
         gap: 4.5rem;
         border-radius: var(--Corner-None, 0rem);
         background: var(--Surface-Inverse-primary, #181818);
+        margin-top: 5vh;
     }
 
     .contact {
@@ -604,6 +605,7 @@ export default {
         gap: 4.5rem;
         border-radius: var(--Corner-None, 0rem);
         background: var(--Surface-Inverse-primary, #181818);
+        margin-top: 5vh;
     }
 
     .contact {
@@ -924,6 +926,7 @@ export default {
         gap: 4.5rem;
         border-radius: var(--Corner-None, 0rem);
         background: var(--Surface-Inverse-primary, #181818);
+        margin-top: 5vh;
     }
 
     .contact {

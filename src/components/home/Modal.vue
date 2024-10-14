@@ -84,21 +84,22 @@ export default {
 </script>
 
 <style scoped>
-/* Disable scrolling when modal is visible */
 .no-scroll {
     overflow: hidden;
 }
 
-/* Blur the background */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    backdrop-filter: blur(5px); /* Blur effect */
-    z-index: 998; /* Below the modal */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 @media (max-width: 1384px) {

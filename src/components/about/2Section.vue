@@ -303,20 +303,18 @@ export default {
     }
 
     img.slide {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
         object-fit: contain;
     }
 
     .swiper-slide {
-        align-self: flex-start;
+        /* align-self: flex-start;
         justify-self: flex-start;
-        text-align: center;
-
-        /* Center slide text vertically */
+        text-align: center; */
         display: flex;
         justify-content: center;
         align-items: center;
+        width: auto;
     }
     .slider-team {
         display: block;

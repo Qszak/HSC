@@ -44,7 +44,7 @@ export default {
 @media (max-width: 640px) {
     .about-us {
         display: flex;
-        width: calc(100svw - var(--scrollbarWidth));
+        width: calc(100vw - var(--scrollbarWidth));
         padding: 3rem var(--space-200, 1rem);
         flex-direction: column;
         align-items: center;

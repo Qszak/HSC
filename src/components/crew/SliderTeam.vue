@@ -1,19 +1,14 @@
 <template>
     <div class="slider">
         <swiper
-            :effect="'coverflow'"
             :grabCursor="true"
             :centeredSlides="true"
-            :slidesPerView="'auto'"
-            :coverflowEffect="{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
-            }"
+            :slidesPerView="2"
             :pagination="true"
             :modules="modules"
+            :loop="true"
+            :spaceBetween="24"
+            :initialSlide="0"
             class="mySwiper"
         >
             <swiper-slide

@@ -15,19 +15,14 @@
             </div>
             <div class="team-slider">
                 <swiper
-                    :effect="'coverflow'"
                     :grabCursor="true"
                     :centeredSlides="true"
-                    :slidesPerView="'1'"
-                    :coverflowEffect="{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: false,
-                    }"
+                    :slidesPerView="2"
                     :pagination="true"
                     :modules="modules"
+                    :loop="true"
+                    :spaceBetween="104"
+                    :initialSlide="0"
                     class="swiper-dynamic"
                 >
                     <swiper-slide

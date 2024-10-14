@@ -105,7 +105,7 @@ export default {
 @media (max-width: 640px) {
     .hero-content {
         display: flex;
-        width: calc(100svw - var(--scrollbarWidth));
+        width: calc(100vw - var(--scrollbarWidth));
         height: 46.25rem;
         padding: 0rem var(--space-200, 1rem);
         flex-direction: column;

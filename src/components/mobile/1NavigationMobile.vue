@@ -68,7 +68,7 @@
                                 >
                                     <li>
                                         <RouterLink
-                                            to="/fizjoterpia"
+                                            to="/fizjoterapia"
                                             class="sub-nav-link"
                                             @click="closeMenu"
                                             >Fizjoterapia</RouterLink
@@ -170,7 +170,7 @@ export default {
 <style scoped>
 nav {
     display: flex;
-    width: calc(100svw - var(--scrollbarWidth));
+    width: calc(100vw - var(--scrollbarWidth));
     padding: var(--space-150, 0.75rem) var(--space-300, 1.5rem);
     justify-content: space-between;
     align-items: center;
